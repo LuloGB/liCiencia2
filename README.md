@@ -16,7 +16,7 @@
 
 
 
-!\[Imagen de licenciados]()
+!\[Imagen de licenciados](https://github.com/LuloGB/liCiencia2/blob/main/pics/Fondo%20Logo.jpg)
 
 
 

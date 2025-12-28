@@ -11,7 +11,7 @@ Partiendo de variada documentación, buscamos que el conocimiento sea más alcan
 <div align="center">
  <img src="./pics/Fondo%20Logo.jpg" alt="Imagen de liCiencia2" width="400">
  <br>
-  <span style="font-size: 10px;">Imagen de liCiencia2.</span>
+  <sub>Imagen de liCiencia2.</sub>
 </div>
 
 ---

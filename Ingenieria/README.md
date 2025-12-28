@@ -44,7 +44,7 @@ Luego veremos el binario, cómo se trabaja, e iremos complementando con algo de 
 ## Publicaciones sobre Electrónica Digital
 
 - [Lenguaje máquina](#)
- - [Señal digital](#)
+  - [Señal digital](#)
 
 ## Bibliografía recomendada
 

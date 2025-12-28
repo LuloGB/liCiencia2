@@ -14,7 +14,7 @@ Desde *sistemas de protección* hasta el *funcionamiento del silicio*, esta rama
 De esta forma pasamos de entender cómo se comporta el segundo elemento más abundante en la corteza terrestre –después del oxígeno (O)–, a construir cosas tan cotidianas como el cargador de un móvil.
 
 <div align="center">
-  <img src="./pics/Diferentes_transistores.png" alt="Diferentes transistores" width="400">
+  <img src="https://github.com/LuloGB/liCiencia2/blob/main/Ingenieria/Electronica/pics/presentacion/Diferentes_Circuitos_Integrados.png" alt="Diferentes transistores" width="400">
   <br>
   <sub>Img. 1: Diferentes transistores.</sub>
 </div>
@@ -26,7 +26,7 @@ Cuando unimos componentes pasivos junto con activos en ciertas configuraciones, 
 
 
 <div align="center">
-  <img src="./pics/Diferentes_Circuitos_Integrados.png" alt="Diferentes circuitos integrados" width="400">
+  <img src="https://github.com/LuloGB/liCiencia2/blob/main/Ingenieria/Electronica/pics/presentacion/Diferentes_transistores.png" alt="Diferentes circuitos integrados" width="400">
   <br>
   <sub>Img. 2: Diferentes circuitos integrados.</sub>
 </div>

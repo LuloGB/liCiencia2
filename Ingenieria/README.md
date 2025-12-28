@@ -14,8 +14,9 @@ Desde *sistemas de protección* hasta el *funcionamiento del silicio*, esta rama
 De esta forma pasamos de entender cómo se comporta el segundo elemento más abundante en la corteza terrestre –después del oxígeno (O)–, a construir cosas tan cotidianas como el cargador de un móvil.
 
 <div align="center">
-  <img src="./pics/Diferentes_transistores.png" alt="Diferentes transistores" width="400"><br>
-  <span style="font-size: 10px;">Img. 1: Diferentes transistores.</span>
+  <img src="./pics/Diferentes_transistores.png" alt="Diferentes transistores" width="400">
+  <br>
+  <span style="font-size: 5px;">Img. 1: Diferentes transistores.</span>
 </div>
 
 ## Digital
@@ -23,10 +24,13 @@ De esta forma pasamos de entender cómo se comporta el segundo elemento más abu
 ¿Y qué pasa con los móviles, los ordenadores, los chips (/tʃɪp/, su traducción al castellano es *circuito integrado*)? 
 Cuando unimos componentes pasivos junto con activos en ciertas configuraciones, podemos crear *tecnologías como la TTL o la CMOS*, con la que se construyen puertas lógicas como las *AND* u *OR*. Si seguimos “pegándolas”, como si de piezas de puzle se tratasen, llegamos a obtener el *latch* (/lætʃ/) y el *flip-flop* (/flɪp-flɒp/); estos juntos conforman registros, que jugando con ellos nos llevan a *ALUs*, *RAMs*, *ROMs*; y en su conjunto creamos las CPUs, necesitando algo de apoyo de programación para conseguir que este procesador pueda realizar cálculos, interpretar texto por comunicación bus con periféricos y mostrar datos en pantalla con tarjetas gráficas.
 
+
 <div align="center">
-  <img src="./pics/Diferentes_Circuitos_Integrados.png" alt="Diferentes circuitos integrados" width="400"><br>
-  <span style="font-size: 10px;">Img. 2: Diferentes circuitos integrados.</span>
+  <img src="./pics/Diferentes_Circuitos_Integrados.png" alt="Diferentes circuitos integrados" width="400">
+  <br>
+  <span style="font-size: 5px;">Img. 2: Diferentes circuitos integrados.</span>
 </div>
+
 
 Toda esta rama de la ingeniería es casi infinita de lo mucho que se puede ver, tanto de estudio como de aplicación; además, se encuentra en compañía de otros campos, como el control industrial o los sistemas de comunicaciones, a los que se les podría dedicar media vida.
 

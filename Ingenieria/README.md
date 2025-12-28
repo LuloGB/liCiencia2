@@ -28,51 +28,69 @@ Dentro de la electrónica podemos diferenciar dos grupos:
 
 
 
-Desde sistemas de protección hasta el funcionamiento del silicio, esta rama de la ingeniería estudia el comportamiento de semiconductores y sus aplicaciones: diodos pnp o npn, transistores BJT, MOSFET, CMOS o NMOS; sus configuraciones con componentes pasivos para hacer filtros, amortiguadores; junto con lógica para construir sistemas de control y reguladores; y llegar con esto hasta la electrónica de potencia. De esta forma pasamos de entender cómo se comporta el segundo elemento más abundante en la corteza terrestre -después del oxígeno (O)-, a construir cosas tan cotidianas como el cargador de un móvil.
+Desde \*sistemas de protección\* hasta el \*funcionamiento del silicio\*, esta rama de la ingeniería <u>estudia el comportamiento de semiconductores y sus aplicaciones</u>: diodos pnp o npn, transistores BJT, MOSFET, CMOS o NMOS; sus configuraciones con componentes pasivos para hacer filtros, amortiguadores; junto con lógica para construir sistemas de control y reguladores; y llegar con esto hasta la electrónica de potencia. De esta forma pasamos de entender cómo se comporta el segundo elemento más abundante en la corteza terrestre -después del oxígeno (O)-, a construir cosas tan cotidianas como el cargador de un móvil.
 
 
 
+<div align="center">
 
+&nbsp;<img src="./Ingenieria/pics/Diferentes\_transistores.png" alt="Imagen de liCiencia2" width="400">
 
-Img. 1: Diferentes transistores.
+&nbsp;<br>
 
-Digital.
+&nbsp; <span style="font-size: 10px;">Img. 1: Diferentes transistores.</span>
 
-&nbsp;   
-
-&nbsp;   ¿Y qué pasa con los móviles, los ordenadores, los chips /tഽ🇮p/ (su traducción al castellano es circuito integrado)? Cuando unimos componentes pasivos junto con activos en ciertas configuraciones, podemos crear tecnologías como la TTL o la CMOS, con la que podemos construir puertas lógicas como las AND u OR; si seguimos "pegándolas", como si de piezas de puzle se tratasen, llegamos a obtener el latch /lætഽ/, el flip-flop /fl🇮p-flɒp/, que estos juntos conforman registros, que jugando con ellos tenemos ALUs, RAMs, ROMs; y en su conjunto creamos las CPUs, necesitando algo de apoyo de programación para conseguir que este procesador pueda realizar cálculos, interpretar texto por comunicación bus con periféricos, mostrar datos en pantalla con tarjetas gráficas...
-
-
-
-
-
-Img. 2: Diferentes circuitos integrados.
+</div>
 
 
 
-&nbsp;   Toda esta rama de la ingeniería es casi infinita de lo mucho que se puede ver, tanto de estudio como de aplicación; además que se encuentra en compañía de otros campos, como el control industrial o sistemas de comunicaciones, que se les podría dedicar media vida a ellos.
+\## Digital.
+
+&nbsp;
+
+¿Y qué pasa con los móviles, los ordenadores, los chips /tഽ🇮p/ (su traducción al castellano es \*circuito integrado\*)? Cuando unimos componentes pasivos junto con activos en ciertas configuraciones, podemos crear \*tecnologías como la TTL o la CMOS\*, con la que se construyen puertas lógicas como las \*AND\* u \*OR\*; si seguimos "pegándolas", como si de piezas de puzle se tratasen, llegamos a obtener el \*latch\* /lætഽ/, el \*flip-flop\* /fl🇮p-flɒp/, que estos juntos conforman registros, que jugando con ellos tenemos \*ALUs\*, \*RAMs\*, \*ROMs\*; y en su conjunto creamos las CPUs, necesitando algo de apoyo de programación para conseguir que este procesador pueda realizar cálculos, interpretar texto por comunicación bus con periféricos, mostrar datos en pantalla con tarjetas gráficas...
 
 
 
-Partes de la sección.
+<div align="center">
+
+ <img src="./Ingenieria/pics/Diferentes\_Circuitos\_Integrados.png" alt="Imagen de liCiencia2" width="400">
+
+ <br>
+
+  <span style="font-size: 10px;">Img. 1: Diferentes circuitos integrados.</span>
+
+</div>
 
 
 
-&nbsp;   Lo primero es lo primero, y para explicar cómo es posible que tú puedas estar viendo este blog, empezaremos por la señal digital, luego veremos el binario, cómo se trabaja e iremos complementando con algo de electrónica sobre circuitos impresos, algunos montajes sencillos, qué son los transistores... hasta llegar a ver programación básica y arquitecturas de microprocesadores.
+Toda esta rama de la ingeniería es casi infinita de lo mucho que se puede ver, tanto de estudio como de aplicación; además que se encuentra en compañía de otros campos, como el control industrial o sistemas de comunicaciones, que se les podría dedicar media vida a ellos.
 
 
 
-Publicaciones sobre Electrónica Digital.
-
-Lenguaje máquina.
-
-Señal digital.
-
-Bibliografía recomendada.
+\#Partes de la sección.
 
 
 
-&nbsp;   Los libros con los que he trabajado en los que me he ayudado:
+&nbsp;   Lo primero es lo primero, y para explicar cómo es posible que tú puedas estar viendo estas publicaciones en tu dispositivo electrónico, empezaremos por la señal digital, luego veremos el binario, cómo se trabaja e iremos complementando con algo de electrónica sobre circuitos impresos, algunos montajes sencillos, qué son los transistores... hasta llegar a ver programación básica y arquitecturas de microprocesadores.
 
-Fundamentos de sistemas digitales - L. Floyd.
+
+
+\#Publicaciones sobre Electrónica Digital.
+
+-\[Lenguaje máquina.](#)
+
+&nbsp;-\[Señal digital.](#)
+
+
+
+\#Bibliografía recomendada.
+
+
+
+Los libros con los que he trabajado en los que me he ayudado:
+
+>
+
+-Fundamentos de sistemas digitales - L. Floyd.
 

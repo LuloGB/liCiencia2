@@ -1,8 +1,8 @@
-d# Bienvenida
+# Bienvenida
 
 ## ¿Qué es este sitio?
 
-**_liCiencia2_** consiste en un proyecto de divulgación sobre *física* e *ingeniería*, conformado por un equipo actual de dos personas: un estudiante de doctorado en física sobre *Qubits superconductores en nanoestructuras híbridas* en la Universidad Autónoma de Madrid y un estudiante de Grado en Ingeniería Electrónica Industrial y Automática en la Universidad de La Laguna.
+	**_liCiencia2_** consiste en un proyecto de divulgación sobre *física* e *ingeniería*, conformado por un equipo actual de dos personas: un estudiante de doctorado en física sobre *Qubits superconductores en nanoestructuras híbridas* en la Universidad Autónoma de Madrid y un estudiante de Grado en Ingeniería Electrónica Industrial y Automática en la Universidad de La Laguna.
 
 ## ¿Qué hacemos?
 

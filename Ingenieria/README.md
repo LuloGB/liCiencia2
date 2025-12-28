@@ -1,8 +1,8 @@
-\# Categorías.
+\# Categorías
 
 
 
-\- Electrónica.
+\- Electrónica
 
-&nbsp; 1. Lenguaje Máquina.
+&nbsp; 1. Lenguaje Máquina
 

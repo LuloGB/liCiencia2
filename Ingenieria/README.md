@@ -12,9 +12,9 @@
 
 
 
-> Pero, ¿qué pasa con los famosos \*\*\_transistores\_\*\*? Estos son los llamados \*componentes activos\*: en este caso, sí <u>aumentan la amplitud de la intensidad</u>, aunque se usan generalmente como elementos de control. Los transistores, junto con los \*diodos\* y \*los tiristores\* forman parte de un enorme grupo de elementos hechos de \*semiconductores\*, siendo su material característico el <u>silicio</u> (Si).
+Pero, ¿qué pasa con los famosos \*\*\_transistores\_\*\*? Estos son los llamados \*componentes activos\*: en este caso, sí <u>aumentan la amplitud de la intensidad</u>, aunque se usan generalmente como elementos de control. Los transistores, junto con los \*diodos\* y \*los tiristores\* forman parte de un enorme grupo de elementos hechos de \*semiconductores\*, siendo su material característico el <u>silicio</u> (Si).
 
-> Dentro de la electrónica podemos diferenciar dos grupos:
+Dentro de la electrónica podemos diferenciar dos grupos:
 
 
 

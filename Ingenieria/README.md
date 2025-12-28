@@ -2,11 +2,13 @@
 
 &nbsp;   
 
-> Dentro de la ingeniería hay una rama que es la \*eléctrica\*. Esta consiste en el estudio del <u>comportamiento de la electricidad sobre componentes pasivos</u>. Estos componentes son los \*condensadores\*, \*las bobinas\* y \*las resistencias\*. Estas piezas se llaman "\*pasivos\*" porque no se les puede controlar: actúan cuando se les hace pasar una corriente, generalmente <u>disminuyendo su amplitud</u>, o también, <u>solo la atrasan o adelantan</u>.
+<p style="text-indent: 2em;">Dentro de la ingeniería hay una rama que es la \*eléctrica\*. Esta consiste en el estudio del <u>comportamiento de la electricidad sobre componentes pasivos</u>. Estos componentes son los \*condensadores\*, \*las bobinas\* y \*las resistencias\*. Estas piezas se llaman "\*pasivos\*" porque no se les puede controlar: actúan cuando se les hace pasar una corriente, generalmente <u>disminuyendo su amplitud</u>, o también, <u>solo la atrasan o adelantan</u>.
+
+</p>
 
 
 
-\#La ingeniería electrónica.
+\# La ingeniería electrónica.
 
 
 

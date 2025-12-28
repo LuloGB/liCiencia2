@@ -30,17 +30,7 @@ Cuando unimos componentes pasivos junto con activos en ciertas configuraciones, 
   <br>
   <sub>Img. 2: Diferentes circuitos integrados.</sub>
 </div>
-
-
-
-
-
-
-
-
-
-
-
+<br>
 
 Toda esta rama de la ingeniería es casi infinita de lo mucho que se puede ver, tanto de estudio como de aplicación; además, se encuentra en compañía de otros campos, como el control industrial o los sistemas de comunicaciones, a los que se les podría dedicar media vida.
 

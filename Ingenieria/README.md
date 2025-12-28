@@ -16,7 +16,7 @@ De esta forma pasamos de entender cómo se comporta el segundo elemento más abu
 <div align="center">
   <img src="./pics/Diferentes_transistores.png" alt="Diferentes transistores" width="400">
   <br>
-  <span style="font-size: 5px;">Img. 1: Diferentes transistores.</span>
+  <sub>*Img. 1: Diferentes transistores.*</sub>
 </div>
 
 ## Digital
@@ -28,7 +28,7 @@ Cuando unimos componentes pasivos junto con activos en ciertas configuraciones, 
 <div align="center">
   <img src="./pics/Diferentes_Circuitos_Integrados.png" alt="Diferentes circuitos integrados" width="400">
   <br>
-  <span style="font-size: 5px;">Img. 2: Diferentes circuitos integrados.</span>
+  <sub>*Img. 2: Diferentes circuitos integrados.*</sub>
 </div>
 
 

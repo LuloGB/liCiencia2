@@ -1,62 +1,14 @@
-\# La ingeniería eléctrica
-
-
-
-<div style="margin-left: 2em;">
-
-
-
-Dentro de la ingeniería hay una rama que es la \*eléctrica\*.  
-
-Esta consiste en el estudio del <u>comportamiento de la electricidad sobre componentes pasivos</u>.  
-
-Estos componentes son los \*condensadores\*, \*las bobinas\* y \*las resistencias\*.  
-
-Estas piezas se llaman \*“pasivos”\* porque no se les puede controlar: actúan cuando se les hace pasar una corriente, generalmente <u>disminuyendo su amplitud</u>, o también, <u>solo la atrasan o adelantan</u>.
-
-
-
-</div>
-
-
-
-\# La ingeniería electrónica
-
-
-
-Pero, ¿qué pasa con los famosos \*\*\_transistores\_\*\*?  
-
-Estos son los llamados \*componentes activos\*: en este caso, sí <u>aumentan la amplitud de la intensidad</u>, aunque se usan generalmente como elementos de control.  
-
-Los transistores, junto con los \*diodos\* y \*los tiristores\*, forman parte de un enorme grupo de elementos hechos de \*semiconductores\*, siendo su material característico el <u>silicio</u> (Si).  
-
-
-
-Dentro de la electrónica podemos diferenciar dos grupos:
-
-
-
-\## Analógica
-
-
-
-Desde sistemas de protección hasta el funcionamiento del silicio, esta rama de la ingeniería estudia el comportamiento de semiconductores y sus aplicaciones: diodos pnp o npn, transistores BJT, MOSFET, CMOS o NMOS; sus configuraciones con componentes pasivos para hacer filtros, amortiguadores; junto con lógica para construir sistemas de control y reguladores; y llegar con esto hasta la electrónica de potencia.  
-
-De esta forma pasamos de entender cómo se comporta el segundo elemento más abundante en la corteza terrestre –después del oxígeno (O)–, a construir cosas tan cotidianas como el cargador de un móvil.
-
-
-
-
-
-
-
-
-
-\#La ingeniería eléctrica.
+\# La ingeniería eléctrica.
 
 &nbsp;   
 
-<p style="text-indent: 2em;">Dentro de la ingeniería hay una rama que es la \*eléctrica\*. Esta consiste en el estudio del <u>comportamiento de la electricidad sobre componentes pasivos</u>. Estos componentes son los \*condensadores\*, \*las bobinas\* y \*las resistencias\*. Estas piezas se llaman "\*pasivos\*" porque no se les puede controlar: actúan cuando se les hace pasar una corriente, generalmente <u>disminuyendo su amplitud</u>, o también, <u>solo la atrasan o adelantan</u>.
+<p style="text-indent: 2em;">
+
+
+
+Dentro de la ingeniería hay una rama que es la \*eléctrica\*. Esta consiste en el estudio del <u>comportamiento de la electricidad sobre componentes pasivos</u>. Estos componentes son los \*condensadores\*, \*las bobinas\* y \*las resistencias\*. Estas piezas se llaman "\*pasivos\*" porque no se les puede controlar: actúan cuando se les hace pasar una corriente, generalmente <u>disminuyendo su amplitud</u>, o también, <u>solo la atrasan o adelantan</u>.
+
+
 
 </p>
 

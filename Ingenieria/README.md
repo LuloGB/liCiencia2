@@ -34,7 +34,7 @@ Desde \*sistemas de protección\* hasta el \*funcionamiento del silicio\*, esta 
 
 <div align="center">
 
-&nbsp;<img src="./Ingenieria/pics/Diferentes\_transistores.png" alt="Imagen de liCiencia2" width="400">
+&nbsp;<img src="./pics/Diferentes\_transistores.png" alt="Imagen de liCiencia2" width="400">
 
 &nbsp;<br>
 
@@ -54,7 +54,7 @@ Desde \*sistemas de protección\* hasta el \*funcionamiento del silicio\*, esta 
 
 <div align="center">
 
- <img src="./Ingenieria/pics/Diferentes\_Circuitos\_Integrados.png" alt="Imagen de liCiencia2" width="400">
+ <img src="./pics/Diferentes\_Circuitos\_Integrados.png" alt="Imagen de liCiencia2" width="400">
 
  <br>
 

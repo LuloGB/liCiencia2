@@ -21,7 +21,7 @@ Partiendo de variada documentación, buscamos que el conocimiento sea más alcan
 - [Física](https://github.com/LuloGB/liCiencia2/tree/main/Fisica)  
   (Trabajando en ello)
 - [Ingeniería](https://github.com/LuloGB/liCiencia2/tree/main/Ingenieria)  
-  - [Electrónica](#)
+  - [Electrónica](https://github.com/LuloGB/liCiencia2/tree/main/Ingenieria/Electronica)
 
 ### Redes sociales
 

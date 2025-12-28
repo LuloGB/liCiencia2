@@ -16,7 +16,7 @@ De esta forma pasamos de entender cómo se comporta el segundo elemento más abu
 <div align="center">
   <img src="./pics/Diferentes_transistores.png" alt="Diferentes transistores" width="400">
   <br>
-  <sub>*Img. 1: Diferentes transistores.*</sub>
+  <sub>Img. 1: Diferentes transistores.</sub>
 </div>
 
 ## Digital
@@ -28,8 +28,18 @@ Cuando unimos componentes pasivos junto con activos en ciertas configuraciones, 
 <div align="center">
   <img src="./pics/Diferentes_Circuitos_Integrados.png" alt="Diferentes circuitos integrados" width="400">
   <br>
-  <sub>*Img. 2: Diferentes circuitos integrados.*</sub>
+  <sub>Img. 2: Diferentes circuitos integrados.</sub>
 </div>
+
+
+
+
+
+
+
+
+
+
 
 
 Toda esta rama de la ingeniería es casi infinita de lo mucho que se puede ver, tanto de estudio como de aplicación; además, se encuentra en compañía de otros campos, como el control industrial o los sistemas de comunicaciones, a los que se les podría dedicar media vida.

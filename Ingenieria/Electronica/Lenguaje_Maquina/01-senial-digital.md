@@ -1,5 +1,6 @@
 # Señal Continua y discreta.
 El elemento más básico e importante en la electrónica es el *electrón*. Este, al desplazarse por los diferentes elementos hace que surja la *intensidad*, pero para que exista este movimiento tenemos algo que llamaremos  **voltaje** -o **tensión**, que usaremos indistintamente: esta puede ser grande, pequeña o negativa. Esta variación, si la medimos a lo largo del tiempo, conseguiremos una *amplitud*. Si esta amplitud varía, conseguimos una *señal continua* (*Fig 1.*), que es la base de la electrónica analógica.
+
 El trabajar este tipo de señales es muy costoso: son necesarios grandes aparatos que generalmente son difíciles de usar. Esto surge por el hecho que trabajamos con "la señal completa". Una solución es medir cada cierto tiempo -llamado *periodo*- la tensión que hay en ese instante. De esta forma tenemos una **señal discreta**, que son las que usan nuestros ordenadores.
 
 <div align="center">
@@ -7,6 +8,7 @@ El trabajar este tipo de señales es muy costoso: son necesarios grandes aparato
   <br>
   <sub>*Fig 1. Señal continua.*</sub>
 </div>
+<br>
 
 Imaginemos una señal como la de la figura 1. En el eje vertical tenemos <u>la amplitud</u>, que llamaremos *V*, y en el horizontal el tiempo *t*. Cuando va pasando el tiempo, vemos que la señal ha ido cambiando su valor de amplitud: es porque es una señal variable. Vamos a *discretizarla*.
 
@@ -15,6 +17,7 @@ Imaginemos una señal como la de la figura 1. En el eje vertical tenemos <u>la a
   <br>
   <sub>*Fig 2. Señal discretizada sobre Señal conitnua.*</sub>
 </div>
+<br>
 
 Tomamos un periodo *T*, que es una cantidad de tiempo fija, y medimos V cada dicho T. Esto genera unos puntos que, si los unimos con rectas horizontales y verticales, nos queda algo parecido a una escalera (Fig 2.), pero que es parecida a la señal original. De esta forma, hemos *digitalizado* una señal: así es como piensan en verdad los ordenadores.
 
@@ -29,6 +32,7 @@ Vamos a simplificarlo un poco más y vamos a usar solo dos valores: voltaje bajo
   <br>
   <sub>*Fig 3. Ejemplo con bombillos. Izquierda en $V_H$. Derecha en $V_L$.*</sub>
 </div>
+<br>
 
 Si lo volvemos aún más simple, podemos pasar de un bombillo a un número, que sería el equivalente a que esté encendido a un 1, y si está apagado a un 0. Conceptualmente, así funciona el binario en lo ordenadores.
 Aunque vamos a ser sinceros, los ordenadores no entienden de números, solo de tensiones, que sus <u>valores típicos son de 5V o 3.3V a 0V</u>.
@@ -38,6 +42,7 @@ Aunque vamos a ser sinceros, los ordenadores no entienden de números, solo de t
   <br>
   <sub>*Fig 4. Rangos de tensión de una señal de ordenador.*</sub>
 </div>
+<br>
 
 En la figura 4 tenemos una representación en la que dividimos voltaje alto y bajo. Como no son señales perfectas, tenemos un rango, comprendido en máximo y mínimo. Con este rango otenemos la franja de *High* /ha🇮/ y *Low* /ləΩ/, alto y bajo, respectivamente. En medio, entre $V_{\text{H(min)}}$ y $V_{\text{L(max)}}$ surge algo llamado incertidumbre, que es lo bueno de las señales digitales: como estamos midiendo solo entre algo y bajo, todo el *ruido*, que es basura que porta la señal, es "comido" por esta incertidumbre, eliminando posibles problemas.
 
@@ -56,6 +61,7 @@ Recordemos la señal discretizada, la de los escaloncitos. Teniendo High y Low v
   <br>
   <sub>*Fig 5. Partes de una señal ideal.*</sub>
 </div>
+<br>
 
 Con el ejemplo de la figura 5 podemos ver todo: viendo de izquierda a derecha partimos del valor Low y, en un instante $t$, saltamos a High. A este salto se le da el nombre de *flanco de subida*. Si seguimos, vemos otro paso de High a Low, que también es un flanco, pero esta vez *de bajada*. Con esto, ya tenemos una señal digital.
 
@@ -68,8 +74,10 @@ En la realidad, no es así. Para los curiosos, aquí les vengo a contar la verda
   <br>
   <sub>*Fig 6. Partes de una señal real.*</sub>
 </div>
+<br>
 
-Vamos a volver a la señal ideal, y supongamos que pasamos de bajo a alto. Ahora sucede algo distinto: la señal asciende muy lentamente. Esto es porque existen efectos capacitivos que no teníamos en cuenta antes. Poco a poco va subiendo y cuando ha pasado el 90% del total de la señal, podemos decir que estamos en High. De lo que ha tarado de pasar del 10% al 90 se le llama *tiempo de subida*. 
+Vamos a volver a la señal ideal, y supongamos que pasamos de bajo a alto. Ahora sucede algo distinto: la señal asciende muy lentamente. Esto es porque existen efectos capacitivos que no teníamos en cuenta antes. Poco a poco va subiendo y cuando ha pasado el 90% del total de la señal, podemos decir que estamos en High. De lo que ha tarado de pasar del 10% al 90 se le llama *tiempo de subida*.
+
 Cuando llega a alta, no se queda quieto de inmediato, sino aparece una "inercia" que le hace continuar un poco más. El punto más alto se le llama *Sobreimpulso*. Luego, como también hay otros efectos, ocurre una oscilación, que es el *rizado* (a tener en cuenta que siempre aparece cuando se cambia de un estado a otro, ya sea de alto a bajo como de bajo a alto). Por último, la señal se estabiliza y permanece en ese estado.
 Por último, al igual que pasa con el flanco de subida que hay un tiempo de subida, en el flanco de bajada hay un *tiempo de bajada*. Pero, ¿y el tiempo del pulso? Sencillo: es lo que ha tardado de pasar del 50% de un flanco a otro flanco, denominado *ancho de pulso*.
 

@@ -94,13 +94,13 @@ Con esto ya tenemos lo básico para entender lo que es una señal digital, pero 
 <hr>
 <table width="100%" style="border: none;">
   <tr>
-    <td width="100%" align="left" style="border: none;">
+    <td width="50%" align="left" style="border: none; padding-right: 10px;">
       <a href="https://github.com/LuloGB/liCiencia2/tree/main/Ingenieria/Electronica/Lenguaje_Maquina">
         <strong>⬅️ Atrás</strong><br>
         <sub>Volver al inicio</sub>
       </a>
     </td>
-    <td width="100%" align="right" style="border: none;">
+    <td width="50%" align="right" style="border: none; padding-left: 10px;">
       <a href="">
         <strong>Siguiente ➡️</strong><br>
         <sub>Decimal y binario.</sub>

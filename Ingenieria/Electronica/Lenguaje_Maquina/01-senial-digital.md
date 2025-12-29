@@ -6,7 +6,7 @@ El trabajar este tipo de señales es muy costoso: son necesarios grandes aparato
 <div align="center">
   <img src="https://github.com/LuloGB/liCiencia2/blob/main/Ingenieria/Electronica/pics/lenguaje_maquina/senial-digital/Fig%201.png" alt="Señal continua" width="400">
   <br>
-  <sub>*Fig 1. Señal continua.*</sub>
+  <sub><em>Fig 1. Señal continua.</em></sub>
 </div>
 <br>
 
@@ -15,7 +15,7 @@ Imaginemos una señal como la de la figura 1. En el eje vertical tenemos <u>la a
 <div align="center">
   <img src="https://github.com/LuloGB/liCiencia2/blob/main/Ingenieria/Electronica/pics/lenguaje_maquina/senial-digital/Fig%202.png" alt="Señal discretizada" width="400">
   <br>
-  <sub>*Fig 2. Señal discretizada sobre Señal conitnua.*</sub>
+  <sub><em>Fig 2. Señal discretizada sobre Señal conitnua.</em></sub>
 </div>
 <br>
 
@@ -30,17 +30,17 @@ Vamos a simplificarlo un poco más y vamos a usar solo dos valores: voltaje bajo
 <div align="center">
   <img src="https://github.com/LuloGB/liCiencia2/blob/main/Ingenieria/Electronica/pics/lenguaje_maquina/senial-digital/Fig%203.png" alt="Ejemplo bombillos" width="400">
   <br>
-  <sub>*Fig 3. Ejemplo con bombillos. Izquierda en $V_H$. Derecha en $V_L$.*</sub>
+  <sub><em>Fig 3. Ejemplo con bombillos. Izquierda en $V_H$. Derecha en $V_L$.</em></sub>
 </div>
 <br>
 
-Si lo volvemos aún más simple, podemos pasar de un bombillo a un número, que sería el equivalente a que esté encendido a un 1, y si está apagado a un 0. Conceptualmente, así funciona el binario en lo ordenadores.
+Si lo volvemos aún más simple, podemos pasar de un bombillo a un número, que sería el equivalente a que esté encendido a un 1, y si está apagado a un 0. Conceptualmente, así funciona el binario en los ordenadores.
 Aunque vamos a ser sinceros, los ordenadores no entienden de números, solo de tensiones, que sus <u>valores típicos son de 5V o 3.3V a 0V</u>.
 
 <div align="center">
   <img src="https://github.com/LuloGB/liCiencia2/blob/main/Ingenieria/Electronica/pics/lenguaje_maquina/senial-digital/Fig%204.png" alt="Rangos de tensión" width="400">
   <br>
-  <sub>*Fig 4. Rangos de tensión de una señal de ordenador.*</sub>
+  <sub><em>Fig 4. Rangos de tensión de una señal de ordenador.</em></sub>
 </div>
 <br>
 
@@ -59,7 +59,7 @@ Recordemos la señal discretizada, la de los escaloncitos. Teniendo High y Low v
 <div align="center">
   <img src="https://github.com/LuloGB/liCiencia2/blob/main/Ingenieria/Electronica/pics/lenguaje_maquina/senial-digital/Fig%205.png" alt="Señal Ideal" width="400">
   <br>
-  <sub>*Fig 5. Partes de una señal ideal.*</sub>
+  <sub><em>Fig 5. Partes de una señal ideal.</em></sub>
 </div>
 <br>
 
@@ -72,7 +72,7 @@ En la realidad, no es así. Para los curiosos, aquí les vengo a contar la verda
 <div align="center">
   <img src="https://github.com/LuloGB/liCiencia2/blob/main/Ingenieria/Electronica/pics/lenguaje_maquina/senial-digital/Fig%206.png" alt="Señal Real" width="400">
   <br>
-  <sub>*Fig 6. Partes de una señal real.*</sub>
+  <sub><em>Fig 6. Partes de una señal real.</em></sub>
 </div>
 <br>
 
@@ -97,13 +97,13 @@ Con esto ya tenemos lo básico para entender lo que es una señal digital, pero 
     <td width="50%" align="left" style="border: none;">
       <a href="https://github.com/LuloGB/liCiencia2/tree/main/Ingenieria/Electronica/Lenguaje_Maquina">
         <strong>⬅️ Atrás</strong><br>
-        <small>Volver al inicio</small>
+        <sub>Volver al inicio</sub>
       </a>
     </td>
     <td width="50%" align="right" style="border: none;">
       <a href="">
         <strong>Siguiente ➡️</strong><br>
-        <small>Decimal y binario.</small>
+        <sub>Decimal y binario.</sub>
       </a>
     </td>
   </tr>

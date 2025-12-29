@@ -3,7 +3,7 @@ El elemento más básico e importante en la electrónica es el *electrón*. Este
 El trabajar este tipo de señales es muy costoso: son necesarios grandes aparatos que generalmente son difíciles de usar. Esto surge por el hecho que trabajamos con "la señal completa". Una solución es medir cada cierto tiempo -llamado *periodo*- la tensión que hay en ese instante. De esta forma tenemos una **señal discreta**, que son las que usan nuestros ordenadores.
 
 <div align="center">
-  <img src="" alt="Señal continua" width="400">
+  <img src="https://github.com/LuloGB/liCiencia2/blob/main/Ingenieria/Electronica/pics/lenguaje_maquina/senial-digital/Fig%201.png" alt="Señal continua" width="400">
   <br>
   <sub>*Fig 1. Señal continua.*</sub>
 </div>
@@ -11,7 +11,7 @@ El trabajar este tipo de señales es muy costoso: son necesarios grandes aparato
 Imaginemos una señal como la de la figura 1. En el eje vertical tenemos <u>la amplitud</u>, que llamaremos *V*, y en el horizontal el tiempo *t*. Cuando va pasando el tiempo, vemos que la señal ha ido cambiando su valor de amplitud: es porque es una señal variable. Vamos a *discretizarla*.
 
 <div align="center">
-  <img src="" alt="Señal discretizada" width="400">
+  <img src="https://github.com/LuloGB/liCiencia2/blob/main/Ingenieria/Electronica/pics/lenguaje_maquina/senial-digital/Fig%202.png" alt="Señal discretizada" width="400">
   <br>
   <sub>*Fig 2. Señal discretizada sobre Señal conitnua.*</sub>
 </div>
@@ -25,7 +25,7 @@ Tomamos un periodo *T*, que es una cantidad de tiempo fija, y medimos V cada dic
 Vamos a simplificarlo un poco más y vamos a usar solo dos valores: voltaje bajo $V_L$ y voltaje alto $V_H$. Montamos un circuito simple, de solo una fuente y un bombillo (Fig 3.). Vamos a imaginarnos que la fuente, una simple pila, da $V_H$ cuando el cable está conectado, y cuando no está conectado, como no existe un circuito cerrado, pues da $V_L$.
 
 <div align="center">
-  <img src="" alt="Ejemplo bombillos" width="400">
+  <img src="https://github.com/LuloGB/liCiencia2/blob/main/Ingenieria/Electronica/pics/lenguaje_maquina/senial-digital/Fig%203.png" alt="Ejemplo bombillos" width="400">
   <br>
   <sub>*Fig 3. Ejemplo con bombillos. Izquierda en $V_H$. Derecha en $V_L$.*</sub>
 </div>
@@ -34,7 +34,7 @@ Si lo volvemos aún más simple, podemos pasar de un bombillo a un número, que 
 Aunque vamos a ser sinceros, los ordenadores no entienden de números, solo de tensiones, que sus <u>valores típicos son de 5V o 3.3V a 0V</u>.
 
 <div align="center">
-  <img src="" alt="Rangos de tensión" width="400">
+  <img src="https://github.com/LuloGB/liCiencia2/blob/main/Ingenieria/Electronica/pics/lenguaje_maquina/senial-digital/Fig%204.png" alt="Rangos de tensión" width="400">
   <br>
   <sub>*Fig 4. Rangos de tensión de una señal de ordenador.*</sub>
 </div>
@@ -52,7 +52,7 @@ De esta forma tenemos defininda nuestra señal binaria, pero es angosto trabajar
 Recordemos la señal discretizada, la de los escaloncitos. Teniendo High y Low vamos a hacer que la señal alterne entre estos dos valores. Si tomamos una foto de uno de estos instantes tenemos una especie de rectángulo. Vamos a ver sus partes.
 
 <div align="center">
-  <img src="" alt="Señal Ideal" width="400">
+  <img src="https://github.com/LuloGB/liCiencia2/blob/main/Ingenieria/Electronica/pics/lenguaje_maquina/senial-digital/Fig%205.png" alt="Señal Ideal" width="400">
   <br>
   <sub>*Fig 5. Partes de una señal ideal.*</sub>
 </div>
@@ -64,7 +64,7 @@ Con el ejemplo de la figura 5 podemos ver todo: viendo de izquierda a derecha pa
 En la realidad, no es así. Para los curiosos, aquí les vengo a contar la verdad: las señales digitales no son así en absoluto, ya que presentan muchas más partes y se tienen otros muchos factores en cuenta.
 
 <div align="center">
-  <img src="" alt="Señal Real" width="400">
+  <img src="https://github.com/LuloGB/liCiencia2/blob/main/Ingenieria/Electronica/pics/lenguaje_maquina/senial-digital/Fig%206.png" alt="Señal Real" width="400">
   <br>
   <sub>*Fig 6. Partes de una señal real.*</sub>
 </div>

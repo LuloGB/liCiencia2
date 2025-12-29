@@ -43,8 +43,7 @@ Luego veremos el binario, cómo se trabaja, e iremos complementando con algo de 
 
 ## Publicaciones sobre Electrónica Digital
 
-- [Lenguaje máquina](#)
-  - [Señal digital](#)
+- [Lenguaje máquina](https://github.com/LuloGB/liCiencia2/tree/main/Ingenieria/Electronica/Lenguaje_Maquina)
 
 ## Bibliografía recomendada
 

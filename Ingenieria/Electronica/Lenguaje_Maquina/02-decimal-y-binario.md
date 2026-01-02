@@ -17,7 +17,7 @@ $ 1 · 10^2 + 5 · 10^2 + 7 · 10^0 = 157$
 
 Este método de "descomponer" se puede usar también para el binario. Ahora tenemos el número $10011101$. Repetimos el mismo procedimiento, pero esta vez estamos en la base binaria, en la que solo hay dos símbolos, por tanto, no se eleva a $10$, sino a $2$. Entonces, tomando el dígito y multiplicándolo por la posición, tenemos lo siguiente:
 
-$ 1 · 2^7 || 0 · 2^6 || 0 · 2^5 || 1 · 2^4 || 1 · 2^3 || 1 · 2^2 || 0 · 2^1 || 1 · 2^0 $
+$ 1 · 2^7 | 0 · 2^6 | 0 · 2^5 | 1 · 2^4 | 1 · 2^3 | 1 · 2^2 | 0 · 2^1 | 1 · 2^0 $
 
 > **Lectura:** El truco para leer el binario es solo decir "uno" y "cero", no, como ahora, "diez millones once mil ciento uno", que es hasta pesado. Imagínate hacerlo cuando tenemos 32 dígitos, que es lo normal.
 

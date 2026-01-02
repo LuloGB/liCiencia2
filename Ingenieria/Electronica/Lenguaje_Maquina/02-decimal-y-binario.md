@@ -88,27 +88,18 @@ Este método es mucho más sencillo y solo hace falta saber dividir entre dos.
 Volvamos a nuestro querido $157$ y vamos a irlo dividiendo entre dos hasta que solo quede dividir $1$/$2$. Comenzamos primero dividiendo $157$ entre dos, con lo que tenemos $78$ y de resto $1$. Anotemos el resto, que es importante. El cociente dado, hay que seguirlo trabajando, volviendo a efectuar la división, quedando $39$ de cociente y $0$ de resto. Importante, los ceros hay que también apuntarlos: todos los restos nos van a dar la solución.
 
 $$
-\begin{aligned}
-
-157/2 &= \begin{cases} R = 1 \\ C = 78 \\ \end{cases} \\
-
-78/2 &= \begin{cases} R = 0 \\ C = 39 \\ \end{cases} \\
-
-39/2 &= \begin{cases} R = 1 \\ C = 19 \\ \end{cases} \\
-
-19/2 &= \begin{cases} R = 1 \\ C = 9 \\ \end{cases} \\
-
-9/2 &= \begin{cases} R = 1 \\ C = 4 \\ \end{cases} \\
-
-4/2 &= \begin{cases} R = 0 \\ C = 2 \\ \end{cases} \\
-
-2/2 &= \begin{cases} R = 0 \\ C = 1 \\ \end{cases} \\
-
-1/2 &= \begin{cases} R = 1 \\ C = 0 \\ \end{cases} \\
-
-&\text{fin}
-
-\end{aligned}
+\begin{array}{r|ll}
+\text{División} & \text{Cociente} & \text{Resto} \\
+\hline
+157 / 2 & 78 & \mathbf{1} \quad \uparrow \\
+78 / 2 & 39 & \mathbf{0} \quad | \\
+39 / 2 & 19 & \mathbf{1} \quad | \\
+19 / 2 & 9 & \mathbf{1} \quad | \\
+9 / 2 & 4 & \mathbf{1} \quad | \\
+4 / 2 & 2 & \mathbf{0} \quad | \\
+2 / 2 & 1 & \mathbf{0} \quad | \\
+1 / 2 & \mathbf{0} & \mathbf{1} \quad |
+\end{array}
 $$
 
 Para poder ver cuál es el número en binario, solo hay que reordenar los restos y ponerlos del último conseguido al primero: $10011101$, que es nuestro $157$.

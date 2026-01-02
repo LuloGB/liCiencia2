@@ -91,14 +91,14 @@ $$
 \begin{array}{r|ll}
 \text{División} & \text{Cociente} & \text{Resto} \\
 \hline
-157 / 2 & 78 & \mathbf{1} \quad \uparrow \\
-78 / 2 & 39 & \mathbf{0} \quad | \\
-39 / 2 & 19 & \mathbf{1} \quad | \\
-19 / 2 & 9 & \mathbf{1} \quad | \\
-9 / 2 & 4 & \mathbf{1} \quad | \\
-4 / 2 & 2 & \mathbf{0} \quad | \\
-2 / 2 & 1 & \mathbf{0} \quad | \\
-1 / 2 & \mathbf{0} & \mathbf{1} \quad |
+157 / 2 & 78 & \mathbf{1} \quad \\
+78 / 2 & 39 & \mathbf{0} \quad  \\
+39 / 2 & 19 & \mathbf{1} \quad  \\
+19 / 2 & 9 & \mathbf{1} \quad  \\
+9 / 2 & 4 & \mathbf{1} \quad  \\
+4 / 2 & 2 & \mathbf{0} \quad  \\
+2 / 2 & 1 & \mathbf{0} \quad  \\
+1 / 2 & \mathbf{0} & \mathbf{1} \quad
 \end{array}
 $$
 
@@ -155,12 +155,12 @@ Tenemos nuestro ejemplo, el $0.6875$ y lo multiplicamos por $2$, teniendo $1.375
 
 $$
 \begin{array}{r|ll}
-\text{Operación} & \text{Entero (Bit)} \\
+\text{Operación} & \text{Entero} & \text{Decimales} \\
 \hline
-0.6875 \cdot 2 = 1.375 & \mathbf{1} \quad \downarrow \\
-0.375 \cdot 2 = 0.75 & \mathbf{0} \quad | \\
-0.75 \cdot 2 = 1.5 & \mathbf{1} \quad | \\
-0.5 \cdot 2 = 1.0 & \mathbf{1} \quad \downarrow
+0.6875 \cdot 2 = 1.375 & \mathbf{1} & \mathbf{.375} \quad \downarrow \\
+0.375 \cdot 2 = 0.75 & \mathbf{0} & \mathbf{.75} \quad | \\
+0.75 \cdot 2 = 1.5 & \mathbf{1} & \mathbf{.5} \quad | \\
+0.5 \cdot 2 = 1.0 & \mathbf{1} & \mathbf{.0} \quad \downarrow
 \end{array}
 $$
 

@@ -181,5 +181,5 @@ Con esto ya podemos pasar de base diez (humano) a base dos (máquina), pero si q
 ---
 ### Navegación.
 
-- ➡️ **Siguiente:** [La señal digital](https://github.com/LuloGB/liCiencia2/blob/main/Ingenieria/Electronica/Lenguaje_Maquina/01-senial-digital.md)
-- ⬅️ **Anterior:** [Aritmética binaria](#)
+- ➡️ **Siguiente:** [Aritmética binaria.](#)
+- ⬅️ **Anterior:** [La señal digital.](https://github.com/LuloGB/liCiencia2/blob/main/Ingenieria/Electronica/Lenguaje_Maquina/01-senial-digital.md)

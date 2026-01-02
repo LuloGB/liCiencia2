@@ -1,7 +1,7 @@
 # Señal Continua y discreta.
 El elemento más básico e importante en la electrónica es el *electrón*. Este, al desplazarse por los diferentes elementos hace que surja la *intensidad*, pero para que exista este movimiento tenemos algo que llamaremos  **voltaje** -o **tensión**, que usaremos indistintamente: esta puede ser grande, pequeña o negativa. Esta variación, si la medimos a lo largo del tiempo, conseguiremos una *amplitud*. Si esta amplitud varía, conseguimos una *señal continua* (*Fig 1.*), que es la base de la electrónica analógica.
 
-El trabajar este tipo de señales es muy costoso: son necesarios grandes aparatos que generalmente son difíciles de usar. Esto surge por el hecho que trabajamos con "la señal completa". Una solución es medir cada cierto tiempo -llamado *periodo*- la tensión que hay en ese instante. De esta forma tenemos una **señal discreta**, que son las que usan nuestros ordenadores.
+El trabajar este tipo de señales es muy difícil de procesar y almacenar: son necesarios grandes aparatos que generalmente son difíciles de programar. Esto surge por el hecho que trabajamos con "la señal completa". Una solución es medir cada cierto tiempo -llamado *periodo*- la tensión que hay en ese instante, quitándonos el problema del ruido. De esta forma tenemos una **señal discreta**, que son las que usan nuestros ordenadores.
 
 <div align="center">
   <img src="https://github.com/LuloGB/liCiencia2/blob/main/Ingenieria/Electronica/pics/lenguaje_maquina/senial-digital/Fig%201.png" alt="Señal continua" width="400">
@@ -44,7 +44,7 @@ Aunque vamos a ser sinceros, los ordenadores no entienden de números, solo de t
 </div>
 <br>
 
-En la figura 4 tenemos una representación en la que dividimos voltaje alto y bajo. Como no son señales perfectas, tenemos un rango, comprendido en máximo y mínimo. Con este rango otenemos la franja de *High* /ha🇮/ y *Low* /ləΩ/, alto y bajo, respectivamente. En medio, entre $V_{\text{H(min)}}$ y $V_{\text{L(max)}}$ surge algo llamado incertidumbre, que es lo bueno de las señales digitales: como estamos midiendo solo entre algo y bajo, todo el *ruido*, que es basura que porta la señal, es "comido" por esta incertidumbre, eliminando posibles problemas.
+En la figura 4 tenemos una representación en la que dividimos voltaje alto y bajo. Como no son señales perfectas, tenemos un rango, comprendido en máximo y mínimo. Con este rango otenemos la franja de *High* /ha🇮/ y *Low* /ləΩ/, alto y bajo, respectivamente. En medio, entre $V_{\text{H(min)}}$ y $V_{\text{L(max)}}$ surge algo llamado incertidumbre, que es lo bueno de las señales digitales: como estamos midiendo solo entre algo y bajo, todo el *ruido*, que es basura que porta la señal, es "comido" por esta incertidumbre, aunque el circuito llega a ser impredecible en esta zona.
 
 ---
 

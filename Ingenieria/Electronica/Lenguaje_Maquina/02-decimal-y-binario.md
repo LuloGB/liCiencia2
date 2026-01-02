@@ -154,17 +154,14 @@ Con saber multiplicar es más que suficiente, pero esta vez, hay un pequeño tru
 Tenemos nuestro ejemplo, el $0.6875$ y lo multiplicamos por $2$, teniendo $1.375$. Separamos lo que tengamos de unidad ($1$) y nos quedamos con los valores a la derecha de la coma ($0.375$), con los que vamos a seguir trabajando. Volviendo a duplicar, conseguimos $0$ y $.75$, y así seguimos hasta llegar al final no tener nada tras la coma.
 
 $$
-\begin{aligned}
-
-0.6875·2 &= \begin{cases} U = 1 \\ d = .375 \\ \end{cases} \\
-
-0.375·2 &= \begin{cases} U = 0 \\ d = .75 \\ \end{cases} \\
-
-0.75·2 &= \begin{cases} U = 1 \\ d = .5 \\ \end{cases} \\
-
-0.5·2 &= \begin{cases} U = 1 \\ d = .0 \\ \end{cases} \\
-
-\end{aligned}
+\begin{array}{r|ll}
+\text{Operación} & \text{Entero (Bit)} \\
+\hline
+0.6875 \cdot 2 = 1.375 & \mathbf{1} \quad \downarrow \\
+0.375 \cdot 2 = 0.75 & \mathbf{0} \quad | \\
+0.75 \cdot 2 = 1.5 & \mathbf{1} \quad | \\
+0.5 \cdot 2 = 1.0 & \mathbf{1} \quad \downarrow
+\end{array}
 $$
 
 > **Aclaración:** Tanto en división como en multiplicación sucesiva para construir los números de izquierda a derecha, se apuntan los resultados del último al primero; y si se quieren poner de derecha a izquierda, es al revés el apunte, de arriba a abajo.

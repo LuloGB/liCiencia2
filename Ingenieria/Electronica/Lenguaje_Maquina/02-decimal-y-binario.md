@@ -90,45 +90,21 @@ Volvamos a nuestro querido $157$ y vamos a irlo dividiendo entre dos hasta que s
 $$
 \begin{aligned}
 
-157/2 &= \begin{cases}
-    R = 1 \\
-    C = 78 \\
-    \end{cases} \\
+157/2 &= \begin{cases} R = 1 \\ C = 78 \\ \end{cases} \\
 
-78/2 &= \begin{cases}
-    R = 0 \\
-    C = 39 \\
-    \end{cases} \\
+78/2 &= \begin{cases} R = 0 \\ C = 39 \\ \end{cases} \\
 
-39/2 &= \begin{cases}
-    R = 1 \\
-    C = 19 \\
-    \end{cases} \\
+39/2 &= \begin{cases} R = 1 \\ C = 19 \\ \end{cases} \\
 
-19/2 &= \begin{cases}
-    R = 1 \\
-    C = 9 \\
-    \end{cases} \\
+19/2 &= \begin{cases} R = 1 \\ C = 9 \\ \end{cases} \\
 
-9/2 &= \begin{cases}
-    R = 1 \\
-    C = 4 \\
-    \end{cases} \\
+9/2 &= \begin{cases} R = 1 \\ C = 4 \\ \end{cases} \\
 
-4/2 &= \begin{cases}
-    R = 0 \\
-    C = 2 \\
-    \end{cases} \\
+4/2 &= \begin{cases} R = 0 \\ C = 2 \\ \end{cases} \\
 
-2/2 &= \begin{cases}
-    R = 0 \\
-    C = 1 \\
-    \end{cases} \\
+2/2 &= \begin{cases} R = 0 \\ C = 1 \\ \end{cases} \\
 
-1/2 &= \begin{cases}
-    R = 1 \\
-    C = 0 \\
-    \end{cases} \\
+1/2 &= \begin{cases} R = 1 \\ C = 0 \\ \end{cases} \\
 
 &\text{fin}
 
@@ -189,25 +165,13 @@ Tenemos nuestro ejemplo, el $0.6875$ y lo multiplicamos por $2$, teniendo $1.375
 $$
 \begin{aligned}
 
-0.6875·2 &= \begin{cases}
-        U = 1 \\
-        d = .375 \\
-    \end{cases} \\
+0.6875·2 &= \begin{cases} U = 1 \\ d = .375 \\ \end{cases} \\
 
-0.375·2 &= \begin{cases}
-        U = 0 \\
-        d = .75 \\
-    \end{cases} \\
+0.375·2 &= \begin{cases} U = 0 \\ d = .75 \\ \end{cases} \\
 
-0.75·2 &= \begin{cases}
-        U = 1 \\
-        d = .5 \\
-    \end{cases} \\
+0.75·2 &= \begin{cases} U = 1 \\ d = .5 \\ \end{cases} \\
 
-0.5·2 &= \begin{cases}
-        U = 1 \\
-        d = .0 \\
-    \end{cases} \\
+0.5·2 &= \begin{cases} U = 1 \\ d = .0 \\ \end{cases} \\
 
 \end{aligned}
 $$
@@ -219,3 +183,15 @@ Y, mirando los valores de abajo hacia arriba, para construirlo de la coma para l
 ---
 
 Con esto ya podemos pasar de base diez (humano) a base dos (máquina), pero si queremos que la máquina sume o reste no la vamos a hacer pasar a binario para poder efectuar el cálculo, por lo que en la próxima publicación, explicaré cómo se hace.
+
+---
+---
+# Fuentes.
+
+- *Fundamentos de sistemas digitales* – L. Floyd.
+
+---
+### Navegación.
+
+- ➡️ **Siguiente:** [La señal digital](https://github.com/LuloGB/liCiencia2/blob/main/Ingenieria/Electronica/Lenguaje_Maquina/01-senial-digital.md)
+- ⬅️ **Anterior:** [Aritmética binaria](#)

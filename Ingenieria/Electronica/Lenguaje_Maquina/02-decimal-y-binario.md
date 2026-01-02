@@ -23,7 +23,7 @@ $1 · 2^7 | 0 · 2^6 | 0 · 2^5 | 1 · 2^4 | 1 · 2^3 | 1 · 2^2 | 0 · 2^1 | 1 
 
 Con esto, tenemos el número catalogado, pero lo sorprendente viene después, que es sumándolo:
 
-$ 1 · 2^7 + 0 · 2^6 + 0 · 2^5 + 1 · 2^4 + 1 · 2^3 + 1 · 2^2 + 0 · 2^1+ 1 · 2^0 \Rightarrow 1 · 2^7 + 1 · 2^4 + 1 · 2^3 + 1 · 2^2 + 1 · 2^0 = 157 $
+$1 · 2^7 + 0 · 2^6 + 0 · 2^5 + 1 · 2^4 + 1 · 2^3 + 1 · 2^2 + 0 · 2^1+ 1 · 2^0 \Rightarrow 1 · 2^7 + 1 · 2^4 + 1 · 2^3 + 1 · 2^2 + 1 · 2^0 = 157 $
 
 > **Aclaración:** $n^0$, siendo $n$ cualquier número real, quitando el cero, siempre da $1$.
 

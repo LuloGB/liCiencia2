@@ -61,10 +61,10 @@ Para no parecer que lo dejo a medias, les voy a dar un ejemplo muy sencillo: $11
 
 $$
 \begin{array}{r}
-    \mathbf{10} \\
-   11 \overline{) 110} \\
-   -11\phantom{0} \\ \hline
-    00
+\mathbf{10} \\
+11 \overline{) 110} \\
+-11\ \  \\ \hline
+00
 \end{array}
 $$
 
@@ -83,5 +83,5 @@ Ya creo que hemos tenido suficientes matemáticas. Antes quiero coger un pequeñ
 ---
 ### Navegación.
 
-- ➡️ **Siguiente:** [Octal, hexadecimal y BCD.](https://github.com/LuloGB/liCiencia2/blob/main/Ingenieria/Electronica/Lenguaje_Maquina/01-senial-digital.md)
+- ➡️ **Siguiente:** [Octal, hexadecimal y BCD.](#)
 - ⬅️ **Anterior:** [Decimal y binario.](02-decimal-y-binario.md)

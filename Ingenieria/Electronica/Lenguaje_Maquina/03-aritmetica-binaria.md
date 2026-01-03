@@ -63,7 +63,7 @@ $$
 \begin{array}{r}
 \mathbf{10} \\
 11 \overline{) 110} \\
--11\ \  \\ \hline
+-11\ \ \\ \hline
 00
 \end{array}
 $$

@@ -1,8 +1,15 @@
 # Bases.
 
+> ✍🏻 **Autor:** Lulo.  
+> 📚 **Nivel:** Fácil.  
+> ⌛ **Tiempo lectura:** 20 min.  
+> 📖 **Lectura previa:** No necesaria.  
+> 🧮 **Matemáticas:** Básicas.  
+> 🏷️ **Etiquetas:** `Binario`, `Decimal`, `Conversión de bases`.  
+
 El manejo de los números es algo que nos acompaña en nuestro día a día, y una herramienta accesible que empleamos son los dedos de nuestras manos. Con ellos, podemos contar desde el cero al diez: esto es lo que conforma la *base diez*.
 
-> **Aclaración:** Más concretamente, la base diez emplea los dígitos del 0 al 9.
+> ☝🏻🤓 **Aclaración:** Más concretamente, la base diez emplea los dígitos del 0 al 9.
 
 Ya entendiendo la [señal digital](https://github.com/LuloGB/liCiencia2/blob/main/Ingenieria/Electronica/Lenguaje_Maquina/01-senial-digital.md), teníamos el problema de que no sabíamos trabajar matemáticamente eso. Como primer punto, como ya habíamos hecho, fue convertir High en un uno, y Low en un cero. Con estos dos símbolos, podemos representar toda una base numérica, que vamos a darle el nombre de **binario**.
 Hemos logrado pasar de cuadrados a números, que con ellos podremos hacer cuentas, pero antes de ponernos locos sumando y restando, vamos a intentar primero traducirlos: antes de ponerse uno a hacer oraciones en inglés, tenemos que saber cómo pasar del español al inglés. Con las bases, sucede lo mismo, por lo que lo siguiente será aprender *conversiones de bases*.
@@ -13,23 +20,23 @@ Repasaremos primero cómo se construye la base diez. Tomemos el número $157$, e
 
 $1 · 10^2 + 5 · 10^2 + 7 · 10^0 = 157$
 
-> **Aclaración:** Cuando empezamos a contar, no iniciamos en $10^1$, sino en $10^0$.
+> ☝🏻🤓 **Aclaración:** Cuando empezamos a contar, no iniciamos en $10^1$, sino en $10^0$.
 
 Este método de "descomponer" se puede usar también para el binario. Ahora tenemos el número $10011101$. Repetimos el mismo procedimiento, pero esta vez estamos en la base binaria, en la que solo hay dos símbolos, por tanto, no se eleva a $10$, sino a $2$. Entonces, tomando el dígito y multiplicándolo por la posición, tenemos lo siguiente:
 
 $1 · 2^7 | 0 · 2^6 | 0 · 2^5 | 1 · 2^4 | 1 · 2^3 | 1 · 2^2 | 0 · 2^1 | 1 · 2^0 $
 
-> **Lectura:** El truco para leer el binario es solo decir "uno" y "cero", no, como ahora, "diez millones once mil ciento uno", que es hasta pesado. Imagínate hacerlo cuando tenemos 32 dígitos, que es lo normal.
+> 🧐 **Lectura:** El truco para leer el binario es solo decir "uno" y "cero", no, como ahora, "diez millones once mil ciento uno", que es hasta pesado. Imagínate hacerlo cuando tenemos 32 dígitos, que es lo normal.
 
 Con esto, tenemos el número catalogado, pero lo sorprendente viene después, que es sumándolo:
 
 $1 · 2^7 + 0 · 2^6 + 0 · 2^5 + 1 · 2^4 + 1 · 2^3 + 1 · 2^2 + 0 · 2^1+ 1 · 2^0 \Rightarrow 1 · 2^7 + 1 · 2^4 + 1 · 2^3 + 1 · 2^2 + 1 · 2^0 = 157 $
 
-> **Aclaración:** $n^0$, siendo $n$ cualquier número real, quitando el cero, siempre da $1$.
+> ☝🏻🤓 **Aclaración:** $n^0$, siendo $n$ cualquier número real, quitando el cero, siempre da $1$.
 
 De esta forma hemos pasado de una ristra de unos y ceros a un número que entendemos más: así funciona el *método de conversión binario-decimal*. Ahora, ¿qué pasa si lo queremos hacer al revés?
 
-> **Ejercicio:** Esto también funciona cuando tenemos números de coma flotante. Intenta hacer la conversión de 1011,110101, a ver si te sale. **Pista:** Igual que para las unidades y superiores usamos enteros de $0$ hacia arriba, para los que están por debajo de la coma son con enteros negativos.
+> 📒 **Ejercicio:** Esto también funciona cuando tenemos números de coma flotante. Intenta hacer la conversión de 1011,110101, a ver si te sale. **Pista:** Igual que para las unidades y superiores usamos enteros de $0$ hacia arriba, para los que están por debajo de la coma son con enteros negativos.
 
 # Conversión decimal a binario.
 
@@ -52,7 +59,7 @@ $$
 
 Estos son los nueve principales pesos de $2$, que son en verdad muy importante sabérselos, pero por ahora, solo necesito que lo entiendas.
 
-> **Curiosidad:** ¿La secuencia de números te suena? 16 GB, 32 GB, 128 GB, 256 GB... A que si vas a una tienda de discos de memoria, como pendrives o disco duros, te los venden en esta secuencia. Pues es por los pesos de 2.
+> ❗ **Curiosidad:** ¿La secuencia de números te suena? 16 GB, 32 GB, 128 GB, 256 GB... A que si vas a una tienda de discos de memoria, como pendrives o disco duros, te los venden en esta secuencia. Pues es por los pesos de 2.
 
 ## Suma de pesos.
 
@@ -83,7 +90,7 @@ Volvimos a tener el $10011101$ del comienzo, que, como demostramos antes, es el 
 
 Este método es mucho más sencillo y solo hace falta saber dividir entre dos.
 
-> **Experiencia:** Recuerdo en Informática cuando tuvimos que aprender a usar este método y lo que más nos costó fue recordar cómo se dividía obteniendo el resto, y sin tener que usar la calculadora.
+> 😬 **Experiencia:** Recuerdo en Informática cuando tuvimos que aprender a usar este método y lo que más nos costó fue recordar cómo se dividía obteniendo el resto, y sin tener que usar la calculadora.
 
 Volvamos a nuestro querido $157$ y vamos a irlo dividiendo entre dos hasta que solo quede dividir $1$/$2$. Comenzamos primero dividiendo $157$ entre dos, con lo que tenemos $78$ y de resto $1$. Anotemos el resto, que es importante. El cociente dado, hay que seguirlo trabajando, volviendo a efectuar la división, quedando $39$ de cociente y $0$ de resto. Importante, los ceros hay que también apuntarlos: todos los restos nos van a dar la solución.
 
@@ -104,7 +111,7 @@ $$
 
 Para poder ver cuál es el número en binario, solo hay que reordenar los restos y ponerlos del último conseguido al primero: $10011101$, que es nuestro $157$.
 
-> **Ejercicio:** si en verdad lo entendiste, inténtalo con un número más grande, como el 1612, a ver si logras pasarlo a binario.
+> 📒 **Ejercicio:** si en verdad lo entendiste, inténtalo con un número más grande, como el 1612, a ver si logras pasarlo a binario.
 
 
 # Fracción decimal a binario.
@@ -115,7 +122,7 @@ Con estas herramientas somos capaces de pasar cualquier número entero a binario
 
 Esto tiene algo de truco, y es que la suma de pesos funciona igual: para los decimales, en vez de elevar a naturales, hay que hacerlo a enteros negativos.
 
-> **Aclaración** ¿Por qué se empieza en -1 y no en -0? Muy simple, porque si elevamos cualquier número a -0, este sería la inversa del mismo número elevado a 0, que da 1, y la inversa de 1 es 1, por tanto, esto nos da igual.
+> ☝🏻🤓 **Aclaración** ¿Por qué se empieza en -1 y no en -0? Muy simple, porque si elevamos cualquier número a -0, este sería la inversa del mismo número elevado a 0, que da 1, y la inversa de 1 es 1, por tanto, esto nos da igual.
 
 $$
 \begin{aligned}
@@ -164,7 +171,7 @@ $$
 \end{array}
 $$
 
-> **Aclaración:** Tanto en división como en multiplicación sucesiva para construir los números de izquierda a derecha, se apuntan los resultados del último al primero; y si se quieren poner de derecha a izquierda, es al revés el apunte, de arriba a abajo.
+> ☝🏻🤓 **Aclaración:** Tanto en división como en multiplicación sucesiva para construir los números de izquierda a derecha, se apuntan los resultados del último al primero; y si se quieren poner de derecha a izquierda, es al revés el apunte, de arriba a abajo.
 
 Y, mirando los valores de abajo hacia arriba, para construirlo de la coma para la derecha, hemos vuelto a conseguir $0.1011$.
 

@@ -1,5 +1,12 @@
 # Aritmética binaria.
 
+> ✍🏻 **Autor:** Lulo.  
+> 📚 **Nivel:** Fácil.  
+> ⌛ **Tiempo lectura:** ~10 min.  
+> 📖 **Lectura previa:** [Decimal y binario.](02-decimal-y-binario.md)  
+> 🧮 **Matemáticas:** Básicas.  
+> 🏷️ **Etiquetas:** `Binario`.  
+
 Hemos pasado de [decimal a binario](https://github.com/LuloGB/liCiencia2/blob/pre-publicaciones-electronica/Ingenieria/Electronica/Lenguaje_Maquina/02-decimal-y-binario.md), pero para poder efectuar cálculos y no querer marearnos con los números, sale más efectivo aprender cómo se hace en base 2.
 
 Seguramente habrás oído el chiste informático de 1+1 es igual a 10. Hoy estás en tu día de suerte (o mala suerte), porque vas a entenderlo.
@@ -8,7 +15,7 @@ Seguramente habrás oído el chiste informático de 1+1 es igual a 10. Hoy está
 
 Como en el colegio, lo que nos enseñan justo después de contar, es sumar. En binario es exactametne igual: si sumas a $0$, el resultado es el mismo. Y cuando sumamos un número que da mayor a $1$ (como $1+1$), tenemos algo que llamaremos *acarreo* o *carry* /ˈkæɹi/ y consiste en que desplazamos el $1$ que nos sobra a la izquierda y ponemos un 0 en la derecha. Es como si cogiéramos el uno sobrante, ponemos el resultado a cero y lo sumamos a la posición de la izquierda.
 
-> **Aclaración:** Si sumas 9 + 1, sucede que te da 10. Esto es porque hemos metido un acarreo de 1, y ponemos el número más pequeño a la derecha, que es cero. En todas las bases es así.
+> ☝🏻🤓 **Aclaración:** Si sumas 9 + 1, sucede que te da 10. Esto es porque hemos metido un acarreo de 1, y ponemos el número más pequeño a la derecha, que es cero. En todas las bases es así.
 
 $$
 \begin{aligned}
@@ -40,7 +47,7 @@ Al igual que teníamos el acarreo, existe el *accarreo negativo*, que este es co
 
 Seguramente ya sabían multiplicar binario antes de llegar a leer esto: si es verdadero y lo pongo falso es falso; si es verdadero y verdadero, es verdadero; pero si es falso y falso, es verdadero. Si cambiamos "verdadero" por 1 y "falso" por 0, tenemos multiplicación binaria.
 
-> **Curiosidad:** Toda la lógica, incluyendo la multiplicación, está basada en los trabajos de *George Boole*, que seguramente te suene más por estadística.
+> ❗ **Curiosidad:** Toda la lógica, incluyendo la multiplicación, está basada en los trabajos de *George Boole*, que seguramente te suene más por estadística.
 
 $$
 \begin{aligned}
@@ -51,7 +58,7 @@ $$
 \end{aligned}
 $$
 
-> **Experiencia:** Les prometo que de toda la aritmética binaria, de la multiplicación se van a hartar, por lo que es muy importante entenderlo ahora.
+> 😬 **Experiencia:** Les prometo que de toda la aritmética binaria, de la multiplicación se van a hartar, por lo que es muy importante entenderlo ahora.
 
 # División.
 
@@ -67,7 +74,7 @@ $$
 \end{array}
 $$
 
-> **Ejercicio:** Si no me crees, convierte $110$ y $11$ a decimal, efectua la división y luego, el resultado, pásalo a binario a ver si no es igual a $10$.
+> 📒 **Ejercicio:** Si no me crees, convierte $110$ y $11$ a decimal, efectua la división y luego, el resultado, pásalo a binario a ver si no es igual a $10$.
 
 ---
 

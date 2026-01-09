@@ -1,4 +1,12 @@
 # Señal Continua y discreta.
+
+> ✍🏻 **Autor:** Lulo.  
+> 📚 **Nivel:** Fácil.  
+> ⌛ **Tiempo lectura:** 10-15 min.  
+> 📖 **Lectura previa:** No necesaria.  
+> 🧮 **Matemáticas:** Básicas.  
+> 🏷️ **Etiquetas:** `Electrónica`, `Electrónica Analógica`, `Electrónica Digital`,`Señal Digital`.  
+
 El elemento más básico e importante en la electrónica es el *electrón*. Este, al desplazarse por los diferentes elementos hace que surja la *intensidad*, pero para que exista este movimiento tenemos algo que llamaremos  **voltaje** -o **tensión**, que usaremos indistintamente: esta puede ser grande, pequeña o negativa. Esta variación, si la medimos a lo largo del tiempo, conseguiremos una *amplitud*. Si esta amplitud varía, conseguimos una *señal continua* (*Fig 1.*), que es la base de la electrónica analógica.
 
 El trabajar este tipo de señales es muy difícil de procesar y almacenar: son necesarios grandes aparatos que generalmente son difíciles de programar. Esto surge por el hecho que trabajamos con "la señal completa". Una solución es medir cada cierto tiempo -llamado *periodo*- la tensión que hay en ese instante, quitándonos el problema del ruido. De esta forma tenemos una **señal discreta**, que son las que usan nuestros ordenadores.

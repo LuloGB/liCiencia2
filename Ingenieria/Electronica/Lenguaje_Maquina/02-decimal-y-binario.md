@@ -26,7 +26,7 @@ Este método de "descomponer" se puede usar también para el binario. Ahora tene
 
 $1 · 2^7 | 0 · 2^6 | 0 · 2^5 | 1 · 2^4 | 1 · 2^3 | 1 · 2^2 | 0 · 2^1 | 1 · 2^0 $
 
-> 🧐 **Lectura:** El truco para leer el binario es solo decir "uno" y "cero", no, como ahora, "diez millones once mil ciento uno", que es hasta pesado. Imagínate hacerlo cuando tenemos 32 dígitos, que es lo normal.
+> 🧐 **Interpretación:** El truco para leer el binario es solo decir "uno" y "cero", no, como ahora, "diez millones once mil ciento uno", que es hasta pesado. Imagínate hacerlo cuando tenemos 32 dígitos, que es lo normal.
 
 Con esto, tenemos el número catalogado, pero lo sorprendente viene después, que es sumándolo:
 

@@ -89,5 +89,5 @@ Ya creo que hemos tenido suficientes matemáticas. Antes quiero coger un pequeñ
 ---
 ### Navegación.
 
-- ➡️ **Siguiente:** [Octal, hexadecimal y BCD.](#)
+- ➡️ **Siguiente:** [Octal, hexadecimal y BCD.](04-octal-hexadecimal-y-bcd.md)
 - ⬅️ **Anterior:** [Decimal y binario.](02-decimal-y-binario.md)

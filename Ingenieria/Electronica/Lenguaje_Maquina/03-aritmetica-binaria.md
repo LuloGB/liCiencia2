@@ -59,6 +59,7 @@ Sinceramente, para dividir tuve que aprender solo para explicarlo aquí, ya que 
 
 Para no parecer que lo dejo a medias, les voy a dar un ejemplo muy sencillo: $110 \div 11$. Empezamos por comparar los dos primeros valores, de izquierda a derecha, de $110$, que es $11$, y las veces que hace falta multiplicar el denominador, $11$, para que sea igual es por $1$. Luego, nos queda $00$, y, para este caso, sería por $0$. Entonces, de cociente nos queda $10$ y de resto $0$.
 
+
 $$
 \begin{array}{c|c@{}c@{}c}
 \multicolumn{1}{c}{} & \mathbf{1} & \mathbf{0} & \\
@@ -67,6 +68,7 @@ $$
    &  0 & 0 & 0
 \end{array}
 $$
+
 
 > **Ejercicio:** Si no me crees, convierte $110$ y $11$ a decimal, efectua la división y luego, el resultado, pásalo a binario a ver si no es igual a $10$.
 

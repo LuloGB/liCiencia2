@@ -61,14 +61,13 @@ Para no parecer que lo dejo a medias, les voy a dar un ejemplo muy sencillo: $11
 
 
 $$
-\begin{array}{c|c@{}c@{}c}
-\multicolumn{1}{c}{} & \mathbf{1} & \mathbf{0} & \\
-11 & \overline{)1} & 1 & 0 \\
-   & -1 & 1 & \\ \cline{2-3}
-   &  0 & 0 & 0
+\begin{array}{r}
+\mathbf{10} \\
+11 \overline{) 110} \\
+-11\ \ \\ \hline
+00
 \end{array}
 $$
-
 
 > **Ejercicio:** Si no me crees, convierte $110$ y $11$ a decimal, efectua la división y luego, el resultado, pásalo a binario a ver si no es igual a $10$.
 

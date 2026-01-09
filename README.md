@@ -18,14 +18,14 @@ Partiendo de variada documentación, buscamos que el conocimiento sea más alcan
 
 ### Secciones
 
-- [Física](https://github.com/LuloGB/liCiencia2/tree/main/Fisica)  
+- [Física](/Fisica/README.md)  
   (Trabajando en ello)
-- [Ingeniería](https://github.com/LuloGB/liCiencia2/tree/main/Ingenieria)  
-  - [Electrónica](https://github.com/LuloGB/liCiencia2/tree/main/Ingenieria/Electronica)
+- [Ingeniería](/Ingenieria/README.md)  
+  - [Electrónica](/Ingenieria/Electronica/README.md)
 
 ### Redes sociales
 
 También nos puedes encontrar por estos otros sitios:
 
-- Canal de YouTube: [https://www.youtube.com/@liCiencia2](https://www.youtube.com/@liCiencia2)
+- 📹 **Canal de YouTube:** [https://www.youtube.com/@liCiencia2](https://www.youtube.com/@liCiencia2)
 

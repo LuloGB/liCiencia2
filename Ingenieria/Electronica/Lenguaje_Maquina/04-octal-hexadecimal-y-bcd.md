@@ -7,6 +7,12 @@
 > 🧮 **Matemáticas:** Básicas.  
 > 🏷️ **Etiquetas:** `Conversión de bases`, `Binario`, `Hexadecimal`.
 
+
+CORREGIR LOS PUNTOS DE LAS ECUACIONES Y LO QUE DIGA EL ASESOR
+
+
+
+
 Ahora me gustaría aprovechar para coger un pequeño desvío. Ya hemos hablado de la [base dos](02-decimal-y-binario.md), pero hay otras bases que son igual de importante: la *hexadecimal* (base 16), *octal* (base 8) y *BCD* (Código Decimal Binario).
 
 > ⚠️ **Cuidado:** Esta publicación es continuación directa de [Decimal y binario.](02-decimal-y-binario.md) Se va a estar pasando decimal a binario todo el rato, por lo que recomiendo que tengas un buen manejo de conversión de bases, o por lo menos entender cómo funcionan.
@@ -17,29 +23,21 @@ Tenemos la base diez, con diez caracteres del 0 al 9. Luego el binario, con dos 
 
 Vamos a contar en base 10: cero (0), uno (1), dos (2), tres (3)... nueve (9) y creamos el uno-cero (10), que llamamos diez. Es como cuando ya hemos usado todos los caracteres numéricos en una posición, sumamos uno a la posición superior y reiniciamos en la que nos encontrábamos. Ahora vamos a hacer lo mismo en base 16: cero (0), uno (1), dos (2), tres (3)... nueve (9) y... ¿Se vio? No podemos usar uno-cero, porque esto sería en base diez, y aún nos queda poner desde el diez hasta quince. Entonces, ¿cómo se soluciona esto? Pues vamos al abecedario: A (10), B (11), C (12), D (13), E (14) y F(15).
 
-$$
-\begin{aligned}
-&\text{Decimal} & \text{Hexadecimal}  \\
-&0 & 0 \\
-&1 & 1 \\
-&2 & 2 \\
-&3 & 3 \\
-&4 & 4 \\
-&5 & 5 \\
-&6 & 6 \\
-&7 & 7 \\
-&8 & 8 \\
-&9 & 9 \\
-&10 & A \\
-&11 & B \\
-&12 & C \\
-&13 & D \\
-&14 & E \\
-&15 & F \\
-\end{aligned}
-$$
+| Decimal | Hexadecimal |
+| :---: | :---: |
+| 0 | 0 |
+| 1 | 1 |
+| 2 | 2 |
+| ... | ... |
+| 9 | 9 |
+| 10 | **A** |
+| 11 | **B** |
+| 12 | **C** |
+| 13 | **D** |
+| 14 | **E** |
+| 15 | **F** |
 
-> ❗ **Curiosidad:** Si has ido a una ferretería o almacén a combrarte un cubo de pintura, las muestras que te dan a veces sale F3A8 o cosas así, y es porque está representado en hexadecimal.
+> ❗ **Curiosidad:** Si has ido a una ferretería o almacén a comprarte un cubo de pintura, las muestras que te dan a veces sale F3A8 o cosas así, y es porque está representado en hexadecimal.
 
 ## Conversión binario a hexadecimal.
 
@@ -58,7 +56,7 @@ Tenemos el $611$, pero no es el seiscientos once, sino el número en hexadecimal
 
 > ☝🏻🤓 **Aclaración:** ¿Por qué se agrupan de 4 en 4? Cuenta de 0 a 1111 en decimal: vas a ver que pasamos de 0 a 15, que son los dígitos que representan el hexadecimal. Es así de simple.
 
-## Conversión binario a hexadecimal.
+## Conversión hexadecimal a binario.
 
 Para poder deshacer el ejemplo anterior es tan sencillo como separar los dígitos, convertir cada uno a decimal y pasarlo de decimal a binario:
 
@@ -69,7 +67,7 @@ $$6B=6\text{ y }B = { \begin{matrix}
                     = 0110 \text{ } 1011
 $$
 
-### Converisón hexadecimal a decimal directa.
+### Conversión hexadecimal a decimal directa.
 
 En verdad, sí existe una forma de convertir el hexadecimal al decimal y de forma directa: es mediante suma de pesos. Al igual que en el binario, teníamos a $2^n$, siendo $n$ la posición del dígito, empezando desde $0$. En hexadecimal es igual, pero en vez de $2^n$, usamos $16^n$.
 
@@ -81,7 +79,7 @@ $$6B=6*16^1[16]+B[11]*16^0[1]=96+11=107$$
 
 # Octal.
 
-Otra base muy interesante es la octal, con ocho dígitos, del $0$ al $7$, que es igual de sencilla como la hexadecimal: no podemo hacer conversiones directas octal-decimal, pero sí indirectamente con el binario, pero esta vez no agrupando de cuatro en cuatro, sino de tres en tres.
+Otra base muy interesante es la octal, con ocho dígitos, del $0$ al $7$, que es igual de sencilla como la hexadecimal: no podemos hacer conversiones directas octal-decimal, pero sí indirectamente con el binario, pero esta vez no agrupando de cuatro en cuatro, sino de tres en tres.
 
 ## Conversión binario a octal.
 
@@ -176,7 +174,7 @@ $$
 
 ---
 
-Aún quedan puntos como la aritmética con estas bases o la conversión de coma flotante, pero eso haría que esta publicación se volviera casi eterna, por lo que lo pondré en otra a parte. Con entender bien cómo se representa el hexadecimal y que existe el BCD, con eso, es más que suficiente como para poder seguir adelante.
+Aún quedan puntos como la aritmética con estas bases o la conversión de coma flotante, pero eso haría que esta publicación se volviera casi eterna, por lo que lo pondré en otra aparte. Con entender bien cómo se representa el hexadecimal y que existe el BCD, con eso, es más que suficiente como para poder seguir adelante.
 
 ---
 ---

@@ -154,8 +154,8 @@ $$
 
 # Tabla resumen.
 
-| **Decimal** | **Binario** | **Hexadecimal** | **Octal** |
-| :---: | :---: | :---: | :---: |
+| **Decimal** | **Binario** | **Hexadecimal** | **Octal** | **BCD** |
+| :---: | :---: | :---: | :---: | :---: |
 | 107 | 1101011 | 6B | 153 | 000100000111 |
 
 > 😬 **Experiencia:** ¿Para qué sirve todo esto si con el binario es suficiente? Cuando empecé a trabajar con microprocesadores me di cuenta de lo importante que es el hexadecimal y cuando apliquemos decodificadores con 7 segmentos quizás vean que el BCD 8421 tiene verdadera utilidad.

@@ -175,3 +175,4 @@ Aún quedan puntos como la aritmética con estas bases o la conversión de coma 
 
 - ➡️ **Siguiente:** [Bit, Byte y Nyble.](05-bit-byte-y-nyble.md)
 - ⬅️ **Anterior:** [Aritmética binaria.](03-aritmetica-binaria.md)
+- 🔗 **Publicación en Blogger:** [Octal, hexadecimal y BCD.](https://licienciados.blogspot.com/2026/01/04-electronica-octal-hexadecimal-y-bcd.html)

@@ -5,7 +5,7 @@
 > ⌛ **Tiempo lectura:** ~10 min.  
 > 📖 **Lectura previa:** [Decimal y binario.](02-decimal-y-binario.md)  
 > 🧮 **Matemáticas:** Básicas.  
-> 🏷️ **Etiquetas:** `Binario`.  
+> 🏷️ **Etiquetas:** `Binario`, `Aritmética`.  
 
 Hemos pasado de [decimal a binario](https://github.com/LuloGB/liCiencia2/blob/pre-publicaciones-electronica/Ingenieria/Electronica/Lenguaje_Maquina/02-decimal-y-binario.md), pero para poder efectuar cálculos y no querer marearnos con los números, sale más efectivo aprender cómo se hace en base 2.
 
@@ -91,3 +91,4 @@ Ya creo que hemos tenido suficientes matemáticas. Antes quiero coger un pequeñ
 
 - ➡️ **Siguiente:** [Octal, hexadecimal y BCD.](04-octal-hexadecimal-y-bcd.md)
 - ⬅️ **Anterior:** [Decimal y binario.](02-decimal-y-binario.md)
+- 🔗 **Publicación en Blogger:** [Aritmética binaria.](https://github.com/LuloGB/liCiencia2/blob/main/Ingenieria/Electronica/Lenguaje_Maquina/03-aritmetica-binaria.md)

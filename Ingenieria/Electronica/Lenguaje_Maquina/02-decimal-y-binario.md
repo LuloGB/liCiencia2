@@ -190,4 +190,4 @@ Con esto ya podemos pasar de base diez (humano) a base dos (máquina), pero si q
 
 - ➡️ **Siguiente:** [Aritmética binaria.](03-aritmetica-binaria.md)
 - ⬅️ **Anterior:** [La señal digital.](01-senial-digital.md)
-
+- 🔗 **Publicación en Blogger:** [Decimal y binario.](https://licienciados.blogspot.com/2025/11/decimal-y-binario.html)

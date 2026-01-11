@@ -27,5 +27,5 @@ Partiendo de variada documentación, buscamos que el conocimiento sea más alcan
 
 También nos puedes encontrar por estos otros sitios:
 
+- 🔗 **Página de Blogger:** [Bienvenida.](https://licienciados.blogspot.com/p/bienvenida.html)
 - 📹 **Canal de YouTube:** [https://www.youtube.com/@liCiencia2](https://www.youtube.com/@liCiencia2)
-

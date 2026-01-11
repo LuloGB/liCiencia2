@@ -164,10 +164,10 @@ $$
 \begin{array}{r|ll}
 \text{Operación} & \text{Entero} & \text{Decimales} \\
 \hline
-0.6875 \cdot 2 = 1.375 & \mathbf{1} & \mathbf{.375} \quad \downarrow \\
-0.375 \cdot 2 = 0.75 & \mathbf{0} & \mathbf{.75} \quad | \\
-0.75 \cdot 2 = 1.5 & \mathbf{1} & \mathbf{.5} \quad | \\
-0.5 \cdot 2 = 1.0 & \mathbf{1} & \mathbf{.0} \quad \downarrow
+0.6875 \cdot 2 = 1.375 & \mathbf{1} & \mathbf{.375} \\
+0.375 \cdot 2 = 0.75 & \mathbf{0} & \mathbf{.75} \\
+0.75 \cdot 2 = 1.5 & \mathbf{1} & \mathbf{.5} \\
+0.5 \cdot 2 = 1.0 & \mathbf{1} & \mathbf{.0}
 \end{array}
 $$
 

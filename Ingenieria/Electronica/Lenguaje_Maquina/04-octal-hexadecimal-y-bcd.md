@@ -62,10 +62,10 @@ Tenemos el $611$, pero no es el seiscientos once, sino el número en hexadecimal
 
 Para poder deshacer el ejemplo anterior es tan sencillo como separar los dígitos, convertir cada uno a decimal y pasarlo de decimal a binario:
 
-$$6B=6\text{ y }B = \left\{ \begin{matrix}
+$$6B=6\text{ y }B = { \begin{matrix}
                     6 = 0110 \\
                     B = 1011 \\
-                    \end{matrix} \right\}
+                    \end{matrix}}
                     = 0110 \text{ } 1011
 $$
 
@@ -88,11 +88,11 @@ Otra base muy interesante es la octal, con ocho dígitos, del $0$ al $7$, que es
 Vamos a usar el mismo ejemplo de antes, el $1101011$. Recordemos que estamos en octal, por lo que vamos a agruparlo de tres en tres y convertir cada valor a su equivalente en decimal:
 
 $$
-1101011=001\text{ }101\text{ }011=\left\{ \begin{matrix}
+1101011=001\text{ }101\text{ }011={ \begin{matrix}
                     001 = 1 \\
                     101 = 5 \\
                     011 = 3
-                    \end{matrix} \right\}
+                    \end{matrix} }
                     = 153
 $$
 
@@ -105,11 +105,11 @@ Entonces, nos termina quedando el $153$ en base octal.
 Esto tampoco tiene demasiada ciencia: es volver a usar el concepto de conversión hexadecimal-binario, pero haciéndolo de tres en tres.
 
 $$
-153=1\text{, }5\text{ y }3=\left\{ \begin{matrix}
+153=1\text{, }5\text{ y }3={ \begin{matrix}
                     1 = 001 \\
                     5 = 101 \\
                     3 = 011
-                    \end{matrix} \right\}
+                    \end{matrix}}
                     = 001\text{ }101\text{ }011
 $$
 

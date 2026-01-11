@@ -67,7 +67,7 @@ En verdad, sí existe una forma de convertir el hexadecimal al decimal y de form
 
 Volvamos al ejemplo resuelto antes, que es el $6B$, y vamos a convertirlo:
 
-$$6B=6*16^1[16]+B[11]*16^0[1]=96+11=107$$
+$$6B=6·16^1(16)+B(11)·16^0(1)=96+11=107$$
 
 > ❗ **Curiosidad:** Si uno se fija, de esta forma podemos compactar mucho números muy grandes: el 867455 en decimal es D3C7F en hexadecimal, y en binario son 20 dígitos, por lo que se nota la diferencia.
 
@@ -109,7 +109,7 @@ $$
 
 En base dos tenemos $2^n$, en base dieciseis $16^n$ y, por intuición, en base ocho es $8^n$, que, aplicando la definición de los pesos, podemos pasar de base octal a base diez:
 
-$$153=1*8^2[64]+5*8^1[8]+3*8^0[1]=64+40+3=107$$
+$$153=1·8^2(64)+5·8^1(8)+3·8^0(1)=64+40+3=107$$
 
 Con lo que hemos obtenido el mismo valor pasándolo del binario al decimal a través del hexadecimal como del octal.
 

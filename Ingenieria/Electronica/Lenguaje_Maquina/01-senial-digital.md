@@ -102,5 +102,5 @@ Con esto ya tenemos lo básico para entender lo que es una señal digital, pero 
 ---
 ### Navegación.
 
-- ➡️ **Siguiente:** [Volver al inicio](https://github.com/LuloGB/liCiencia2/tree/main/Ingenieria/Electronica/Lenguaje_Maquina)
-- ⬅️ **Anterior:** [Decimal y binario](https://github.com/LuloGB/liCiencia2/blob/main/Ingenieria/Electronica/Lenguaje_Maquina/02-decimal-y-binario.md)
+- ➡️ **Siguiente:** [Decimal y binario.](02-decimal-y-binario.md)
+- 🔗 **Publicación en Blogger:** [La señal digital.](https://licienciados.blogspot.com/2025/10/la-senal-digital.html)

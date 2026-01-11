@@ -1,5 +1,4 @@
 # Categorías
 
-- [Electrónica](https://github.com/LuloGB/liCiencia2/tree/main/Ingenieria/Electronica)
-  1. [Lenguaje Máquina](https://github.com/LuloGB/liCiencia2/tree/main/Ingenieria/Electronica/Lenguaje_Maquina)
-
+- [Electrónica](Electronica/README.md)
+  1. [Lenguaje Máquina](Electronica/Lenguaje_Maquina/README.md)

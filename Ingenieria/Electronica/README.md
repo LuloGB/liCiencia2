@@ -3,6 +3,7 @@
 - [1. Señal digital](/Lenguaje_Maquina/01-senial-digital.md)
 - [2. Decimal y binario](/Lenguaje_Maquina/02-decimal-y-binario.md)
 - [3. Aritmética binaria](/Lenguaje_Maquina/03-aritmetica-binaria.md)
+- [4. Octal, hexadecimal y BCD](/Lenguaje_Maquina/04-octal-hexadecimal-y-bcd.md)
 
 ## Publicaciones complementarias.
 

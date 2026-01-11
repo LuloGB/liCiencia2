@@ -162,7 +162,7 @@ $$
 
 ---
 
-Aún quedan puntos como la aritmética con estas bases o la conversión de coma flotante, pero eso haría que esta publicación se volviera casi eterna, por lo que lo pondré en otra aparte. Con entender bien cómo se representa el hexadecimal y que existe el BCD, con eso, es más que suficiente como para poder seguir adelante.
+Aún quedan puntos como la aritmética con estas bases o la conversión de coma flotante, pero eso haría que esta publicación se volviera casi eterna, por lo que lo pondré en otra aparte. Con entender bien cómo se representa el hexadecimal y que existe el BCD, con eso, es más que suficiente como para poder seguir adelante. 
 
 ---
 ---

@@ -147,7 +147,7 @@ $$107=1\text{, }0\text{ y }7={ \begin{matrix}
                     0 = 0000 \\
                     7 = 0111
                     \end{matrix} }
-                    = 0001\text{ }0000\text{ }0111
+                    = 0001 \text{ } 0000 \text{ } 0111
 $$
 
 > ⚠️ **Cuidado:** La conversión BCD a decimal está algo más limitada: se agrupan de cuatro en cuarto y se va cambiando su equivalente a base diez, pero existen valores prohibidos: por ejemplo el 1100, que es el 12, en BCD no se puede representar, porque solo se pueden usar los valores del 0 al 9, por tanto, ese valor en binario sería ilegal en este caso.
@@ -162,7 +162,7 @@ $$
 
 ---
 
-Aún quedan puntos como la aritmética con estas bases o la conversión de coma flotante, pero eso haría que esta publicación se volviera casi eterna, por lo que lo pondré en otra aparte. Con entender bien cómo se representa el hexadecimal y que existe el BCD, con eso, es más que suficiente como para poder seguir adelante. 
+Aún quedan puntos como la aritmética con estas bases o la conversión de coma flotante, pero eso haría que esta publicación se volviera casi eterna, por lo que lo pondré en otra aparte. Con entender bien cómo se representa el hexadecimal y que existe el BCD, con eso, es más que suficiente como para poder seguir adelante.
 
 ---
 ---

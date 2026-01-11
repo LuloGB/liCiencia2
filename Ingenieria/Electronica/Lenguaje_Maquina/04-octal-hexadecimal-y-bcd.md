@@ -7,12 +7,6 @@
 > 🧮 **Matemáticas:** Básicas.  
 > 🏷️ **Etiquetas:** `Conversión de bases`, `Binario`, `Hexadecimal`.
 
-
-CORREGIR LOS PUNTOS DE LAS ECUACIONES Y LO QUE DIGA EL ASESOR
-
-
-
-
 Ahora me gustaría aprovechar para coger un pequeño desvío. Ya hemos hablado de la [base dos](02-decimal-y-binario.md), pero hay otras bases que son igual de importante: la *hexadecimal* (base 16), *octal* (base 8) y *BCD* (Código Decimal Binario).
 
 > ⚠️ **Cuidado:** Esta publicación es continuación directa de [Decimal y binario.](02-decimal-y-binario.md) Se va a estar pasando decimal a binario todo el rato, por lo que recomiendo que tengas un buen manejo de conversión de bases, o por lo menos entender cómo funcionan.
@@ -23,19 +17,19 @@ Tenemos la base diez, con diez caracteres del 0 al 9. Luego el binario, con dos 
 
 Vamos a contar en base 10: cero (0), uno (1), dos (2), tres (3)... nueve (9) y creamos el uno-cero (10), que llamamos diez. Es como cuando ya hemos usado todos los caracteres numéricos en una posición, sumamos uno a la posición superior y reiniciamos en la que nos encontrábamos. Ahora vamos a hacer lo mismo en base 16: cero (0), uno (1), dos (2), tres (3)... nueve (9) y... ¿Se vio? No podemos usar uno-cero, porque esto sería en base diez, y aún nos queda poner desde el diez hasta quince. Entonces, ¿cómo se soluciona esto? Pues vamos al abecedario: A (10), B (11), C (12), D (13), E (14) y F(15).
 
-| Decimal | Hexadecimal |
+| **Decimal** | **Hexadecimal** |
 | :---: | :---: |
 | 0 | 0 |
 | 1 | 1 |
 | 2 | 2 |
 | ... | ... |
 | 9 | 9 |
-| 10 | **A** |
-| 11 | **B** |
-| 12 | **C** |
-| 13 | **D** |
-| 14 | **E** |
-| 15 | **F** |
+| 10 | *A* |
+| 11 | *B* |
+| 12 | *C* |
+| 13 | *D* |
+| 14 | *E* |
+| 15 | *F* |
 
 > ❗ **Curiosidad:** Si has ido a una ferretería o almacén a comprarte un cubo de pintura, las muestras que te dan a veces sale F3A8 o cosas así, y es porque está representado en hexadecimal.
 
@@ -129,21 +123,18 @@ Existen mil y un formas de representar el código BCD: por ejemplo podemos poner
 
 Aquí no somos artistas, sino ingenieros, por lo que hace falta simplificar lo máximo posible, y para eso tenemos el *BCD 8421*. En esta representación vamos a trabajar con 4 dígitos, que, como hemos usado en el binario anteriormente, es con los que hacen falta representar los diez dígitos del decimal:
 
-$$
-\begin{array}{|c|c|}
-\textbf{Decimal} & \textbf{Binario} \\
-0 & 0000 \\
-1 & 0001 \\
-2 & 0010 \\
-3 & 0011 \\
-4 & 0100 \\
-5 & 0101 \\
-6 & 0110 \\
-7 & 0111 \\
-8 & 1000 \\
-9 & 1001 \\
-\end{array}
-$$
+| **Decimal** | **Binario** |
+| :---: | :---: |
+| 0 | 0000 |
+| 1 | 0001 |
+| 2 | 0010 |
+| 3 | 0011 |
+| 4 | 0100 |
+| 5 | 0101 |
+| 6 | 0110 |
+| 7 | 0111 |
+| 8 | 1000 |
+| 9 | 1001 |
 
 > ☝🏻🤓 **Aclaración:** Los números 8421 es por los pesos: como usamos 4 dígitos para representarlos, el cuarto valor se multiplica por 8, el tercero por 4, el segundo por 2 y el último por 1, y por último se suman.
 
@@ -163,12 +154,9 @@ $$
 
 # Tabla resumen.
 
-$$
-\begin{matrix}
-&\textbf{Decimal}&\textbf{Binario}&\textbf{Hexadecimal}&\textbf{Octal}&\textbf{BCD}\\
-&107&1101011&6B&153&000100000111
-\end{matrix}
-$$
+| **Decimal** | **Binario** | **Hexadecimal** | **Octal** |
+| :---: | :---: | :---: | :---: |
+| 107 | 1101011 | 6B | 153 | 000100000111 |
 
 > 😬 **Experiencia:** ¿Para qué sirve todo esto si con el binario es suficiente? Cuando empecé a trabajar con microprocesadores me di cuenta de lo importante que es el hexadecimal y cuando apliquemos decodificadores con 7 segmentos quizás vean que el BCD 8421 tiene verdadera utilidad.
 

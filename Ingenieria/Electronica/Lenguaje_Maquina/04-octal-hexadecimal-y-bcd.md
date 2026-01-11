@@ -1,10 +1,10 @@
 # Octal, hexadecimal y BCD.
 
 > ✍🏻 **Autor:** Lulo.  
-> 📚 **Nivel:** Medio.  
+> 📚 **Nivel:** Básico.  
 > ⌛ **Tiempo lectura:** ~10 min.  
 > 📖 **Lectura previa:** [Decimal y binario.](02-decimal-y-binario.md)  
-> 🧮 **Matemáticas:** Básicas.  
+> 🧮 **Matemáticas:** Medio.  
 > 🏷️ **Etiquetas:** `Conversión de bases`, `Binario`, `Hexadecimal`.
 
 Ahora me gustaría aprovechar para coger un pequeño desvío. Ya hemos hablado de la [base dos](02-decimal-y-binario.md), pero hay otras bases que son igual de importante: la *hexadecimal* (base 16), *octal* (base 8) y *BCD* (Código Decimal Binario).
@@ -173,6 +173,6 @@ Aún quedan puntos como la aritmética con estas bases o la conversión de coma 
 ---
 ### Navegación.
 
-- ➡️ **Siguiente:** [Bit, Byte y Nyble.](05-bit-byte-y-nyble.md)
+- ➡️ **Siguiente:** [Bit, byte y nibble.](05-bit-byte-y-nibble.md)
 - ⬅️ **Anterior:** [Aritmética binaria.](03-aritmetica-binaria.md)
 - 🔗 **Publicación en Blogger:** [Octal, hexadecimal y BCD.](https://licienciados.blogspot.com/2026/01/04-electronica-octal-hexadecimal-y-bcd.html)

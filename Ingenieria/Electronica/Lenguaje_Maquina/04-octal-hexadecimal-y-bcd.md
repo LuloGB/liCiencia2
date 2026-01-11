@@ -2,7 +2,7 @@
 
 > ✍🏻 **Autor:** Lulo.  
 > 📚 **Nivel:** Medio.  
-> ⌛ **Tiempo lectura:** .          FALTA  
+> ⌛ **Tiempo lectura:** ~10 min.  
 > 📖 **Lectura previa:** [Decimal y binario.](02-decimal-y-binario.md)  
 > 🧮 **Matemáticas:** Básicas.  
 > 🏷️ **Etiquetas:** `Conversión de bases`, `Binario`, `Hexadecimal`.

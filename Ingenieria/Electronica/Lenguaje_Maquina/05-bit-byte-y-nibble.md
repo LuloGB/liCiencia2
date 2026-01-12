@@ -37,4 +37,4 @@ A este valor se le da tanta importancia porque es la unidad mínima para poder a
 
 - ➡️ **Siguiente:** [Representación con signo.](#)
 - ⬅️ **Anterior:** [Octal, hexadecimal y BCD.](04-octal-hexadecimal-y-bcd.md)
-- 🔗 **Publicación en Blogger:** [Bit, byte y nibble.](#)
+- 🔗 **Publicación en Blogger:** [Bit, byte y nibble.](https://licienciados.blogspot.com/2026/01/05-electronica-bit-byte-y-nibble.html)

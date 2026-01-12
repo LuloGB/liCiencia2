@@ -2,7 +2,7 @@
 
 > ✍🏻 **Autor:** Lulo.  
 > 📚 **Nivel:** Básico.  
-> ⌛ **Tiempo lectura:** AÑADIR---------------------  
+> ⌛ **Tiempo lectura:** ~5 min.  
 > 📖 **Lectura previa:** [Decimal y binario.](02-decimal-y-binario.md) [Aritmética binaria.](03-aritmetica-binaria.md)  
 > 🧮 **Matemáticas:** Nulas.  
 > 🏷️ **Etiquetas:** `Binario`, `Teoría y conceptos`.
@@ -35,6 +35,6 @@ A este valor se le da tanta importancia porque es la unidad mínima para poder a
 
 ### Navegación.
 
-- ➡️ **Siguiente:** [](#)
-- ⬅️ **Anterior:** [Octal, hexadecimal y BCD](04-octal-hexadecimal-y-bcd.md)
-- 🔗 **Publicación en Blogger:** [Bit, byte y nibble.]()
+- ➡️ **Siguiente:** [Representación con signo.](#)
+- ⬅️ **Anterior:** [Octal, hexadecimal y BCD.](04-octal-hexadecimal-y-bcd.md)
+- 🔗 **Publicación en Blogger:** [Bit, byte y nibble.](#)

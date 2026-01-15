@@ -33,6 +33,13 @@ A este valor se le da tanta importancia porque es la unidad mínima para poder a
 
 > ❗ **Curiosidad:** Existen superordenadores que ya trabajan con 128 bits, que eso equivale a poder almacenar $2^{128}$ instrucciones. En este caso, más no significa mejor: consumen más energía, ocupan más espacio... Esto es solo para ordenadores experimentales.
 
+---
+
+Ya sabemos usar el binario, entendemos cómo se pueden agrupar y cómo se trabaja, pero hay un problema al que no nos hemos enfrentado directamente y es ¿cómo representamos valores que son negativos? Si solo tenemos los símbolos 1 y 0, no podemos usar el "-". Esto lo abarcaremos en la siguiente publicación.
+
+---
+---
+
 ### Navegación.
 
 - ➡️ **Siguiente:** [Representación con signo.](#)

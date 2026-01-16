@@ -23,7 +23,7 @@ Los bits se pueden agrupar, y el primer grupo que nos encontramos son los *nibbl
 
 # Byte.
 
-Giga Byte, Mega Byte, Tera Byte... Estas palabras las llegamos a usar en nuestro día a día, pero generalmente no conocemos su significado: al igual que Kilo es $10^3$, Mega es $10^6$, Giga $10^9$ y Tera $10^^{12$}; luego, el *byte* /baɪt/ corresponde a la unidad, que son dos grupos de nibble u ocho bits de información.
+Giga Byte, Mega Byte, Tera Byte... Estas palabras las llegamos a usar en nuestro día a día, pero generalmente no conocemos su significado: al igual que Kilo es $10^3$, Mega es $10^6$, Giga $10^9$ y Tera $10^{12$}; luego, el *byte* /baɪt/ corresponde a la unidad, que son dos grupos de nibble u ocho bits de información.
 
 A este valor se le da tanta importancia porque es la unidad mínima para poder almacenar tanto todo tipo de datos como hasta caracteres alfabéticos, además que los primeros ordenadores trabajaban con este tamaño de datos.
 

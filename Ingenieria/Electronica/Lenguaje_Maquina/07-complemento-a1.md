@@ -46,6 +46,6 @@ Si hemos entendido el signo y magnitud, el complemento a1 es igual de sencillo: 
 
 ### Navegación.
 
-- ➡️ **Siguiente:** [Complemento a2.](#)
+- ➡️ **Siguiente:** [Complemento a2.](08-complemento-a2.md)
 - ⬅️ **Anterior:** [Representación con signo.](06-representacion-con-signo.md)
 - 🔗 **Publicación en Blogger:** [Complemento a1.]()

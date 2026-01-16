@@ -43,7 +43,7 @@ Ahora quiero que reflexiones lo siguiente que te voy a plantear: si con $8$ bits
 
 Intentemos representar el $0$. Ponemos primero el bit del signo y el resto de bits a cero. ¿Pero qué signo? Es obligatorio ponerlo en esta representación del binario. ¿El cero es positivo o negativo? Pues en signo y magnitud el cero es positivo *y* negativo al mismo tiempo.
 
-$0 == 00000000 == 10000000$
+$$0 == 00000000 == 10000000$$
 
 > ❗ **Curiosidad:** Si un ordenador solo entienden unos y ceros, ¿cómo sabe en qué binario trabaja los números? Pues cuando se le mandan datos, estos van acompañados de trozos de códigos (ceros y unos) que le dicen al procesador cómo tiene que trabajar esos valores.
 
@@ -52,6 +52,12 @@ $0 == 00000000 == 10000000$
 Ahora tenemos una forma de representar números negativos, pero nos encontramos con el problema del cero, que bastantes veces es algo muy poco deseado. Para esto existen los complementos a1 y a2.
 
 ---
+---
+
+# Fuentes.
+
+- *Fundamentos de sistemas digitales* – L. Floyd.
+
 ---
 
 ### Navegación.

@@ -23,11 +23,11 @@ Tenemos el $12$, pero lo vamos a hacer en complemento a1 en $8$ bits: primero el
 
 Para pasarlo a decimal es solo repetir todo el proceso al revés: si el bit de signo es $0$, solo hay que convertir el resto del número como si de binario natural se tratara; en el caso de tener un signo $1$, que quiere decir que es negativo, se invierte todo el número y se convierte a binario natural.
 
-> ❗ **Curiosidad:** Aunque parezca un poco raro, esta es la forma más cómoda, desde un punto de vista físico, en la que los ordenadores trabajan los números internamente.
+> ❗ **Curiosidad:** Aunque parezca un poco raro el complemento a1, este método era el que se usaba en los primeros ordenadores, y hoy en día se sigue usando para ciertos protocolos de internet.
 
 # Limitaciones.
 
-En este caso tenemos un mismo rango de valores que en la representación de magnitud y signo, que es de $-2^{n-1}-1$ a $2^{n-1}-1$. Esto es debido a que tenemos el mismo problema de antes, que el $0$ tiene doble representación.
+En este caso tenemos un mismo rango de valores que en la representación de magnitud y signo, que es de $-(2^{n-1}-1)$ a $2^{n-1}-1$. Esto es debido a que tenemos el mismo problema de antes, que el $0$ tiene doble representación.
 
 $$0 == 00000000 == 11111111$$
 

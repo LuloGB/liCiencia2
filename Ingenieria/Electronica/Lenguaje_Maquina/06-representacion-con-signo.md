@@ -33,7 +33,7 @@ Ahora quizás uno empiece a confundirse: pero si transformamos el $1101$ a decim
 
 ## Limitaciones.
 
-En binario natural podemos contar desde $0$ hasta $2^n-1$, siendo $n$ el número de bits con los que trabajamos. Ahora hay un problema, y es que tenemos que sacrificar el último bit para indicar el signo. Hemos pasado a contar de $-2^{n-1}-1$ hasta $2^{n-1}-1$.
+En binario natural podemos contar desde $0$ hasta $2^n-1$, siendo $n$ el número de bits con los que trabajamos. Ahora hay un problema, y es que tenemos que sacrificar el último bit para indicar el signo. Hemos pasado a contar de $-(2^{n-1}-1)$ hasta $2^{n-1}-1$.
 
 | **nº bits** | **Rango Binario natural** | **Rango magnitud-signo** |
 | :---: | :---: | :---: |

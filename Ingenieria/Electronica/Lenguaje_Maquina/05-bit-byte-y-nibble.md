@@ -42,6 +42,6 @@ Ya sabemos usar el binario, entendemos cómo se pueden agrupar y cómo se trabaj
 
 ### Navegación.
 
-- ➡️ **Siguiente:** [Representación con signo.](#)
+- ➡️ **Siguiente:** [Representación con signo.](06-representacion-con-signo.md)
 - ⬅️ **Anterior:** [Octal, hexadecimal y BCD.](04-octal-hexadecimal-y-bcd.md)
 - 🔗 **Publicación en Blogger:** [Bit, byte y nibble.](https://licienciados.blogspot.com/2026/01/05-electronica-bit-byte-y-nibble.html)

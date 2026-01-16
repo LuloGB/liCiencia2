@@ -5,6 +5,7 @@
 - [3. Aritmética binaria.](Lenguaje_Maquina/03-aritmetica-binaria.md)
 - [4. Octal, hexadecimal y BCD.](Lenguaje_Maquina/04-octal-hexadecimal-y-bcd.md)
 - [5. Bit, byte y nibble.](Lenguaje_Maquina/05-bit-byte-y-nibble.md)
+- [6. Representación con signo.](Lenguaje_Maquina/06-representacion-con-signo.md)
 
 ## Publicaciones complementarias.
 

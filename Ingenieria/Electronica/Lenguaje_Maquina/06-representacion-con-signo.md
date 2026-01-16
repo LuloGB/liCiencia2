@@ -58,4 +58,4 @@ Ahora tenemos una forma de representar números negativos, pero nos encontramos 
 
 - ➡️ **Siguiente:** [Complemento a1.](#)
 - ⬅️ **Anterior:** [Bit, byte y nibble.](05-bit-byte-y-nibble.md)
-- 🔗 **Publicación en Blogger:** [Representación con signo.]()
+- 🔗 **Publicación en Blogger:** [Representación con signo.](https://licienciados.blogspot.com/2026/01/06-electronica-representacion-con-signo.html)

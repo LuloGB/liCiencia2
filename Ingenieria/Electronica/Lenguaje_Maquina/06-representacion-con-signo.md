@@ -49,7 +49,7 @@ $$0 == 00000000 == 10000000$$
 
 ---
 
-Ahora tenemos una forma de representar números negativos, pero nos encontramos con el problema del cero, que bastantes veces es algo muy poco deseado. Para esto existen los complementos a1 y a2.
+Ahora tenemos una forma de representar números negativos, pero nos encontramos con el problema del cero, que bastantes veces es algo muy poco deseado. Para esto existen los complementos a 1 y a 2.
 
 ---
 ---
@@ -62,6 +62,6 @@ Ahora tenemos una forma de representar números negativos, pero nos encontramos 
 
 ### Navegación.
 
-- ➡️ **Siguiente:** [Complemento a1.](#)
+- ➡️ **Siguiente:** [Complemento a 1.](07-complemento-a1.md)
 - ⬅️ **Anterior:** [Bit, byte y nibble.](05-bit-byte-y-nibble.md)
 - 🔗 **Publicación en Blogger:** [Representación con signo.](https://licienciados.blogspot.com/2026/01/06-electronica-representacion-con-signo.html)

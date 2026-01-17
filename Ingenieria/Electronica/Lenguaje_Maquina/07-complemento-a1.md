@@ -1,4 +1,4 @@
-# Complemento a1.
+# Complemento a 1.
 
 > ✍🏻 **Autor:** Lulo.  
 > 📚 **Nivel:** Básico.  
@@ -15,7 +15,7 @@ En esta base también nos ayudamos del bit de signo, por lo que el primer bit se
 
 Tenemos el $12$, pero lo vamos a hacer en complemento a1 en $8$ bits: primero el bit de signo, $0$, luego tres bits que nos hacen falta de relleno y por último el valor en binario natural, obteniendo $00001100$. Para hacer el $-12$, vamos a tomar su representación positiva e invertirla: cada cero se cambia por un uno y cada uno por un cero. De esta forma nos queda: $11110011$. Es en verdad bastante sencillo.
 
-| **Decimal** | **Binario natural** | **Complemento a1** |
+| **Decimal** | **Binario natural** | **Complemento a 1** |
 | :---: | :---: | :---: |
 | -12 | -1100 | 11110011 |
 
@@ -23,7 +23,7 @@ Tenemos el $12$, pero lo vamos a hacer en complemento a1 en $8$ bits: primero el
 
 Para pasarlo a decimal es solo repetir todo el proceso al revés: si el bit de signo es $0$, solo hay que convertir el resto del número como si de binario natural se tratara; en el caso de tener un signo $1$, que quiere decir que es negativo, se invierte todo el número y se convierte a binario natural.
 
-> ❗ **Curiosidad:** Aunque parezca un poco raro el complemento a1, este método era el que se usaba en los primeros ordenadores, y hoy en día se sigue usando para ciertos protocolos de internet.
+> ❗ **Curiosidad:** Aunque parezca un poco raro el complemento a 1, este método era el que se usaba en los primeros ordenadores, y hoy en día se sigue usando para ciertos protocolos de internet.
 
 # Limitaciones.
 
@@ -33,7 +33,7 @@ $$0 == 00000000 == 11111111$$
 
 ---
 
-Si hemos entendido el signo y magnitud, el complemento a1 es igual de sencillo: si es negativo, darle la vuelta. Y aún tenemos el problema de la doble representación del $0$, pero tiene solución, y se llama *complemento a2*, que lo veremos en la siguiente publicación.
+Si hemos entendido el signo y magnitud, el complemento a 1 es igual de sencillo: si es negativo, darle la vuelta. Y aún tenemos el problema de la doble representación del $0$, pero tiene solución, y se llama *complemento a 2*, que lo veremos en la siguiente publicación.
 
 ---
 ---
@@ -46,6 +46,6 @@ Si hemos entendido el signo y magnitud, el complemento a1 es igual de sencillo: 
 
 ### Navegación.
 
-- ➡️ **Siguiente:** [Complemento a2.](08-complemento-a2.md)
+- ➡️ **Siguiente:** [Complemento a 2.](08-complemento-a2.md)
 - ⬅️ **Anterior:** [Representación con signo.](06-representacion-con-signo.md)
-- 🔗 **Publicación en Blogger:** [Complemento a1.]()
+- 🔗 **Publicación en Blogger:** [Complemento a 1.]()

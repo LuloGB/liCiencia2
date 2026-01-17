@@ -175,4 +175,5 @@ Aún quedan puntos como la aritmética con estas bases o la conversión de coma 
 
 - ➡️ **Siguiente:** [Bit, byte y nibble.](05-bit-byte-y-nibble.md)
 - ⬅️ **Anterior:** [Aritmética binaria.](03-aritmetica-binaria.md)
+- 📓 **Complementaria:** [Aritmética de otras bases.](0A-aritmetica-de-otras-bases.md)
 - 🔗 **Publicación en Blogger:** [Octal, hexadecimal y BCD.](https://licienciados.blogspot.com/2026/01/04-electronica-octal-hexadecimal-y-bcd.html)

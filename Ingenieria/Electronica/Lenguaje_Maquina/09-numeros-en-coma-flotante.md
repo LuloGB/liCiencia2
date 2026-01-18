@@ -1,14 +1,16 @@
 # Números en coma flotante.
 
 > ✍🏻 **Autor:** Lulo.  
-> 📚 **Nivel:** Básico.  
-> ⌛ **Tiempo lectura:** ~5 min.  
-> 📖 **Lectura previa:** [Complemento a 1.](07-complemento-a1.md)  
+> 📚 **Nivel:** Medio.  
+> ⌛ **Tiempo lectura:**                    min.  
+> 📖 **Lectura previa:** [Decimal y binario.](02-decimal-y-binario.md)  
 > 🧮 **Matemáticas:** Básicas.  
-> 🏷️ **Etiquetas:** `Binario`, `Conversión de bases`.
+> 🏷️ **Etiquetas:** `Binario`.
 
 
-REVISAR TODO
+
+
+PAG 73
 
 
 
@@ -25,6 +27,6 @@ REVISAR TODO
 
 ### Navegación.
 
-- ➡️ **Siguiente:** [Números en coma flotante.](#)
-- ⬅️ **Anterior:** [Complemento a 1.](07-complemento-a1.md)
-- 🔗 **Publicación en Blogger:** [Complemento a 2.]()
+- ➡️ **Siguiente:** [Código Gray y códigos alfanuméricos.](#)
+- ⬅️ **Anterior:** [Complemento a 2.](08-complemento-a2.md)
+- 🔗 **Publicación en Blogger:** [Números en coma flotante.](#)

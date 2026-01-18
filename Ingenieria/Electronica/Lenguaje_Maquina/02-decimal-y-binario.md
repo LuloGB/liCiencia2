@@ -18,19 +18,19 @@ Hemos logrado pasar de cuadrados a números, que con ellos podremos hacer cuenta
 
 Repasaremos primero cómo se construye la base diez. Tomemos el número $157$, en el cual tenemos tres dígitos: el $1$, el $5$ y el $7$. Si lo descomponemos, en verdad lo que vemos son el $100$, el $50$ y el $7$. Cada uno multiplica por $10^n$, siendo $n$ la posición en la que se encuentra, y se suman.
 
-$1 · 10^2 + 5 · 10^2 + 7 · 10^0 = 157$
+$$1 · 10^2 + 5 · 10^2 + 7 · 10^0 = 157$$
 
 > ☝🏻🤓 **Aclaración:** Cuando empezamos a contar, no iniciamos en $10^1$, sino en $10^0$.
 
 Este método de "descomponer" se puede usar también para el binario. Ahora tenemos el número $10011101$. Repetimos el mismo procedimiento, pero esta vez estamos en la base binaria, en la que solo hay dos símbolos, por tanto, no se eleva a $10$, sino a $2$. Entonces, tomando el dígito y multiplicándolo por la posición, tenemos lo siguiente:
 
-$1 · 2^7 | 0 · 2^6 | 0 · 2^5 | 1 · 2^4 | 1 · 2^3 | 1 · 2^2 | 0 · 2^1 | 1 · 2^0 $
+$$1 · 2^7 | 0 · 2^6 | 0 · 2^5 | 1 · 2^4 | 1 · 2^3 | 1 · 2^2 | 0 · 2^1 | 1 · 2^0 $$
 
 > 🧐 **Interpretación:** El truco para leer el binario es solo decir "uno" y "cero", no, como ahora, "diez millones once mil ciento uno", que es hasta pesado. Imagínate hacerlo cuando tenemos 32 dígitos, que es lo normal.
 
 Con esto, tenemos el número catalogado, pero lo sorprendente viene después, que es sumándolo:
 
-$1 · 2^7 + 0 · 2^6 + 0 · 2^5 + 1 · 2^4 + 1 · 2^3 + 1 · 2^2 + 0 · 2^1+ 1 · 2^0 \Rightarrow 1 · 2^7 + 1 · 2^4 + 1 · 2^3 + 1 · 2^2 + 1 · 2^0 = 157 $
+$$1 · 2^7 + 0 · 2^6 + 0 · 2^5 + 1 · 2^4 + 1 · 2^3 + 1 · 2^2 + 0 · 2^1+ 1 · 2^0 \Rightarrow 1 · 2^7 + 1 · 2^4 + 1 · 2^3 + 1 · 2^2 + 1 · 2^0 = 157 $$
 
 > ☝🏻🤓 **Aclaración:** $n^0$, siendo $n$ cualquier número real, quitando el cero, siempre da $1$.
 

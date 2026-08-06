@@ -40,7 +40,7 @@ El elemento más básico e importante en la electrónica es el **electrón**. Es
 El trabajar este tipo de señales es muy difícil de procesar y almacenar. Son necesarios grandes aparatos que generalmente requieren muchas horas para poderlos programar. Esto surge por el hecho que trabajamos con "la señal completa". Una solución es medir cada cierto tiempo -llamado **periodo**- la tensión que hay en ese instante. De esta manera, tenemos una **señal discreta**, que son las que usan nuestros ordenadores, móviles o dispositivos electrónicos en general.
 
 <div align="center" id="figura1">
-  <img src="https://github.com/LuloGB/liCiencia2/raw/main/Ingenieria/Electronica/pics/lenguaje_maquina/senial-digital/Fig%201.png" alt="Señal continua" width="400">
+  <img src="../pics/lenguaje_maquina/senial-digital/fig_1.png" alt="Señal continua" width="400">
   <br>
   <sub><em>Fig 1. Ejemplo de señal continua</em></sub>
 </div>
@@ -49,7 +49,7 @@ El trabajar este tipo de señales es muy difícil de procesar y almacenar. Son n
 Imaginemos una señal como la [Figura 1](#figura1). En el eje vertical tenemos **la amplitud**, que representaremos con la letra $V$, y en el horizontal el **tiempo**, mostrado con $t$. Al recorrer el eje del tiempo vemos que la señal ha ido cambiando su valor de amplitud. Esto es porque es una señal variable.
 
 <div align="center" id="figura2">
-  <img src="https://github.com/LuloGB/liCiencia2/raw/main/Ingenieria/Electronica/pics/lenguaje_maquina/senial-digital/Fig%202.png" alt="Señal discretizada" width="400">
+  <img src="../pics/lenguaje_maquina/senial-digital/fig_2.png" alt="Señal discretizada" width="400">
   <br>
   <sub><em>Fig 2. Señal discretizada sobre Señal continua</em></sub>
 </div>
@@ -62,7 +62,7 @@ Ahora vamos a **discretizarla**. Tomamos un periodo $T$, que es una cantidad de 
 Para que un ordenador pueda entender bien la información, el usar señales analógicas digitalizadas le pueden llegar a ser demasiado complicadas, por lo que hace falta simplificarlas. Para ello, vamos a tener dos tensiones de partida, voltaje bajo $V_L$ y voltaje alto $V_H$. Para entenderlo mejor, montamos un circuito simple, de solo una fuente y un bombillo, representado en la [Figura 3](#figura3). Vamos a imaginarnos que la fuente, una simple pila, da $V_H$ cuando el cable está conectado, y cuando no está conectado, como no existe un circuito cerrado, pues da $V_L$.
 
 <div align="center" id="figura3">
-  <img src="https://github.com/LuloGB/liCiencia2/raw/main/Ingenieria/Electronica/pics/lenguaje_maquina/senial-digital/Fig%203.png" alt="Ejemplo bombillos" width="400">
+  <img src="../pics/lenguaje_maquina/senial-digital/fig_3.png" alt="Ejemplo bombillos" width="400">
   <br>
   <sub><em>Fig 3. Ejemplo empleando un circuito sencillo. Izquierda en $V_H$. Derecha en $V_L$</em></sub>
 </div>
@@ -73,7 +73,7 @@ Para poder trabajar con estos conceptos, en vez de usar este dibujo, vamos a apo
 Como punto final, estaría bien que aclarase que para que un circuito pueda tener en funcionamiento este 1 y 0, se usan tensiones con <u>valores típicos de 5V o 3.3V a 0V</u>.
 
 <div align="center" id="figura4">
-  <img src="https://github.com/LuloGB/liCiencia2/raw/main/Ingenieria/Electronica/pics/lenguaje_maquina/senial-digital/Fig%204.png" alt="Rangos de tensión" width="400">
+  <img src="../pics/lenguaje_maquina/senial-digital/fig_4.png" alt="Rangos de tensión" width="400">
   <br>
   <sub><em>Fig 4. Rangos de tensión de señal electrónica</em></sub>
 </div>
@@ -90,7 +90,7 @@ La representación numérica es la más cómoda para que un humano pueda trabaja
 Retomando la señal discretizada, tenemos *high* y *low*. Si se hace que la señal alterne entre estos dos valores y se toma una foto de uno de estos instantes, se obtiene una especie de caja, como se representa en la [Figura 5](#figura5).
 
 <div align="center" id="figura5">
-  <img src="https://github.com/LuloGB/liCiencia2/raw/main/Ingenieria/Electronica/pics/lenguaje_maquina/senial-digital/Fig%205.png" alt="Señal Ideal" width="400">
+  <img src="../pics/lenguaje_maquina/senial-digital/fig_5.png" alt="Señal Ideal" width="400">
   <br>
   <sub><em>Fig 5. Constitución de una señal digital ideal</em></sub>
 </div>
@@ -105,7 +105,7 @@ Estas serían las principales partes que conforman una **señal digital idealiza
 Cuando pasamos al caso real, a medir lo que pasa por el circuito y trabajan los componentes electrónicos, pues existen algunas diferencias.
 
 <div align="center" id="figura6">
-  <img src="https://github.com/LuloGB/liCiencia2/raw/main/Ingenieria/Electronica/pics/lenguaje_maquina/senial-digital/Fig%206.png" alt="Señal Real" width="400">
+  <img src="../pics/lenguaje_maquina/senial-digital/fig_6.png" alt="Señal Real" width="400">
   <br>
   <sub><em>Fig 6. Constitución de una señal digital real</em></sub>
 </div>

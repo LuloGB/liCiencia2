@@ -1,11 +1,39 @@
-# Señal Continua y discreta
+---
+titulo: "P01: Señal digital"
+fecha: 2026/07/10
+autor: Lulo
+
+progreso: 
+
+
+nivel: Fácil
+tiempo: 10 a 15 mins
+etiquetas: [Electrónica, Electrónica analógica, Electrónica digital, Señal digital]
+imagen: pics/mini_elect.jpg
+
+anterior:
+siguiente: "../02-decimal-y-binario/"
+
+enlace_ejercicios: 
+enlace_simulaciones: 
+
+descripcion: Lo más básico de la electrónica es entender lo que son las señales digitales.
+destacado:
+
+lecturas_previas:
+
+---
+
 
 > ✍🏻 **Autor:** Lulo  
 > 📚 **Nivel:** Fácil  
 > ⌛ **Tiempo lectura:** 10-15 min  
-> 📖 **Lectura previa:** No necesaria  
 > 🧮 **Matemáticas:** Básicas  
-> 🏷️ **Etiquetas:** `Electrónica`, `Electrónica Analógica`, `Electrónica Digital`,`Señal Digital`  
+{{ mostrar_etiquetas() }}
+
+---
+
+# Señal Continua y discreta
 
 El elemento más básico e importante en la electrónica es el **electrón**. Este, al desplazarse por los diferentes materiales hace que surja la **intensidad**, pero para que exista este movimiento tenemos algo que llamaremos  **voltaje** o **tensión**: esta puede ser grande, pequeña o negativa. Esta variación, si la medimos a lo largo del tiempo, conseguiremos una **amplitud**. Si en vez de ser constante, cambia, conseguimos una **señal continua**, como podemos ver en la [Figura 1](#figura1), que es la base de la electrónica analógica.
 
@@ -28,8 +56,6 @@ Imaginemos una señal como la [Figura 1](#figura1). En el eje vertical tenemos *
 <br>
 
 Ahora vamos a **discretizarla**. Tomamos un periodo $T$, que es una cantidad de tiempo fija, y medimos $V$ cada dicho $T$. Esto genera unos puntos que, si los unimos con rectas horizontales y verticales, nos queda algo parecido a una escalera, mostrado en la [Figura 2](#figura2). La nueva señal creada se termina pareciendo a la señal original, aunque cuanto más reduzcamos el periodo de muestra $T$ menos error tenemos y más similares resultan. De esta forma, hemos **digitalizado** una señal mediante la **discretización**. Con este método podemos convertir cualquier señal analógica a digital.
-
----
 
 # El 0 y el 1
 
@@ -54,8 +80,6 @@ Como punto final, estaría bien que aclarase que para que un circuito pueda tene
 <br>
 
 Volviendo al uso de las tensiones, en la [Figura 4](#figura4) se puede ver una representación en la que se marcan el voltaje alto $V_H$ y bajo $V_L$. Como no son señales perfectas, ya que aparece un cierto **ruido** que hace que la señal oscile próximo al valor deseado, pues se presenta un cierto rango, comprendido en máximo $V_{\text{max}}$ y mínimo $V_{\text{min}}$. Entre estas tensiones máximas y mínimas se consiguen los rangos **High** y **Low**, alto y bajo respectivamente. Cuando se pasa de $V_{\text{H(min)}}$ a $V_{\text{L(max)}}$ aparece algo llamado **incertidumbre**. Toda tensión que se encuentre en esa zona será "ignorada" por el circuito, deshaciéndose de ruidos de gran amplitud.
-
----
 
 # Señal binaria
 
@@ -98,13 +122,3 @@ Otro valor interesante es el **ancho de pulso**, que es cuando cada flanco se en
 Estos serían los conceptos básicos de la comunicación digital. El problema es que si constantemente usamos señales para trabajar la electrónica, se volvería demasiado difícil, por lo que se hace una simplificación matemática, la misma hablada anteriormente, la representación en binario, que profundizaremos en ella a lo largo de las siguientes publicaciones.
 
 ---
----
-# Fuentes
-
-- *Fundamentos de sistemas digitales* – L. Floyd.
-
----
-### Navegación
-
-- ➡️ **Siguiente:** [Decimal y binario](02-decimal-y-binario.md)
-- 🔗 **Publicación en Blogger:** [La señal digital](https://licienciados.blogspot.com/2025/10/la-senal-digital.html)

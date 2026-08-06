@@ -1,0 +1,40 @@
+site_name: liCiencia2
+#site_url: PENDIENTE
+
+theme:
+  name: null
+  custom_dir: apariencia
+
+plugins:
+  - search
+  - macros
+  
+markdown_extensions:
+  - attr_list
+  - pymdownx.arithmatex:
+      generic: true
+
+nav:  #ACTUALIZAR CONSTANTEMENTE!
+  - Inicio:
+    - ¿Qué es este sitio?: index.md
+    - ¿Quiénes somos?: '#quienes-somos'
+    - Planes a futuro: '#planes-futuro'
+    - ¿Dónde encontrarnos?: '#donde-encontrarnos'
+  - Publicaciones:
+    - Estructura: publicaciones/#estructura
+    - Catálogo por Etiquetas: publicaciones/#etiquetas
+    - Últimas publicaciones: publicaciones/#ultimas-publicaciones
+    - Biblioteca: publicaciones/#biblioteca
+  - Física: Fisica/inicio-fisica.md
+  - Ingeniería:
+    - Electrónica:
+      - Lenguaje máquina: Ingenieria/Electronica/Lenguaje_Maquina/indice-lenguaje-maquina.md
+  - Cómo contribuir: '#como-contribuir'
+
+extra:  #ACTUALIZAR CONSTANTEMENTE!
+  bibliografia:
+    - titulo: "Fundamentos de sistemas digitales"
+      autor: "Thomas L. Floyd"
+      tipo: "Libro"
+      detalle: "Novena Edición"
+      enlace: ""

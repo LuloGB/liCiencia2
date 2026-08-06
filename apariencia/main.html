@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+            {% if page is defined %}
+                {{ page.meta.titulo | default(page.title) }} - 
+            {% endif %}
+            {{ config.site_name }}
+        {% endblock %}
+    </title>
+    
+    <link rel="icon" type="image/png" href="{{ base_url }}/pics/logo_principal.png">
+ 
+    <link rel="stylesheet" href="{{ base_url }}/estilos.css">
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const links = document.querySelectorAll('.toc-enlace');
+			
+			function changeActive() {
+				let fromTop = window.scrollY + (window.innerHeight / 2); 
+				let currentActiveId = "";
+				
+				links.forEach(link => {
+					const id = link.getAttribute('href');
+					if (id && id.startsWith('#')) {
+						try {
+							const element = document.querySelector(id);
+							if (element && element.offsetTop <= fromTop) {
+								currentActiveId = id;
+							}
+						} catch(e) {}
+					}
+				});
+				
+				links.forEach(link => {
+					if (link.getAttribute('href') === currentActiveId) {
+						link.classList.add('active');
+					} else {
+						link.classList.remove('active');
+					}
+				});
+			}
+			
+			window.addEventListener('scroll', changeActive);
+			changeActive(); // Ejecución inicial
+		});
+	</script>
+<body>
+        
+    <header class="cabecera-principal">
+        <div class="contenedor-cabecera">
+            <div class="logo-sitio">
+                <a href="{{ base_url }}/" style="text-decoration: none; color: inherit;">
+                    <h1>{{ config.site_name }}</h1>
+                </a>
+            </div>
+            <nav class="barra-superior">
+                <ul>
+                    {% for apartado in nav %}
+                        <li>
+                            {% if apartado.children %}
+                                <details name="menu-principal">
+                                    <summary class="titulo-apartado">{{ apartado.title }}</summary>
+                                    <ul class="subapartado">
+                                        {% for subapartado in apartado.children %}
+                                            <li>
+                                                {% if subapartado.children %}
+                                                    <details name="menu-subnivel">
+                                                        <summary class="titulo-subapartado">{{ subapartado.title }}</summary>
+                                                        <ul class="subsubapartado">
+                                                            {% for tema in subapartado.children %}
+                                                                <li>
+                                                                    {% if tema.children %}
+                                                                        <details name="menu-profundo">
+                                                                            <summary>{{ tema.title }}</summary>
+                                                                            <ul>
+                                                                                {% for publicacion in tema.children %}
+                                                                                    <li>
+                                                                                        <a href="{{ base_url }}/{{ publicacion.url }}">{{ publicacion.title }}</a>
+                                                                                    </li>
+                                                                                {% endfor %}
+                                                                            </ul>
+                                                                        </details>
+                                                                    {% else %}
+                                                                        <a href="{{ base_url }}/{{ tema.url }}">{{ tema.title }}</a>
+                                                                    {% endif %}
+                                                                </li>
+                                                            {% endfor %}
+                                                        </ul>
+                                                    </details>
+                                                {% else %}
+                                                    <a href="{{ base_url }}/{{ subapartado.url }}">{{ subapartado.title }}</a>
+                                                {% endif %}
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                </details>
+                            {% else %}
+                                <a href="{{ base_url }}/{{ apartado.url }}" class="enlace-apartado">{{ apartado.title }}</a>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+            <script>
+                document.addEventListener('click', function(event) {
+                    const cabecera = document.querySelector('.cabecera-principal');
+                    if (!cabecera.contains(event.target)) {
+                        document.querySelectorAll('.barra-superior details').forEach(details => {
+                            details.removeAttribute('open');
+                        });
+                    }
+                });
+            </script>
+        </div>
+    </header>
+    
+    <div class="layout-principal {% if not (page is defined and (page.toc or (page.meta and page.meta.etiquetas))) %}sin-izquierdo{% endif %}">
+        
+        {% if page is defined and (page.toc or (page.meta and page.meta.etiquetas)) %}
+        <aside class="panel-izquierdo">
+            
+            {% if page.meta and page.meta.etiquetas %}
+            <div class="widget-etiquetas">
+                <h3>Etiquetas</h3>
+                <div class="lista-etiquetas-sidebar">
+                    {% for etiqueta in page.meta.etiquetas %}
+                        <span class="tag-sidebar">{{ etiqueta }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            {% if page.toc %}
+            <div class="widget-toc">
+                <h3>Índice</h3>
+                <nav class="tabla-contenidos">
+                    <ul>
+                        {% for toc_item in page.toc %}
+                            <li>
+                                <a href="{{ toc_item.url }}" class="toc-enlace">{{ toc_item.title }}</a>
+                                {% if toc_item.children %}
+                                    <ul>
+                                        {% for child in toc_item.children %}
+                                            <li><a href="{{ child.url }}" class="toc-enlace">{{ child.title }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+            {% endif %}
+
+        </aside>
+        {% endif %}
+        
+        <div class="columna-principal">
+            
+            {% if page is defined %}
+                <h1 class="titulo-gran-formato">{{ page.meta.titulo }}</h1>
+            {% endif %}
+
+            <main class="contenedor-contenido">
+                
+                {% if page.meta.progreso is defined and page.meta.progreso is not none and page.meta.progreso < 100 %}
+					<div class="widget-construccion">
+
+						<div class="construccion-cabecera">
+							<h2>Igual que la cocina, esto lleva su tiempo</h2>
+						</div>
+						
+						<div class="imagen-construccion-contenedor" style="text-align: center; margin-top: 10px; margin-bottom: 15px;">
+							<img src="{{ base_url }}/pics/Trabajando_publicacion.jpg" alt="Trabajando en ello" style="max-width: 150px; height: auto;">
+						</div>
+
+						<p>Alto ahí, campeón. Sé que tienes ganas de echar un vistazo, pero toca esperar.</p>
+						<p>Aprovecha y sal a caminar un rato. Eso nunca hace daño.</p>
+						
+						<div class="construccion-barra-fondo">
+							<div class="construccion-barra-relleno" style="width: {{ page.meta.progreso }}%;"></div>
+						</div>
+						<div class="construccion-porcentaje">Esto anda por el {{ page.meta.progreso }}%</div>
+					</div>
+				{% endif %}
+
+                <div id="contenido-articulo" class="{% if page.meta and page.meta.progreso %}borrador-oculto{% endif %}">
+                    {% block content %}
+                        {% if page is defined and page.content %}
+                            {{ page.content }}
+                            
+                            {% if page.meta.enlace_ejercicios or page.meta.enlace_simulaciones %}
+							<div class="bloque-recursos-independiente">
+								<h3 class="titulo-recursos">Material Adicional</h3>
+								<div class="cuadricula-recursos">
+									{% if page.meta.enlace_ejercicios %}
+									<div class="tarjeta-recurso recurso-ejercicios">
+										<h4><a href="{{ page.meta.enlace_ejercicios }}" class="enlace-recurso-titulo">Problemas y cuestionarios</a></h4>
+									</div>
+									{% endif %}
+
+									{% if page.meta.enlace_simulaciones %}
+									<div class="tarjeta-recurso recurso-simulaciones">
+										<h4><a href="{{ page.meta.enlace_simulaciones }}" class="enlace-recurso-titulo">Simulaciones y material relacionado</a></h4>
+									</div>
+									{% endif %}
+								</div>
+							</div>
+							{% endif %}
+
+                            {% if page.meta.anterior or page.meta.siguiente %}
+							<nav class="navegacion-publicacion-independiente">
+								<div class="nav-columna nav-izquierda">
+									{% if page.meta.anterior %}
+									<a href="{{ page.meta.anterior }}" class="enlace-nav flecha-izq" title="Ir a la publicación anterior">
+										<span class="flecha">←</span>
+										<div class="texto-nav">
+											<span class="etiqueta-nav">Anterior</span>
+										</div>
+									</a>
+									{% endif %}
+								</div>
+								
+								<div class="nav-columna nav-derecha">
+									{% if page.meta.siguiente %}
+									<a href="{{ page.meta.siguiente }}" class="enlace-nav flecha-der" title="Ir a la siguiente publicación">
+										<div class="texto-nav">
+											<span class="etiqueta-nav">Siguiente</span>
+										</div>
+										<span class="flecha">→</span>
+									</a>
+									{% endif %}
+								</div>
+							</nav>
+							{% endif %}
+
+                            {% if page.meta and page.meta.autor and page.meta.comentarios != false %}
+                            <div class="bloque-recursos-independiente" style="margin-top: 40px;">
+                                <h3 class="titulo-recursos">¿Quieres comentar cualquier cosa?</h3>
+                                <p style="color: #64748b; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">
+                                    En caso de tener dudas o haber visto fallos en nuestras publicaciones, puedes acceder a la parte de comentarios de nuestro GitHub y cuanto antes te responderemos.
+                                </p>
+                                <div style="text-align: center; margin-top: 25px;">
+                                    <a href="" 
+                                       target="_blank" 
+                                       class="boton-comentar-github">
+                                        <span style="font-size: 1.2rem;">🚀</span>
+                                        <span>Dejar un comentario en GitHub</span>
+                                    </a>
+                                </div>
+                            </div>
+                            {% endif %}
+                            {% endif %}
+                    {% endblock %}
+                </div>
+                
+            </main>
+        </div>
+
+        <aside class="panel-derecho">
+            
+            {% if page.meta.lecturas_previas %}
+            <div class="widget-sidebar" style="margin-bottom: 25px;">
+                <h3 style="margin-top: 0; font-size: 1.05rem; color: var(--color-primario); border-bottom: 2px solid var(--color-fondo-claro); padding-bottom: 8px; margin-bottom: 15px;">
+                    Lectura previa recomendada
+                </h3>
+                <div class="lista-tarjetas">
+                    {% for lp in page.meta.lecturas_previas %}
+                        <div class="tarjeta-articulo">
+                            <div class="tarjeta-info">
+                                <h3><a href="{{ base_url }}/{{ lp.url }}" style="color: var(--color-primario);">{{ lp.titulo }}</a></h3>
+                                <span class="tarjeta-meta" style="display: block; margin-bottom: 4px;">
+                                    📊 {{ lp.nivel }} — ⌛ {{ lp.tiempo }}
+                                </span>
+                                <span class="tarjeta-meta" style="display: block;">
+                                    📅 {{ lp.fecha }} — ✍🏻 {{ lp.autor }}
+                                </span>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            <div class="widget-lateral">
+                <h3 style="margin-top: 0; font-size: 1.05rem; color: var(--color-primario); border-bottom: 2px solid var(--color-fondo-claro); padding-bottom: 8px; margin-bottom: 15px;">
+                    Últimas actualizaciones
+                </h3>
+                <div class="lista-tarjetas">
+                    {% for p in config.extra.publicaciones_sidebar %}
+                        <div class="tarjeta-articulo">
+                            <div class="tarjeta-imagen">
+                                {% if p.es_externa %}
+                                    <img src="{{ p.imagen }}" alt="{{ p.titulo }}">
+                                {% else %}
+                                    <img src="{{ base_url }}/{{ p.imagen }}" alt="{{ p.titulo }}">
+                                {% endif %}
+                            </div>
+                            <div class="tarjeta-info">
+                                <h3><a href="{{ base_url }}/{{ p.url }}">{{ p.titulo }}</a></h3>
+                                <span class="tarjeta-meta" style="display: block; margin-bottom: 3px;">
+                                    📊 {{ p.nivel }} — ⌛ {{ p.tiempo }}
+                                </span>
+                                <span class="tarjeta-meta">📅 {{ p.fecha_bonita }} — ✍🏻 {{ p.autor | default('Lulo') }}</span>
+                                <p class="tarjeta-descripcion">{{ p.descripcion }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div> 
+            </div> 
+            
+            <div class="widget-sidebar" style="margin-top: 35px;">
+                <h2 style="margin-top: 0; font-size: 1.15rem; color: var(--color-primario); border-bottom: 2px solid var(--color-fondo-claro); padding-bottom: 8px; margin-bottom: 15px; font-family: 'Merriweather', serif;">
+                    Publicaciones destacadas
+                </h2>
+                <div class="lista-articulos">
+                    {% for p in config.extra.publicaciones_destacadas %}
+                        <div class="tarjeta-articulo">
+                            <div class="tarjeta-imagen">
+                                {% if p.es_externa %}
+                                    <img src="{{ p.imagen }}" alt="{{ p.titulo }}">
+                                {% else %}
+                                    <img src="{{ base_url }}/{{ p.imagen }}" alt="{{ p.titulo }}">
+                                {% endif %}
+                            </div>
+                            <div class="tarjeta-info">
+                                <h3><a href="{{ base_url }}/{{ p.url }}">{{ p.titulo }}</a></h3>
+                                <span class="tarjeta-meta" style="display: block; margin-bottom: 3px;">
+                                    📊 {{ p.nivel }} — ⌛ {{ p.tiempo }}
+                                </span>
+                                <span class="tarjeta-meta">📅 {{ p.fecha_bonita }} — ✍🏻 {{ p.autor }}</span>
+                                <p class="tarjeta-descripcion">{{ p.descripcion }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+        </aside>
+
+    </div>
+    
+    <footer class="pie-pagina">
+        <div class="contenedor-footer">
+            <p>&copy; 2026 <strong>{{ config.site_name }}</strong></p>
+            <span class="subtext-footer">Desarrollado usando MkDocs & Python macros</span>
+        </div>
+    </footer>
+</body>
+</html>

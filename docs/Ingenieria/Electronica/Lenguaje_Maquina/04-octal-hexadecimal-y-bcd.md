@@ -1,17 +1,44 @@
-# Octal, hexadecimal y BCD.
+---
+titulo: "P04: Octal, hexadecimal y BCD"
+fecha: REVISIÓN
+autor: Lulo
 
-> ✍🏻 **Autor:** Lulo.  
-> 📚 **Nivel:** Básico.  
-> ⌛ **Tiempo lectura:** ~10 min.  
-> 📖 **Lectura previa:** [Decimal y binario.](02-decimal-y-binario.md)  
-> 🧮 **Matemáticas:** Medio.  
-> 🏷️ **Etiquetas:** `Conversión de bases`, `Binario`, `Hexadecimal`.
+progreso: 50
+
+nivel: Básico
+tiempo: ~10 mins
+etiquetas: [Conversión de bases, Binario, Hexadecimal]
+imagen: pics/mini_elect.jpg
+
+anterior: "../03-aritmetica-binaria/"
+siguiente: "../05-bit-byte-y-nibble/"
+
+enlace_ejercicios: 
+enlace_simulaciones: 
+
+descripcion: 
+destacado:
+
+lecturas_previas:
+  - titulo: "P02: Decimal y binario"
+    nivel: "Fácil"
+    tiempo: "20 min"
+    fecha: "EN REVISIÓN"
+    autor: "Lulo"
+    url: "../02-decimal-y-binario/"
+
+---
+
+> ✍🏻 **Autor:** Lulo  
+> 📚 **Nivel:** Básico  
+> ⌛ **Tiempo lectura:** ~10 min  
+> 🧮 **Matemáticas:** Medio  
 
 Ahora me gustaría aprovechar para coger un pequeño desvío. Ya hemos hablado de la [base dos](02-decimal-y-binario.md), pero hay otras bases que son igual de importante: la *hexadecimal* (base 16), *octal* (base 8) y *BCD* (Código Decimal Binario).
 
 > ⚠️ **Cuidado:** Esta publicación es continuación directa de [Decimal y binario.](02-decimal-y-binario.md) Se va a estar pasando decimal a binario todo el rato, por lo que recomiendo que tengas un buen manejo de conversión de bases, o por lo menos entender cómo funcionan.
 
-# Hexadecimal.
+# Hexadecimal
 
 Tenemos la base diez, con diez caracteres del 0 al 9. Luego el binario, con dos caracteres, el 0 y el 1. La base *hexadecimal*, presenta 16 caracteres. Esto acarrea un problema, que no se llega a notar a primera vista: los diez caracteres de la base diez no son suficientes, por lo que hace falta recurrir a caracteres alfabéticos.
 
@@ -33,7 +60,7 @@ Vamos a contar en base 10: cero (0), uno (1), dos (2), tres (3)... nueve (9) y c
 
 > ❗ **Curiosidad:** Si has ido a una ferretería o almacén a comprarte un cubo de pintura, las muestras que te dan a veces sale F3A8 o cosas así, y es porque está representado en hexadecimal.
 
-## Conversión binario a hexadecimal.
+## Conversión binario a hexadecimal
 
 Ya tenemos la equivalencia decimal-hexadecimal, pero hay un problema, y es que para poder convertir entre estas dos bases, es algo incómodo de hacer, por lo que nos vamos a ayudar del binario: primero convertimos el número, ya en decimal, ya en hexadecimal, a binario y luego se torna a la base deseada. La base decimal ya la hemos trabajado previamente, por lo que hoy voy a poner directamente binario-hexadecimal.
 
@@ -50,7 +77,7 @@ Tenemos el $611$, pero no es el seiscientos once, sino el número en hexadecimal
 
 > ☝🏻🤓 **Aclaración:** ¿Por qué se agrupan de 4 en 4? Cuenta de 0 a 1111 en decimal: vas a ver que pasamos de 0 a 15, que son los dígitos que representan el hexadecimal. Es así de simple.
 
-## Conversión hexadecimal a binario.
+## Conversión hexadecimal a binario
 
 Para poder deshacer el ejemplo anterior es tan sencillo como separar los dígitos, convertir cada uno a decimal y pasarlo de decimal a binario:
 
@@ -61,7 +88,7 @@ $$6B=6\text{ y }B = { \begin{matrix}
                     = 0110 \text{ } 1011
 $$
 
-### Conversión hexadecimal a decimal directa.
+### Conversión hexadecimal a decimal directa
 
 En verdad, sí existe una forma de convertir el hexadecimal al decimal y de forma directa: es mediante suma de pesos. Al igual que en el binario, teníamos a $2^n$, siendo $n$ la posición del dígito, empezando desde $0$. En hexadecimal es igual, pero en vez de $2^n$, usamos $16^n$.
 
@@ -71,11 +98,11 @@ $$6B=6·16^1(16)+B(11)·16^0(1)=96+11=107$$
 
 > ❗ **Curiosidad:** Si uno se fija, de esta forma podemos compactar mucho números muy grandes: el 867455 en decimal es D3C7F en hexadecimal, y en binario son 20 dígitos, por lo que se nota la diferencia.
 
-# Octal.
+# Octal
 
 Otra base muy interesante es la octal, con ocho dígitos, del $0$ al $7$, que es igual de sencilla como la hexadecimal: no podemos hacer conversiones directas octal-decimal, pero sí indirectamente con el binario, pero esta vez no agrupando de cuatro en cuatro, sino de tres en tres.
 
-## Conversión binario a octal.
+## Conversión binario a octal
 
 Vamos a usar el mismo ejemplo de antes, el $1101011$. Recordemos que estamos en octal, por lo que vamos a agruparlo de tres en tres y convertir cada valor a su equivalente en decimal:
 
@@ -92,7 +119,7 @@ Entonces, nos termina quedando el $153$ en base octal.
 
 > ☝🏻🤓 **Aclaración:** En octal no nos hace falta añadir más dígitos porque como usamos los mismos que en decimal, y este tiene hasta diez dígitos, pues en verdad nos sobran dos, el 8 y el 9.
 
-## Conversión octal a binario.
+## Conversión octal a binario
 
 Esto tampoco tiene demasiada ciencia: es volver a usar el concepto de conversión hexadecimal-binario, pero haciéndolo de tres en tres.
 
@@ -105,7 +132,7 @@ $$
                     = 001\text{ }101\text{ }011
 $$
 
-### Conversión octal a decimal directo.
+### Conversión octal a decimal directo
 
 En base dos tenemos $2^n$, en base dieciseis $16^n$ y, por intuición, en base ocho es $8^n$, que, aplicando la definición de los pesos, podemos pasar de base octal a base diez:
 
@@ -113,13 +140,13 @@ $$153=1·8^2(64)+5·8^1(8)+3·8^0(1)=64+40+3=107$$
 
 Con lo que hemos obtenido el mismo valor pasándolo del binario al decimal a través del hexadecimal como del octal.
 
-# BCD.
+# BCD
 
 El *código decimal binario*, o, como sus siglas en inglés, el *Binary Coded Decimal*, es una forma "bruta" de convertir decimal a binario: en vez de hacerlo convirtiéndolo de base diez a base dos, solo lo hacemos con los diez dígitos de la base diez y los agrupamos tal cual salgan.
 
 Existen mil y un formas de representar el código BCD: por ejemplo podemos poner a $1$ representado por $1011010101$ y al $2$ por $101111100$ y el $12$ por ejemplo ponerlo como $1011010101\text{ }101111100$. Es muy feo, lo sé, pero se puede hacer.
 
-## Código 8421.
+## Código 8421
 
 Aquí no somos artistas, sino ingenieros, por lo que hace falta simplificar lo máximo posible, y para eso tenemos el *BCD 8421*. En esta representación vamos a trabajar con 4 dígitos, que, como hemos usado en el binario anteriormente, es con los que hacen falta representar los diez dígitos del decimal:
 
@@ -152,7 +179,7 @@ $$
 
 > ⚠️ **Cuidado:** La conversión BCD a decimal está algo más limitada: se agrupan de cuatro en cuarto y se va cambiando su equivalente a base diez, pero existen valores prohibidos: por ejemplo el 1100, que es el 12, en BCD no se puede representar, porque solo se pueden usar los valores del 0 al 9, por tanto, ese valor en binario sería ilegal en este caso.
 
-# Tabla resumen.
+# Tabla resumen
 
 | **Decimal** | **Binario** | **Hexadecimal** | **Octal** | **BCD** |
 | :---: | :---: | :---: | :---: | :---: |
@@ -165,14 +192,3 @@ $$
 Aún quedan puntos como la aritmética con estas bases o la conversión de coma flotante, pero eso haría que esta publicación se volviera casi eterna, por lo que lo pondré en otra aparte. Con entender bien cómo se representa el hexadecimal y que existe el BCD, con eso, es más que suficiente como para poder seguir adelante.
 
 ---
----
-# Fuentes.
-
-- *Fundamentos de sistemas digitales* – L. Floyd.
-
----
-### Navegación.
-
-- ➡️ **Siguiente:** [Bit, byte y nibble.](05-bit-byte-y-nibble.md)
-- ⬅️ **Anterior:** [Aritmética binaria.](03-aritmetica-binaria.md)
-- 🔗 **Publicación en Blogger:** [Octal, hexadecimal y BCD.](https://licienciados.blogspot.com/2026/01/04-electronica-octal-hexadecimal-y-bcd.html)

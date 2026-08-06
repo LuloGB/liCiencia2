@@ -38,7 +38,7 @@ No es necesario que seas un experto para poder entender lo que mostramos: con po
 Además, al final incluiremos la bibliografía que hemos empleado para desarrollar la publicación y a veces algo más de material con el que poder recrear nuestro trabajo, ejercitar lo aprendido o juguetear un poco con material relacionado.
 
 <div align="center">
- <img src="https://github.com/LuloGB/liCiencia2/raw/main/pics/Fondo%20Logo.jpg" alt="Imagen de liCiencia2" width="400">
+ <img src="/pics/fondo_logo.jpg" alt="Imagen de liCiencia2" width="400">
  <br>
 </div>
 

@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>
+        
+            
+                P04: Octal, hexadecimal y BCD - 
+            
+            liCiencia2
+        
+    </title>
+    
+    <link rel="icon" type="image/png" href="../../../../pics/logo_principal.png">
+ 
+    <link rel="stylesheet" href="../../../../estilos.css">
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const links = document.querySelectorAll('.toc-enlace');
+			
+			function changeActive() {
+				let fromTop = window.scrollY + (window.innerHeight / 2); 
+				let currentActiveId = "";
+				
+				links.forEach(link => {
+					const id = link.getAttribute('href');
+					if (id && id.startsWith('#')) {
+						try {
+							const element = document.querySelector(id);
+							if (element && element.offsetTop <= fromTop) {
+								currentActiveId = id;
+							}
+						} catch(e) {}
+					}
+				});
+				
+				links.forEach(link => {
+					if (link.getAttribute('href') === currentActiveId) {
+						link.classList.add('active');
+					} else {
+						link.classList.remove('active');
+					}
+				});
+			}
+			
+			window.addEventListener('scroll', changeActive);
+			changeActive(); // Ejecución inicial
+		});
+	</script>
+<body>
+        
+    <header class="cabecera-principal">
+        <div class="contenedor-cabecera">
+            <div class="logo-sitio">
+                <a href="../../../../" style="text-decoration: none; color: inherit;">
+                    <h1>liCiencia2</h1>
+                </a>
+            </div>
+            <nav class="barra-superior">
+                <ul>
+                    
+                        <li>
+                            
+                                <details name="menu-principal">
+                                    <summary class="titulo-apartado">Inicio</summary>
+                                    <ul class="subapartado">
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../">¿Qué es este sitio?</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../#quienes-somos">¿Quiénes somos?</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../#planes-futuro">Planes a futuro</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../#donde-encontrarnos">¿Dónde encontrarnos?</a>
+                                                
+                                            </li>
+                                        
+                                    </ul>
+                                </details>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                                <details name="menu-principal">
+                                    <summary class="titulo-apartado">Publicaciones</summary>
+                                    <ul class="subapartado">
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../publicaciones/#estructura">Estructura</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../publicaciones/#etiquetas">Catálogo por Etiquetas</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../publicaciones/#ultimas-publicaciones">Últimas publicaciones</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../publicaciones/#biblioteca">Biblioteca</a>
+                                                
+                                            </li>
+                                        
+                                    </ul>
+                                </details>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                                <a href="../../../../Fisica/inicio-fisica/" class="enlace-apartado">Física</a>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                                <details name="menu-principal">
+                                    <summary class="titulo-apartado">Ingeniería</summary>
+                                    <ul class="subapartado">
+                                        
+                                            <li>
+                                                
+                                                    <details name="menu-subnivel">
+                                                        <summary class="titulo-subapartado">Electrónica</summary>
+                                                        <ul class="subsubapartado">
+                                                            
+                                                                <li>
+                                                                    
+                                                                        <a href="../../../../Ingenieria/Electronica/Lenguaje_Maquina/indice-lenguaje-maquina/">Lenguaje máquina</a>
+                                                                    
+                                                                </li>
+                                                            
+                                                        </ul>
+                                                    </details>
+                                                
+                                            </li>
+                                        
+                                    </ul>
+                                </details>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                                <a href="../../../../#como-contribuir" class="enlace-apartado">Cómo contribuir</a>
+                            
+                        </li>
+                    
+                </ul>
+            </nav>
+            <script>
+                document.addEventListener('click', function(event) {
+                    const cabecera = document.querySelector('.cabecera-principal');
+                    if (!cabecera.contains(event.target)) {
+                        document.querySelectorAll('.barra-superior details').forEach(details => {
+                            details.removeAttribute('open');
+                        });
+                    }
+                });
+            </script>
+        </div>
+    </header>
+    
+    <div class="layout-principal ">
+        
+        
+        <aside class="panel-izquierdo">
+            
+            
+            <div class="widget-etiquetas">
+                <h3>Etiquetas</h3>
+                <div class="lista-etiquetas-sidebar">
+                    
+                        <span class="tag-sidebar">Conversión de bases</span>
+                    
+                        <span class="tag-sidebar">Binario</span>
+                    
+                        <span class="tag-sidebar">Hexadecimal</span>
+                    
+                </div>
+            </div>
+            
+
+            
+            <div class="widget-toc">
+                <h3>Índice</h3>
+                <nav class="tabla-contenidos">
+                    <ul>
+                        
+                            <li>
+                                <a href="#hexadecimal" class="toc-enlace">Hexadecimal</a>
+                                
+                                    <ul>
+                                        
+                                            <li><a href="#conversion-binario-a-hexadecimal" class="toc-enlace">Conversión binario a hexadecimal</a></li>
+                                        
+                                            <li><a href="#conversion-hexadecimal-a-binario" class="toc-enlace">Conversión hexadecimal a binario</a></li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            <li>
+                                <a href="#octal" class="toc-enlace">Octal</a>
+                                
+                                    <ul>
+                                        
+                                            <li><a href="#conversion-binario-a-octal" class="toc-enlace">Conversión binario a octal</a></li>
+                                        
+                                            <li><a href="#conversion-octal-a-binario" class="toc-enlace">Conversión octal a binario</a></li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            <li>
+                                <a href="#bcd" class="toc-enlace">BCD</a>
+                                
+                                    <ul>
+                                        
+                                            <li><a href="#codigo-8421" class="toc-enlace">Código 8421</a></li>
+                                        
+                                            <li><a href="#conversion-decimal-a-bcd" class="toc-enlace">Conversión decimal a BCD.</a></li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            <li>
+                                <a href="#tabla-resumen" class="toc-enlace">Tabla resumen</a>
+                                
+                            </li>
+                        
+                    </ul>
+                </nav>
+            </div>
+            
+
+        </aside>
+        
+        
+        <div class="columna-principal">
+            
+            
+                <h1 class="titulo-gran-formato">P04: Octal, hexadecimal y BCD</h1>
+            
+
+            <main class="contenedor-contenido">
+                
+                
+					<div class="widget-construccion">
+
+						<div class="construccion-cabecera">
+							<h2>Igual que la cocina, esto lleva su tiempo</h2>
+						</div>
+						
+						<div class="imagen-construccion-contenedor" style="text-align: center; margin-top: 10px; margin-bottom: 15px;">
+							<img src="../../../../pics/Trabajando_publicacion.jpg" alt="Trabajando en ello" style="max-width: 150px; height: auto;">
+						</div>
+
+						<p>Alto ahí, campeón. Sé que tienes ganas de echar un vistazo, pero toca esperar.</p>
+						<p>Aprovecha y sal a caminar un rato. Eso nunca hace daño.</p>
+						
+						<div class="construccion-barra-fondo">
+							<div class="construccion-barra-relleno" style="width: 50%;"></div>
+						</div>
+						<div class="construccion-porcentaje">Esto anda por el 50%</div>
+					</div>
+				
+
+                <div id="contenido-articulo" class="borrador-oculto">
+                    
+                        
+                            <blockquote>
+<p>✍🏻 <strong>Autor:</strong> Lulo<br />
+📚 <strong>Nivel:</strong> Básico<br />
+⌛ <strong>Tiempo lectura:</strong> ~10 min<br />
+🧮 <strong>Matemáticas:</strong> Medio  </p>
+</blockquote>
+<p>Ahora me gustaría aprovechar para coger un pequeño desvío. Ya hemos hablado de la <a href="../02-decimal-y-binario/">base dos</a>, pero hay otras bases que son igual de importante: la <em>hexadecimal</em> (base 16), <em>octal</em> (base 8) y <em>BCD</em> (Código Decimal Binario).</p>
+<blockquote>
+<p>⚠️ <strong>Cuidado:</strong> Esta publicación es continuación directa de <a href="../02-decimal-y-binario/">Decimal y binario.</a> Se va a estar pasando decimal a binario todo el rato, por lo que recomiendo que tengas un buen manejo de conversión de bases, o por lo menos entender cómo funcionan.</p>
+</blockquote>
+<h1 id="hexadecimal">Hexadecimal</h1>
+<p>Tenemos la base diez, con diez caracteres del 0 al 9. Luego el binario, con dos caracteres, el 0 y el 1. La base <em>hexadecimal</em>, presenta 16 caracteres. Esto acarrea un problema, que no se llega a notar a primera vista: los diez caracteres de la base diez no son suficientes, por lo que hace falta recurrir a caracteres alfabéticos.</p>
+<p>Vamos a contar en base 10: cero (0), uno (1), dos (2), tres (3)... nueve (9) y creamos el uno-cero (10), que llamamos diez. Es como cuando ya hemos usado todos los caracteres numéricos en una posición, sumamos uno a la posición superior y reiniciamos en la que nos encontrábamos. Ahora vamos a hacer lo mismo en base 16: cero (0), uno (1), dos (2), tres (3)... nueve (9) y... ¿Se vio? No podemos usar uno-cero, porque esto sería en base diez, y aún nos queda poner desde el diez hasta quince. Entonces, ¿cómo se soluciona esto? Pues vamos al abecedario: A (10), B (11), C (12), D (13), E (14) y F(15).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Decimal</strong></th>
+<th style="text-align: center;"><strong>Hexadecimal</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">...</td>
+<td style="text-align: center;">...</td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;"><em>A</em></td>
+</tr>
+<tr>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;"><em>B</em></td>
+</tr>
+<tr>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;"><em>C</em></td>
+</tr>
+<tr>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;"><em>D</em></td>
+</tr>
+<tr>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;"><em>E</em></td>
+</tr>
+<tr>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;"><em>F</em></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>❗ <strong>Curiosidad:</strong> Si has ido a una ferretería o almacén a comprarte un cubo de pintura, las muestras que te dan a veces sale F3A8 o cosas así, y es porque está representado en hexadecimal.</p>
+</blockquote>
+<h2 id="conversion-binario-a-hexadecimal">Conversión binario a hexadecimal</h2>
+<p>Ya tenemos la equivalencia decimal-hexadecimal, pero hay un problema, y es que para poder convertir entre estas dos bases, es algo incómodo de hacer, por lo que nos vamos a ayudar del binario: primero convertimos el número, ya en decimal, ya en hexadecimal, a binario y luego se torna a la base deseada. La base decimal ya la hemos trabajado previamente, por lo que hoy voy a poner directamente binario-hexadecimal.</p>
+<p>Tenemos un número en binario, el <span class="arithmatex">\(1101011\)</span>, y, para poderlo convertir es muy sencillo: lo agrupamos de cuatro en cuatro de derecha a izquierda, quedando así: <span class="arithmatex">\(0110 \text{ } 1011\)</span>. Cuando tenemos grupos menos de cuatro posiciones, se añaden <span class="arithmatex">\(0\)</span> hasta tener el grupo lleno. Ahora cada grupo lo pasamos a base diez:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+0110 &amp;= 6 \\
+1011 &amp;= 11
+\end{aligned}
+\]</div>
+<p>Tenemos el <span class="arithmatex">\(611\)</span>, pero no es el seiscientos once, sino el número en hexadecimal, pero sin convertir: nos hace falta cambiar el <span class="arithmatex">\(11\)</span> por su equivalente en hexadecimal: <span class="arithmatex">\(B\)</span>. Hemos conseguido el <span class="arithmatex">\(6B\)</span>, que es <span class="arithmatex">\(1101011\)</span> en base 16. </p>
+<blockquote>
+<p>☝🏻🤓 <strong>Aclaración:</strong> ¿Por qué se agrupan de 4 en 4? Cuenta de 0 a 1111 en decimal: vas a ver que pasamos de 0 a 15, que son los dígitos que representan el hexadecimal. Es así de simple.</p>
+</blockquote>
+<h2 id="conversion-hexadecimal-a-binario">Conversión hexadecimal a binario</h2>
+<p>Para poder deshacer el ejemplo anterior es tan sencillo como separar los dígitos, convertir cada uno a decimal y pasarlo de decimal a binario:</p>
+<div class="arithmatex">\[6B=6\text{ y }B = { \begin{matrix}
+                    6 = 0110 \\
+                    B = 1011 \\
+                    \end{matrix}}
+                    = 0110 \text{ } 1011
+\]</div>
+<h3 id="conversion-hexadecimal-a-decimal-directa">Conversión hexadecimal a decimal directa</h3>
+<p>En verdad, sí existe una forma de convertir el hexadecimal al decimal y de forma directa: es mediante suma de pesos. Al igual que en el binario, teníamos a <span class="arithmatex">\(2^n\)</span>, siendo <span class="arithmatex">\(n\)</span> la posición del dígito, empezando desde <span class="arithmatex">\(0\)</span>. En hexadecimal es igual, pero en vez de <span class="arithmatex">\(2^n\)</span>, usamos <span class="arithmatex">\(16^n\)</span>.</p>
+<p>Volvamos al ejemplo resuelto antes, que es el <span class="arithmatex">\(6B\)</span>, y vamos a convertirlo:</p>
+<div class="arithmatex">\[6B=6·16^1(16)+B(11)·16^0(1)=96+11=107\]</div>
+<blockquote>
+<p>❗ <strong>Curiosidad:</strong> Si uno se fija, de esta forma podemos compactar mucho números muy grandes: el 867455 en decimal es D3C7F en hexadecimal, y en binario son 20 dígitos, por lo que se nota la diferencia.</p>
+</blockquote>
+<h1 id="octal">Octal</h1>
+<p>Otra base muy interesante es la octal, con ocho dígitos, del <span class="arithmatex">\(0\)</span> al <span class="arithmatex">\(7\)</span>, que es igual de sencilla como la hexadecimal: no podemos hacer conversiones directas octal-decimal, pero sí indirectamente con el binario, pero esta vez no agrupando de cuatro en cuatro, sino de tres en tres.</p>
+<h2 id="conversion-binario-a-octal">Conversión binario a octal</h2>
+<p>Vamos a usar el mismo ejemplo de antes, el <span class="arithmatex">\(1101011\)</span>. Recordemos que estamos en octal, por lo que vamos a agruparlo de tres en tres y convertir cada valor a su equivalente en decimal:</p>
+<div class="arithmatex">\[
+1101011=001\text{ }101\text{ }011={ \begin{matrix}
+                    001 = 1 \\
+                    101 = 5 \\
+                    011 = 3
+                    \end{matrix} }
+                    = 153
+\]</div>
+<p>Entonces, nos termina quedando el <span class="arithmatex">\(153\)</span> en base octal. </p>
+<blockquote>
+<p>☝🏻🤓 <strong>Aclaración:</strong> En octal no nos hace falta añadir más dígitos porque como usamos los mismos que en decimal, y este tiene hasta diez dígitos, pues en verdad nos sobran dos, el 8 y el 9.</p>
+</blockquote>
+<h2 id="conversion-octal-a-binario">Conversión octal a binario</h2>
+<p>Esto tampoco tiene demasiada ciencia: es volver a usar el concepto de conversión hexadecimal-binario, pero haciéndolo de tres en tres.</p>
+<div class="arithmatex">\[
+153=1\text{, }5\text{ y }3={ \begin{matrix}
+                    1 = 001 \\
+                    5 = 101 \\
+                    3 = 011
+                    \end{matrix}}
+                    = 001\text{ }101\text{ }011
+\]</div>
+<h3 id="conversion-octal-a-decimal-directo">Conversión octal a decimal directo</h3>
+<p>En base dos tenemos <span class="arithmatex">\(2^n\)</span>, en base dieciseis <span class="arithmatex">\(16^n\)</span> y, por intuición, en base ocho es <span class="arithmatex">\(8^n\)</span>, que, aplicando la definición de los pesos, podemos pasar de base octal a base diez:</p>
+<div class="arithmatex">\[153=1·8^2(64)+5·8^1(8)+3·8^0(1)=64+40+3=107\]</div>
+<p>Con lo que hemos obtenido el mismo valor pasándolo del binario al decimal a través del hexadecimal como del octal.</p>
+<h1 id="bcd">BCD</h1>
+<p>El <em>código decimal binario</em>, o, como sus siglas en inglés, el <em>Binary Coded Decimal</em>, es una forma "bruta" de convertir decimal a binario: en vez de hacerlo convirtiéndolo de base diez a base dos, solo lo hacemos con los diez dígitos de la base diez y los agrupamos tal cual salgan.</p>
+<p>Existen mil y un formas de representar el código BCD: por ejemplo podemos poner a <span class="arithmatex">\(1\)</span> representado por <span class="arithmatex">\(1011010101\)</span> y al <span class="arithmatex">\(2\)</span> por <span class="arithmatex">\(101111100\)</span> y el <span class="arithmatex">\(12\)</span> por ejemplo ponerlo como <span class="arithmatex">\(1011010101\text{ }101111100\)</span>. Es muy feo, lo sé, pero se puede hacer.</p>
+<h2 id="codigo-8421">Código 8421</h2>
+<p>Aquí no somos artistas, sino ingenieros, por lo que hace falta simplificar lo máximo posible, y para eso tenemos el <em>BCD 8421</em>. En esta representación vamos a trabajar con 4 dígitos, que, como hemos usado en el binario anteriormente, es con los que hacen falta representar los diez dígitos del decimal:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Decimal</strong></th>
+<th style="text-align: center;"><strong>Binario</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0000</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0001</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0010</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">0011</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">0100</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0101</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">0110</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">0111</td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">1000</td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">1001</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>☝🏻🤓 <strong>Aclaración:</strong> Los números 8421 es por los pesos: como usamos 4 dígitos para representarlos, el cuarto valor se multiplica por 8, el tercero por 4, el segundo por 2 y el último por 1, y por último se suman.</p>
+</blockquote>
+<h2 id="conversion-decimal-a-bcd">Conversión decimal a BCD.</h2>
+<p>Vamos a coger el valor que conseguimos antes en decimal, el <span class="arithmatex">\(107\)</span> y vamos a convertirlo: es coger cada dígito y pasarlo al binario con 4 valores.</p>
+<div class="arithmatex">\[107=1\text{, }0\text{ y }7={ \begin{matrix}
+                    1 = 0001 \\
+                    0 = 0000 \\
+                    7 = 0111
+                    \end{matrix} }
+                    = 0001 \text{ } 0000 \text{ } 0111
+\]</div>
+<blockquote>
+<p>⚠️ <strong>Cuidado:</strong> La conversión BCD a decimal está algo más limitada: se agrupan de cuatro en cuarto y se va cambiando su equivalente a base diez, pero existen valores prohibidos: por ejemplo el 1100, que es el 12, en BCD no se puede representar, porque solo se pueden usar los valores del 0 al 9, por tanto, ese valor en binario sería ilegal en este caso.</p>
+</blockquote>
+<h1 id="tabla-resumen">Tabla resumen</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Decimal</strong></th>
+<th style="text-align: center;"><strong>Binario</strong></th>
+<th style="text-align: center;"><strong>Hexadecimal</strong></th>
+<th style="text-align: center;"><strong>Octal</strong></th>
+<th style="text-align: center;"><strong>BCD</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">107</td>
+<td style="text-align: center;">1101011</td>
+<td style="text-align: center;">6B</td>
+<td style="text-align: center;">153</td>
+<td style="text-align: center;">000100000111</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>😬 <strong>Experiencia:</strong> ¿Para qué sirve todo esto si con el binario es suficiente? Cuando empecé a trabajar con microprocesadores me di cuenta de lo importante que es el hexadecimal y cuando apliquemos decodificadores con 7 segmentos quizás vean que el BCD 8421 tiene verdadera utilidad.</p>
+</blockquote>
+<hr />
+<p>Aún quedan puntos como la aritmética con estas bases o la conversión de coma flotante, pero eso haría que esta publicación se volviera casi eterna, por lo que lo pondré en otra aparte. Con entender bien cómo se representa el hexadecimal y que existe el BCD, con eso, es más que suficiente como para poder seguir adelante.</p>
+<hr />
+                            
+                            
+
+                            
+							<nav class="navegacion-publicacion-independiente">
+								<div class="nav-columna nav-izquierda">
+									
+									<a href="../03-aritmetica-binaria/" class="enlace-nav flecha-izq" title="Ir a la publicación anterior">
+										<span class="flecha">←</span>
+										<div class="texto-nav">
+											<span class="etiqueta-nav">Anterior</span>
+										</div>
+									</a>
+									
+								</div>
+								
+								<div class="nav-columna nav-derecha">
+									
+									<a href="../05-bit-byte-y-nibble/" class="enlace-nav flecha-der" title="Ir a la siguiente publicación">
+										<div class="texto-nav">
+											<span class="etiqueta-nav">Siguiente</span>
+										</div>
+										<span class="flecha">→</span>
+									</a>
+									
+								</div>
+							</nav>
+							
+
+                            
+                            <div class="bloque-recursos-independiente" style="margin-top: 40px;">
+                                <h3 class="titulo-recursos">¿Quieres comentar cualquier cosa?</h3>
+                                <p style="color: #64748b; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">
+                                    En caso de tener dudas o haber visto fallos en nuestras publicaciones, puedes acceder a la parte de comentarios de nuestro GitHub y cuanto antes te responderemos.
+                                </p>
+                                <div style="text-align: center; margin-top: 25px;">
+                                    <a href="" 
+                                       target="_blank" 
+                                       class="boton-comentar-github">
+                                        <span style="font-size: 1.2rem;">🚀</span>
+                                        <span>Dejar un comentario en GitHub</span>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            
+                    
+                </div>
+                
+            </main>
+        </div>
+
+        <aside class="panel-derecho">
+            
+            
+            <div class="widget-sidebar" style="margin-bottom: 25px;">
+                <h3 style="margin-top: 0; font-size: 1.05rem; color: var(--color-primario); border-bottom: 2px solid var(--color-fondo-claro); padding-bottom: 8px; margin-bottom: 15px;">
+                    Lectura previa recomendada
+                </h3>
+                <div class="lista-tarjetas">
+                    
+                        <div class="tarjeta-articulo">
+                            <div class="tarjeta-info">
+                                <h3><a href="../../../../../02-decimal-y-binario/" style="color: var(--color-primario);">P02: Decimal y binario</a></h3>
+                                <span class="tarjeta-meta" style="display: block; margin-bottom: 4px;">
+                                    📊 Fácil — ⌛ 20 min
+                                </span>
+                                <span class="tarjeta-meta" style="display: block;">
+                                    📅 EN REVISIÓN — ✍🏻 Lulo
+                                </span>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+            
+
+            <div class="widget-lateral">
+                <h3 style="margin-top: 0; font-size: 1.05rem; color: var(--color-primario); border-bottom: 2px solid var(--color-fondo-claro); padding-bottom: 8px; margin-bottom: 15px;">
+                    Últimas actualizaciones
+                </h3>
+                <div class="lista-tarjetas">
+                    
+                        <div class="tarjeta-articulo">
+                            <div class="tarjeta-imagen">
+                                
+                                    <img src="../../../../pics/mini_elect.jpg" alt="P07: Complemento a 1">
+                                
+                            </div>
+                            <div class="tarjeta-info">
+                                <h3><a href="../../../../Ingenieria/Electronica/Lenguaje_Maquina/07-complemento-a1/">P07: Complemento a 1</a></h3>
+                                <span class="tarjeta-meta" style="display: block; margin-bottom: 3px;">
+                                    📊 Básico — ⌛ ~5 min
+                                </span>
+                                <span class="tarjeta-meta">📅 REVISIÓN — ✍🏻 Lulo</span>
+                                <p class="tarjeta-descripcion"></p>
+                            </div>
+                        </div>
+                    
+                        <div class="tarjeta-articulo">
+                            <div class="tarjeta-imagen">
+                                
+                                    <img src="../../../../pics/mini_elect.jpg" alt="P08: Complemento a 2">
+                                
+                            </div>
+                            <div class="tarjeta-info">
+                                <h3><a href="../../../../Ingenieria/Electronica/Lenguaje_Maquina/08-complemento-a2/">P08: Complemento a 2</a></h3>
+                                <span class="tarjeta-meta" style="display: block; margin-bottom: 3px;">
+                                    📊 Básico — ⌛ 5 min
+                                </span>
+                                <span class="tarjeta-meta">📅 REVISIÓN — ✍🏻 Lulo</span>
+                                <p class="tarjeta-descripcion"></p>
+                            </div>
+                        </div>
+                    
+                        <div class="tarjeta-articulo">
+                            <div class="tarjeta-imagen">
+                                
+                                    <img src="../../../../pics/mini_elect.jpg" alt="P0A: Aritmética de otras bases">
+                                
+                            </div>
+                            <div class="tarjeta-info">
+                                <h3><a href="../../../../Ingenieria/Electronica/Lenguaje_Maquina/0A-aritmetica-de-otras-bases/">P0A: Aritmética de otras bases</a></h3>
+                                <span class="tarjeta-meta" style="display: block; margin-bottom: 3px;">
+                                    📊 Básico — ⌛ ~5 min
+                                </span>
+                                <span class="tarjeta-meta">📅 REVISIÓN — ✍🏻 Lulo</span>
+                                <p class="tarjeta-descripcion"></p>
+                            </div>
+                        </div>
+                    
+                </div> 
+            </div> 
+            
+            <div class="widget-sidebar" style="margin-top: 35px;">
+                <h2 style="margin-top: 0; font-size: 1.15rem; color: var(--color-primario); border-bottom: 2px solid var(--color-fondo-claro); padding-bottom: 8px; margin-bottom: 15px; font-family: 'Merriweather', serif;">
+                    Publicaciones destacadas
+                </h2>
+                <div class="lista-articulos">
+                    
+                </div>
+            </div>
+
+        </aside>
+
+    </div>
+    
+    <footer class="pie-pagina">
+        <div class="contenedor-footer">
+            <p>&copy; 2026 <strong>liCiencia2</strong></p>
+            <span class="subtext-footer">Desarrollado usando MkDocs & Python macros</span>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>
+        
+            
+                P05: Bit, byte y nibble - 
+            
+            liCiencia2
+        
+    </title>
+    
+    <link rel="icon" type="image/png" href="../../../../pics/logo_principal.png">
+ 
+    <link rel="stylesheet" href="../../../../estilos.css">
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const links = document.querySelectorAll('.toc-enlace');
+			
+			function changeActive() {
+				let fromTop = window.scrollY + (window.innerHeight / 2); 
+				let currentActiveId = "";
+				
+				links.forEach(link => {
+					const id = link.getAttribute('href');
+					if (id && id.startsWith('#')) {
+						try {
+							const element = document.querySelector(id);
+							if (element && element.offsetTop <= fromTop) {
+								currentActiveId = id;
+							}
+						} catch(e) {}
+					}
+				});
+				
+				links.forEach(link => {
+					if (link.getAttribute('href') === currentActiveId) {
+						link.classList.add('active');
+					} else {
+						link.classList.remove('active');
+					}
+				});
+			}
+			
+			window.addEventListener('scroll', changeActive);
+			changeActive(); // Ejecución inicial
+		});
+	</script>
+<body>
+        
+    <header class="cabecera-principal">
+        <div class="contenedor-cabecera">
+            <div class="logo-sitio">
+                <a href="../../../../" style="text-decoration: none; color: inherit;">
+                    <h1>liCiencia2</h1>
+                </a>
+            </div>
+            <nav class="barra-superior">
+                <ul>
+                    
+                        <li>
+                            
+                                <details name="menu-principal">
+                                    <summary class="titulo-apartado">Inicio</summary>
+                                    <ul class="subapartado">
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../">¿Qué es este sitio?</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../#quienes-somos">¿Quiénes somos?</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../#planes-futuro">Planes a futuro</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../#donde-encontrarnos">¿Dónde encontrarnos?</a>
+                                                
+                                            </li>
+                                        
+                                    </ul>
+                                </details>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                                <details name="menu-principal">
+                                    <summary class="titulo-apartado">Publicaciones</summary>
+                                    <ul class="subapartado">
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../publicaciones/#estructura">Estructura</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../publicaciones/#etiquetas">Catálogo por Etiquetas</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../publicaciones/#ultimas-publicaciones">Últimas publicaciones</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../publicaciones/#biblioteca">Biblioteca</a>
+                                                
+                                            </li>
+                                        
+                                    </ul>
+                                </details>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                                <a href="../../../../Fisica/inicio-fisica/" class="enlace-apartado">Física</a>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                                <details name="menu-principal">
+                                    <summary class="titulo-apartado">Ingeniería</summary>
+                                    <ul class="subapartado">
+                                        
+                                            <li>
+                                                
+                                                    <details name="menu-subnivel">
+                                                        <summary class="titulo-subapartado">Electrónica</summary>
+                                                        <ul class="subsubapartado">
+                                                            
+                                                                <li>
+                                                                    
+                                                                        <a href="../../../../Ingenieria/Electronica/Lenguaje_Maquina/indice-lenguaje-maquina/">Lenguaje máquina</a>
+                                                                    
+                                                                </li>
+                                                            
+                                                        </ul>
+                                                    </details>
+                                                
+                                            </li>
+                                        
+                                    </ul>
+                                </details>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                                <a href="../../../../#como-contribuir" class="enlace-apartado">Cómo contribuir</a>
+                            
+                        </li>
+                    
+                </ul>
+            </nav>
+            <script>
+                document.addEventListener('click', function(event) {
+                    const cabecera = document.querySelector('.cabecera-principal');
+                    if (!cabecera.contains(event.target)) {
+                        document.querySelectorAll('.barra-superior details').forEach(details => {
+                            details.removeAttribute('open');
+                        });
+                    }
+                });
+            </script>
+        </div>
+    </header>
+    
+    <div class="layout-principal ">
+        
+        
+        <aside class="panel-izquierdo">
+            
+            
+            <div class="widget-etiquetas">
+                <h3>Etiquetas</h3>
+                <div class="lista-etiquetas-sidebar">
+                    
+                        <span class="tag-sidebar">Binario</span>
+                    
+                        <span class="tag-sidebar">Teoría y conceptos</span>
+                    
+                </div>
+            </div>
+            
+
+            
+            <div class="widget-toc">
+                <h3>Índice</h3>
+                <nav class="tabla-contenidos">
+                    <ul>
+                        
+                            <li>
+                                <a href="#bit" class="toc-enlace">Bit</a>
+                                
+                            </li>
+                        
+                            <li>
+                                <a href="#nibble" class="toc-enlace">Nibble</a>
+                                
+                            </li>
+                        
+                            <li>
+                                <a href="#byte" class="toc-enlace">Byte</a>
+                                
+                                    <ul>
+                                        
+                                            <li><a href="#word" class="toc-enlace">Word</a></li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                    </ul>
+                </nav>
+            </div>
+            
+
+        </aside>
+        
+        
+        <div class="columna-principal">
+            
+            
+                <h1 class="titulo-gran-formato">P05: Bit, byte y nibble</h1>
+            
+
+            <main class="contenedor-contenido">
+                
+                
+					<div class="widget-construccion">
+
+						<div class="construccion-cabecera">
+							<h2>Igual que la cocina, esto lleva su tiempo</h2>
+						</div>
+						
+						<div class="imagen-construccion-contenedor" style="text-align: center; margin-top: 10px; margin-bottom: 15px;">
+							<img src="../../../../pics/Trabajando_publicacion.jpg" alt="Trabajando en ello" style="max-width: 150px; height: auto;">
+						</div>
+
+						<p>Alto ahí, campeón. Sé que tienes ganas de echar un vistazo, pero toca esperar.</p>
+						<p>Aprovecha y sal a caminar un rato. Eso nunca hace daño.</p>
+						
+						<div class="construccion-barra-fondo">
+							<div class="construccion-barra-relleno" style="width: 50%;"></div>
+						</div>
+						<div class="construccion-porcentaje">Esto anda por el 50%</div>
+					</div>
+				
+
+                <div id="contenido-articulo" class="borrador-oculto">
+                    
+                        
+                            <blockquote>
+<p>✍🏻 <strong>Autor:</strong> Lulo<br />
+📚 <strong>Nivel:</strong> Básico<br />
+⌛ <strong>Tiempo lectura:</strong> ~5 min<br />
+🧮 <strong>Matemáticas:</strong> Nulas  </p>
+</blockquote>
+<div style="margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap;"><span class="btn-tag-filtro" style="padding: 4px 10px; background-color: #e2e8f0; color: #1e293b; border-radius: 6px; font-size: 0.85rem; border: 1px solid #cbd5e1;">Binario</span><span class="btn-tag-filtro" style="padding: 4px 10px; background-color: #e2e8f0; color: #1e293b; border-radius: 6px; font-size: 0.85rem; border: 1px solid #cbd5e1;">Teoría y conceptos</span></div>
+
+<p>Lo de hoy es un poco de teoría y vamos a explicar algunos de los conceptos que más vamos a usar. Además, estás harto de escucharlos, pero nunca has sabido sus significados.</p>
+<h1 id="bit">Bit</h1>
+<p>Recordemos cuando dimos en el inicio del todo lo que es una <a href="../01-senial-digital/">señal digital</a>: una alternancia de unos y ceros. Este estado, ya se alto o bajo, representa la cantidad mínima de información que se puede almacenar, y se llama <em>bit</em> /ˈbɪt/.</p>
+<p>Si has estado atento, en alguna publicación de seguro que se me ha escapado esa palabra para referirme a los dígitos binarios, que, cada uno de ellos es un bit y en su conjunto forman el dato que ora queremos almacenar, ora queremos trabajar.</p>
+<h1 id="nibble">Nibble</h1>
+<p>Los bits se pueden agrupar, y el primer grupo que nos encontramos son los <em>nibbles</em> /ˈnɪbl̩/. Estos son grupos conformados por cuatro bits, desde <span class="arithmatex">\(0000\)</span> hasta <span class="arithmatex">\(1111\)</span>, y estos son los dígitos máximo y mínimo de la base <a href="../04-octal-hexadecimal-y-bcd/">hexadecimal</a>. Entonces, de esta forma, cada número en hexadecimal es un nibble de información.</p>
+<blockquote>
+<p>😬 <strong>Experiencia:</strong> Este término no lo conocí hasta cuando empecé a estudiar el d (uno de los libros que estoy usando actualmente). Es un término que normalmente se omite, pero es interesante conocerlo.</p>
+</blockquote>
+<h1 id="byte">Byte</h1>
+<p>Giga Byte, Mega Byte, Tera Byte... Estas palabras las llegamos a usar en nuestro día a día, pero generalmente no conocemos su significado: al igual que Kilo es <span class="arithmatex">\(10^3\)</span>, Mega es <span class="arithmatex">\(10^6\)</span>, Giga <span class="arithmatex">\(10^9\)</span> y Tera <span class="arithmatex">\(10^{12}\)</span>; luego, el <em>byte</em> /baɪt/ corresponde a la unidad, que son dos grupos de nibble u ocho bits de información.</p>
+<p>A este valor se le da tanta importancia porque es la unidad mínima para poder almacenar tanto todo tipo de datos como hasta caracteres alfabéticos, además que los primeros ordenadores trabajaban con este tamaño de datos.</p>
+<h2 id="word">Word</h2>
+<p>¿De verdad mi ordenador trabaja a 8 bits, osea, un byte? No. No estamos en los años 70. La tecnología ha ido avanzando enormemente al punto que un microcontrolador de 16 bits (2 bytes) se considera muy limitado, por lo que lo más normal es encontrar de 32 y 64 bits (en este último caso, tu móvil u ordenador). Dependiendo de lo compleja que sean las instrucciones, un microprocesador puede tener un tamaño de <em>palabra</em> (<em>word</em> /wɝːd/) más grande o más pequeño.</p>
+<blockquote>
+<p>❗ <strong>Curiosidad:</strong> Existen superordenadores que ya trabajan con 128 bits, que eso equivale a poder almacenar <span class="arithmatex">\(2^{128}\)</span> instrucciones. En este caso, más no significa mejor: consumen más energía, ocupan más espacio... Esto es solo para ordenadores experimentales.</p>
+</blockquote>
+<hr />
+<p>Ya sabemos usar el binario, entendemos cómo se pueden agrupar y cómo se trabaja, pero hay un problema al que no nos hemos enfrentado directamente y es ¿cómo representamos valores que son negativos? Si solo tenemos los símbolos 1 y 0, no podemos usar el "-". Esto lo abarcaremos en la siguiente publicación.</p>
+<hr />
+                            
+                            
+
+                            
+							<nav class="navegacion-publicacion-independiente">
+								<div class="nav-columna nav-izquierda">
+									
+									<a href="../04-octal-hexadecimal-y-bcd/" class="enlace-nav flecha-izq" title="Ir a la publicación anterior">
+										<span class="flecha">←</span>
+										<div class="texto-nav">
+											<span class="etiqueta-nav">Anterior</span>
+										</div>
+									</a>
+									
+								</div>
+								
+								<div class="nav-columna nav-derecha">
+									
+									<a href="../06-representacion-con-signo/" class="enlace-nav flecha-der" title="Ir a la siguiente publicación">
+										<div class="texto-nav">
+											<span class="etiqueta-nav">Siguiente</span>
+										</div>
+										<span class="flecha">→</span>
+									</a>
+									
+								</div>
+							</nav>
+							
+
+                            
+                            <div class="bloque-recursos-independiente" style="margin-top: 40px;">
+                                <h3 class="titulo-recursos">¿Quieres comentar cualquier cosa?</h3>
+                                <p style="color: #64748b; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">
+                                    En caso de tener dudas o haber visto fallos en nuestras publicaciones, puedes acceder a la parte de comentarios de nuestro GitHub y cuanto antes te responderemos.
+                                </p>
+                                <div style="text-align: center; margin-top: 25px;">
+                                    <a href="" 
+                                       target="_blank" 
+                                       class="boton-comentar-github">
+                                        <span style="font-size: 1.2rem;">🚀</span>
+                                        <span>Dejar un comentario en GitHub</span>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            
+                    
+                </div>
+                
+            </main>
+        </div>
+
+        <aside class="panel-derecho">
+            
+            
+            <div class="widget-sidebar" style="margin-bottom: 25px;">
+                <h3 style="margin-top: 0; font-size: 1.05rem; color: var(--color-primario); border-bottom: 2px solid var(--color-fondo-claro); padding-bottom: 8px; margin-bottom: 15px;">
+                    Lectura previa recomendada
+                </h3>
+                <div class="lista-tarjetas">
+                    
+                        <div class="tarjeta-articulo">
+                            <div class="tarjeta-info">
+                                <h3><a href="../../../../../02-decimal-y-binario/" style="color: var(--color-primario);">P02: Decimal y binario</a></h3>
+                                <span class="tarjeta-meta" style="display: block; margin-bottom: 4px;">
+                                    📊 Fácil — ⌛ 20 min
+                                </span>
+                                <span class="tarjeta-meta" style="display: block;">
+                                    📅 26-10-2026 — ✍🏻 Lulo
+                                </span>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+            
+
+            <div class="widget-lateral">
+                <h3 style="margin-top: 0; font-size: 1.05rem; color: var(--color-primario); border-bottom: 2px solid var(--color-fondo-claro); padding-bottom: 8px; margin-bottom: 15px;">
+                    Últimas actualizaciones
+                </h3>
+                <div class="lista-tarjetas">
+                    
+                        <div class="tarjeta-articulo">
+                            <div class="tarjeta-imagen">
+                                
+                                    <img src="../../../../pics/mini_elect.jpg" alt="P07: Complemento a 1">
+                                
+                            </div>
+                            <div class="tarjeta-info">
+                                <h3><a href="../../../../Ingenieria/Electronica/Lenguaje_Maquina/07-complemento-a1/">P07: Complemento a 1</a></h3>
+                                <span class="tarjeta-meta" style="display: block; margin-bottom: 3px;">
+                                    📊 Básico — ⌛ ~5 min
+                                </span>
+                                <span class="tarjeta-meta">📅 REVISIÓN — ✍🏻 Lulo</span>
+                                <p class="tarjeta-descripcion"></p>
+                            </div>
+                        </div>
+                    
+                        <div class="tarjeta-articulo">
+                            <div class="tarjeta-imagen">
+                                
+                                    <img src="../../../../pics/mini_elect.jpg" alt="P08: Complemento a 2">
+                                
+                            </div>
+                            <div class="tarjeta-info">
+                                <h3><a href="../../../../Ingenieria/Electronica/Lenguaje_Maquina/08-complemento-a2/">P08: Complemento a 2</a></h3>
+                                <span class="tarjeta-meta" style="display: block; margin-bottom: 3px;">
+                                    📊 Básico — ⌛ 5 min
+                                </span>
+                                <span class="tarjeta-meta">📅 REVISIÓN — ✍🏻 Lulo</span>
+                                <p class="tarjeta-descripcion"></p>
+                            </div>
+                        </div>
+                    
+                        <div class="tarjeta-articulo">
+                            <div class="tarjeta-imagen">
+                                
+                                    <img src="../../../../pics/mini_elect.jpg" alt="P0A: Aritmética de otras bases">
+                                
+                            </div>
+                            <div class="tarjeta-info">
+                                <h3><a href="../../../../Ingenieria/Electronica/Lenguaje_Maquina/0A-aritmetica-de-otras-bases/">P0A: Aritmética de otras bases</a></h3>
+                                <span class="tarjeta-meta" style="display: block; margin-bottom: 3px;">
+                                    📊 Básico — ⌛ ~5 min
+                                </span>
+                                <span class="tarjeta-meta">📅 REVISIÓN — ✍🏻 Lulo</span>
+                                <p class="tarjeta-descripcion"></p>
+                            </div>
+                        </div>
+                    
+                </div> 
+            </div> 
+            
+            <div class="widget-sidebar" style="margin-top: 35px;">
+                <h2 style="margin-top: 0; font-size: 1.15rem; color: var(--color-primario); border-bottom: 2px solid var(--color-fondo-claro); padding-bottom: 8px; margin-bottom: 15px; font-family: 'Merriweather', serif;">
+                    Publicaciones destacadas
+                </h2>
+                <div class="lista-articulos">
+                    
+                </div>
+            </div>
+
+        </aside>
+
+    </div>
+    
+    <footer class="pie-pagina">
+        <div class="contenedor-footer">
+            <p>&copy; 2026 <strong>liCiencia2</strong></p>
+            <span class="subtext-footer">Desarrollado usando MkDocs & Python macros</span>
+        </div>
+    </footer>
+</body>
+</html>

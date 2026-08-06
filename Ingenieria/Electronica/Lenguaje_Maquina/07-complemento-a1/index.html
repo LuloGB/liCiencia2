@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>
+        
+            
+                P07: Complemento a 1 - 
+            
+            liCiencia2
+        
+    </title>
+    
+    <link rel="icon" type="image/png" href="../../../../pics/logo_principal.png">
+ 
+    <link rel="stylesheet" href="../../../../estilos.css">
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const links = document.querySelectorAll('.toc-enlace');
+			
+			function changeActive() {
+				let fromTop = window.scrollY + (window.innerHeight / 2); 
+				let currentActiveId = "";
+				
+				links.forEach(link => {
+					const id = link.getAttribute('href');
+					if (id && id.startsWith('#')) {
+						try {
+							const element = document.querySelector(id);
+							if (element && element.offsetTop <= fromTop) {
+								currentActiveId = id;
+							}
+						} catch(e) {}
+					}
+				});
+				
+				links.forEach(link => {
+					if (link.getAttribute('href') === currentActiveId) {
+						link.classList.add('active');
+					} else {
+						link.classList.remove('active');
+					}
+				});
+			}
+			
+			window.addEventListener('scroll', changeActive);
+			changeActive(); // Ejecución inicial
+		});
+	</script>
+<body>
+        
+    <header class="cabecera-principal">
+        <div class="contenedor-cabecera">
+            <div class="logo-sitio">
+                <a href="../../../../" style="text-decoration: none; color: inherit;">
+                    <h1>liCiencia2</h1>
+                </a>
+            </div>
+            <nav class="barra-superior">
+                <ul>
+                    
+                        <li>
+                            
+                                <details name="menu-principal">
+                                    <summary class="titulo-apartado">Inicio</summary>
+                                    <ul class="subapartado">
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../">¿Qué es este sitio?</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../#quienes-somos">¿Quiénes somos?</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../#planes-futuro">Planes a futuro</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../#donde-encontrarnos">¿Dónde encontrarnos?</a>
+                                                
+                                            </li>
+                                        
+                                    </ul>
+                                </details>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                                <details name="menu-principal">
+                                    <summary class="titulo-apartado">Publicaciones</summary>
+                                    <ul class="subapartado">
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../publicaciones/#estructura">Estructura</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../publicaciones/#etiquetas">Catálogo por Etiquetas</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../publicaciones/#ultimas-publicaciones">Últimas publicaciones</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../publicaciones/#biblioteca">Biblioteca</a>
+                                                
+                                            </li>
+                                        
+                                    </ul>
+                                </details>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                                <a href="../../../../Fisica/inicio-fisica/" class="enlace-apartado">Física</a>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                                <details name="menu-principal">
+                                    <summary class="titulo-apartado">Ingeniería</summary>
+                                    <ul class="subapartado">
+                                        
+                                            <li>
+                                                
+                                                    <details name="menu-subnivel">
+                                                        <summary class="titulo-subapartado">Electrónica</summary>
+                                                        <ul class="subsubapartado">
+                                                            
+                                                                <li>
+                                                                    
+                                                                        <a href="../../../../Ingenieria/Electronica/Lenguaje_Maquina/indice-lenguaje-maquina/">Lenguaje máquina</a>
+                                                                    
+                                                                </li>
+                                                            
+                                                        </ul>
+                                                    </details>
+                                                
+                                            </li>
+                                        
+                                    </ul>
+                                </details>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                                <a href="../../../../#como-contribuir" class="enlace-apartado">Cómo contribuir</a>
+                            
+                        </li>
+                    
+                </ul>
+            </nav>
+            <script>
+                document.addEventListener('click', function(event) {
+                    const cabecera = document.querySelector('.cabecera-principal');
+                    if (!cabecera.contains(event.target)) {
+                        document.querySelectorAll('.barra-superior details').forEach(details => {
+                            details.removeAttribute('open');
+                        });
+                    }
+                });
+            </script>
+        </div>
+    </header>
+    
+    <div class="layout-principal ">
+        
+        
+        <aside class="panel-izquierdo">
+            
+            
+            <div class="widget-etiquetas">
+                <h3>Etiquetas</h3>
+                <div class="lista-etiquetas-sidebar">
+                    
+                        <span class="tag-sidebar">Binario</span>
+                    
+                        <span class="tag-sidebar">Conversión de bases</span>
+                    
+                </div>
+            </div>
+            
+
+            
+            <div class="widget-toc">
+                <h3>Índice</h3>
+                <nav class="tabla-contenidos">
+                    <ul>
+                        
+                            <li>
+                                <a href="#diferencia-con-signo-magnitud" class="toc-enlace">Diferencia con signo-magnitud</a>
+                                
+                                    <ul>
+                                        
+                                            <li><a href="#conversion-a-decimal" class="toc-enlace">Conversión a decimal</a></li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            <li>
+                                <a href="#limitaciones" class="toc-enlace">Limitaciones</a>
+                                
+                            </li>
+                        
+                    </ul>
+                </nav>
+            </div>
+            
+
+        </aside>
+        
+        
+        <div class="columna-principal">
+            
+            
+                <h1 class="titulo-gran-formato">P07: Complemento a 1</h1>
+            
+
+            <main class="contenedor-contenido">
+                
+                
+					<div class="widget-construccion">
+
+						<div class="construccion-cabecera">
+							<h2>Igual que la cocina, esto lleva su tiempo</h2>
+						</div>
+						
+						<div class="imagen-construccion-contenedor" style="text-align: center; margin-top: 10px; margin-bottom: 15px;">
+							<img src="../../../../pics/Trabajando_publicacion.jpg" alt="Trabajando en ello" style="max-width: 150px; height: auto;">
+						</div>
+
+						<p>Alto ahí, campeón. Sé que tienes ganas de echar un vistazo, pero toca esperar.</p>
+						<p>Aprovecha y sal a caminar un rato. Eso nunca hace daño.</p>
+						
+						<div class="construccion-barra-fondo">
+							<div class="construccion-barra-relleno" style="width: 50%;"></div>
+						</div>
+						<div class="construccion-porcentaje">Esto anda por el 50%</div>
+					</div>
+				
+
+                <div id="contenido-articulo" class="borrador-oculto">
+                    
+                        
+                            <blockquote>
+<p>✍🏻 <strong>Autor:</strong> Lulo<br />
+📚 <strong>Nivel:</strong> Básico<br />
+⌛ <strong>Tiempo lectura:</strong> 5 min<br />
+🧮 <strong>Matemáticas:</strong> Básicas  </p>
+</blockquote>
+<p>Para poder representar valores negativos nos servía con el <a href="../06-representacion-con-signo/">signo y magnitud</a>, pero teniendo una doble representación del <span class="arithmatex">\(0\)</span>. Pero, ¿esta es la única manera de representar los negativos? No, pues existen dos más, que son mucho más comunes que esta.</p>
+<h1 id="diferencia-con-signo-magnitud">Diferencia con signo-magnitud</h1>
+<p>En esta base también nos ayudamos del bit de signo, por lo que el primer bit será un <span class="arithmatex">\(0\)</span> si es positivo y <span class="arithmatex">\(1\)</span> si es negativo. ¿Cuál es la diferencia? Que cuando queremos representar un valor negativo, no lo hacemos con binario natural, sino "invertimos" esa parte.</p>
+<p>Tenemos el <span class="arithmatex">\(12\)</span>, pero lo vamos a hacer en complemento a1 en <span class="arithmatex">\(8\)</span> bits: primero el bit de signo, <span class="arithmatex">\(0\)</span>, luego tres bits que nos hacen falta de relleno y por último el valor en binario natural, obteniendo <span class="arithmatex">\(00001100\)</span>. Para hacer el <span class="arithmatex">\(-12\)</span>, vamos a tomar su representación positiva e invertirla: cada cero se cambia por un uno y cada uno por un cero. De esta forma nos queda: <span class="arithmatex">\(11110011\)</span>. Es en verdad bastante sencillo.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Decimal</strong></th>
+<th style="text-align: center;"><strong>Binario natural</strong></th>
+<th style="text-align: center;"><strong>Complemento a 1</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">-12</td>
+<td style="text-align: center;">-1100</td>
+<td style="text-align: center;">11110011</td>
+</tr>
+</tbody>
+</table>
+<h2 id="conversion-a-decimal">Conversión a decimal</h2>
+<p>Para pasarlo a decimal es solo repetir todo el proceso al revés: si el bit de signo es <span class="arithmatex">\(0\)</span>, solo hay que convertir el resto del número como si de binario natural se tratara; en el caso de tener un signo <span class="arithmatex">\(1\)</span>, que quiere decir que es negativo, se invierte todo el número y se convierte a binario natural.</p>
+<blockquote>
+<p>❗ <strong>Curiosidad:</strong> Aunque parezca un poco raro el complemento a 1, este método era el que se usaba en los primeros ordenadores, y hoy en día se sigue usando para ciertos protocolos de internet.</p>
+</blockquote>
+<h1 id="limitaciones">Limitaciones</h1>
+<p>En este caso tenemos un mismo rango de valores que en la representación de magnitud y signo, que es de <span class="arithmatex">\(-(2^{n-1}-1)\)</span> a <span class="arithmatex">\(2^{n-1}-1\)</span>. Esto es debido a que tenemos el mismo problema de antes, que el <span class="arithmatex">\(0\)</span> tiene doble representación.</p>
+<div class="arithmatex">\[0 == 00000000 == 11111111\]</div>
+<hr />
+<p>Si hemos entendido el signo y magnitud, el complemento a 1 es igual de sencillo: si es negativo, darle la vuelta. Y aún tenemos el problema de la doble representación del <span class="arithmatex">\(0\)</span>, pero tiene solución, y se llama <em>complemento a 2</em>, que lo veremos en la siguiente publicación.</p>
+<hr />
+                            
+                            
+
+                            
+							<nav class="navegacion-publicacion-independiente">
+								<div class="nav-columna nav-izquierda">
+									
+									<a href="../06-representacion-con-signo/" class="enlace-nav flecha-izq" title="Ir a la publicación anterior">
+										<span class="flecha">←</span>
+										<div class="texto-nav">
+											<span class="etiqueta-nav">Anterior</span>
+										</div>
+									</a>
+									
+								</div>
+								
+								<div class="nav-columna nav-derecha">
+									
+									<a href="../08-complemento-a2/" class="enlace-nav flecha-der" title="Ir a la siguiente publicación">
+										<div class="texto-nav">
+											<span class="etiqueta-nav">Siguiente</span>
+										</div>
+										<span class="flecha">→</span>
+									</a>
+									
+								</div>
+							</nav>
+							
+
+                            
+                            <div class="bloque-recursos-independiente" style="margin-top: 40px;">
+                                <h3 class="titulo-recursos">¿Quieres comentar cualquier cosa?</h3>
+                                <p style="color: #64748b; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">
+                                    En caso de tener dudas o haber visto fallos en nuestras publicaciones, puedes acceder a la parte de comentarios de nuestro GitHub y cuanto antes te responderemos.
+                                </p>
+                                <div style="text-align: center; margin-top: 25px;">
+                                    <a href="" 
+                                       target="_blank" 
+                                       class="boton-comentar-github">
+                                        <span style="font-size: 1.2rem;">🚀</span>
+                                        <span>Dejar un comentario en GitHub</span>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            
+                    
+                </div>
+                
+            </main>
+        </div>
+
+        <aside class="panel-derecho">
+            
+            
+            <div class="widget-sidebar" style="margin-bottom: 25px;">
+                <h3 style="margin-top: 0; font-size: 1.05rem; color: var(--color-primario); border-bottom: 2px solid var(--color-fondo-claro); padding-bottom: 8px; margin-bottom: 15px;">
+                    Lectura previa recomendada
+                </h3>
+                <div class="lista-tarjetas">
+                    
+                        <div class="tarjeta-articulo">
+                            <div class="tarjeta-info">
+                                <h3><a href="../../../../../06-representacion-con-signo/" style="color: var(--color-primario);">P06: Representación con signo</a></h3>
+                                <span class="tarjeta-meta" style="display: block; margin-bottom: 4px;">
+                                    📊 Básico — ⌛ ~5 min
+                                </span>
+                                <span class="tarjeta-meta" style="display: block;">
+                                    📅 REVISIÓN — ✍🏻 Lulo
+                                </span>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+            
+
+            <div class="widget-lateral">
+                <h3 style="margin-top: 0; font-size: 1.05rem; color: var(--color-primario); border-bottom: 2px solid var(--color-fondo-claro); padding-bottom: 8px; margin-bottom: 15px;">
+                    Últimas actualizaciones
+                </h3>
+                <div class="lista-tarjetas">
+                    
+                        <div class="tarjeta-articulo">
+                            <div class="tarjeta-imagen">
+                                
+                                    <img src="../../../../pics/mini_elect.jpg" alt="P07: Complemento a 1">
+                                
+                            </div>
+                            <div class="tarjeta-info">
+                                <h3><a href="../../../../Ingenieria/Electronica/Lenguaje_Maquina/07-complemento-a1/">P07: Complemento a 1</a></h3>
+                                <span class="tarjeta-meta" style="display: block; margin-bottom: 3px;">
+                                    📊 Básico — ⌛ ~5 min
+                                </span>
+                                <span class="tarjeta-meta">📅 REVISIÓN — ✍🏻 Lulo</span>
+                                <p class="tarjeta-descripcion"></p>
+                            </div>
+                        </div>
+                    
+                        <div class="tarjeta-articulo">
+                            <div class="tarjeta-imagen">
+                                
+                                    <img src="../../../../pics/mini_elect.jpg" alt="P08: Complemento a 2">
+                                
+                            </div>
+                            <div class="tarjeta-info">
+                                <h3><a href="../../../../Ingenieria/Electronica/Lenguaje_Maquina/08-complemento-a2/">P08: Complemento a 2</a></h3>
+                                <span class="tarjeta-meta" style="display: block; margin-bottom: 3px;">
+                                    📊 Básico — ⌛ 5 min
+                                </span>
+                                <span class="tarjeta-meta">📅 REVISIÓN — ✍🏻 Lulo</span>
+                                <p class="tarjeta-descripcion"></p>
+                            </div>
+                        </div>
+                    
+                        <div class="tarjeta-articulo">
+                            <div class="tarjeta-imagen">
+                                
+                                    <img src="../../../../pics/mini_elect.jpg" alt="P0A: Aritmética de otras bases">
+                                
+                            </div>
+                            <div class="tarjeta-info">
+                                <h3><a href="../../../../Ingenieria/Electronica/Lenguaje_Maquina/0A-aritmetica-de-otras-bases/">P0A: Aritmética de otras bases</a></h3>
+                                <span class="tarjeta-meta" style="display: block; margin-bottom: 3px;">
+                                    📊 Básico — ⌛ ~5 min
+                                </span>
+                                <span class="tarjeta-meta">📅 REVISIÓN — ✍🏻 Lulo</span>
+                                <p class="tarjeta-descripcion"></p>
+                            </div>
+                        </div>
+                    
+                </div> 
+            </div> 
+            
+            <div class="widget-sidebar" style="margin-top: 35px;">
+                <h2 style="margin-top: 0; font-size: 1.15rem; color: var(--color-primario); border-bottom: 2px solid var(--color-fondo-claro); padding-bottom: 8px; margin-bottom: 15px; font-family: 'Merriweather', serif;">
+                    Publicaciones destacadas
+                </h2>
+                <div class="lista-articulos">
+                    
+                </div>
+            </div>
+
+        </aside>
+
+    </div>
+    
+    <footer class="pie-pagina">
+        <div class="contenedor-footer">
+            <p>&copy; 2026 <strong>liCiencia2</strong></p>
+            <span class="subtext-footer">Desarrollado usando MkDocs & Python macros</span>
+        </div>
+    </footer>
+</body>
+</html>

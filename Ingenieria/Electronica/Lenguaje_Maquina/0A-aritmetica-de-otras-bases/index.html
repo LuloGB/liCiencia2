@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>
+        
+            
+                P0A: Aritmética de otras bases - 
+            
+            liCiencia2
+        
+    </title>
+    
+    <link rel="icon" type="image/png" href="../../../../pics/logo_principal.png">
+ 
+    <link rel="stylesheet" href="../../../../estilos.css">
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const links = document.querySelectorAll('.toc-enlace');
+			
+			function changeActive() {
+				let fromTop = window.scrollY + (window.innerHeight / 2); 
+				let currentActiveId = "";
+				
+				links.forEach(link => {
+					const id = link.getAttribute('href');
+					if (id && id.startsWith('#')) {
+						try {
+							const element = document.querySelector(id);
+							if (element && element.offsetTop <= fromTop) {
+								currentActiveId = id;
+							}
+						} catch(e) {}
+					}
+				});
+				
+				links.forEach(link => {
+					if (link.getAttribute('href') === currentActiveId) {
+						link.classList.add('active');
+					} else {
+						link.classList.remove('active');
+					}
+				});
+			}
+			
+			window.addEventListener('scroll', changeActive);
+			changeActive(); // Ejecución inicial
+		});
+	</script>
+<body>
+        
+    <header class="cabecera-principal">
+        <div class="contenedor-cabecera">
+            <div class="logo-sitio">
+                <a href="../../../../" style="text-decoration: none; color: inherit;">
+                    <h1>liCiencia2</h1>
+                </a>
+            </div>
+            <nav class="barra-superior">
+                <ul>
+                    
+                        <li>
+                            
+                                <details name="menu-principal">
+                                    <summary class="titulo-apartado">Inicio</summary>
+                                    <ul class="subapartado">
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../">¿Qué es este sitio?</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../#quienes-somos">¿Quiénes somos?</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../#planes-futuro">Planes a futuro</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../#donde-encontrarnos">¿Dónde encontrarnos?</a>
+                                                
+                                            </li>
+                                        
+                                    </ul>
+                                </details>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                                <details name="menu-principal">
+                                    <summary class="titulo-apartado">Publicaciones</summary>
+                                    <ul class="subapartado">
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../publicaciones/#estructura">Estructura</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../publicaciones/#etiquetas">Catálogo por Etiquetas</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../publicaciones/#ultimas-publicaciones">Últimas publicaciones</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../publicaciones/#biblioteca">Biblioteca</a>
+                                                
+                                            </li>
+                                        
+                                    </ul>
+                                </details>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                                <a href="../../../../Fisica/inicio-fisica/" class="enlace-apartado">Física</a>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                                <details name="menu-principal">
+                                    <summary class="titulo-apartado">Ingeniería</summary>
+                                    <ul class="subapartado">
+                                        
+                                            <li>
+                                                
+                                                    <details name="menu-subnivel">
+                                                        <summary class="titulo-subapartado">Electrónica</summary>
+                                                        <ul class="subsubapartado">
+                                                            
+                                                                <li>
+                                                                    
+                                                                        <a href="../../../../Ingenieria/Electronica/Lenguaje_Maquina/indice-lenguaje-maquina/">Lenguaje máquina</a>
+                                                                    
+                                                                </li>
+                                                            
+                                                        </ul>
+                                                    </details>
+                                                
+                                            </li>
+                                        
+                                    </ul>
+                                </details>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                                <a href="../../../../#como-contribuir" class="enlace-apartado">Cómo contribuir</a>
+                            
+                        </li>
+                    
+                </ul>
+            </nav>
+            <script>
+                document.addEventListener('click', function(event) {
+                    const cabecera = document.querySelector('.cabecera-principal');
+                    if (!cabecera.contains(event.target)) {
+                        document.querySelectorAll('.barra-superior details').forEach(details => {
+                            details.removeAttribute('open');
+                        });
+                    }
+                });
+            </script>
+        </div>
+    </header>
+    
+    <div class="layout-principal ">
+        
+        
+        <aside class="panel-izquierdo">
+            
+            
+            <div class="widget-etiquetas">
+                <h3>Etiquetas</h3>
+                <div class="lista-etiquetas-sidebar">
+                    
+                        <span class="tag-sidebar">Hexadecimal</span>
+                    
+                        <span class="tag-sidebar">Aritmética</span>
+                    
+                        <span class="tag-sidebar">Complementarios</span>
+                    
+                </div>
+            </div>
+            
+
+            
+            <div class="widget-toc">
+                <h3>Índice</h3>
+                <nav class="tabla-contenidos">
+                    <ul>
+                        
+                            <li>
+                                <a href="#aritmetica-hexadecimal" class="toc-enlace">Aritmética hexadecimal</a>
+                                
+                                    <ul>
+                                        
+                                            <li><a href="#suma-hexadecimal" class="toc-enlace">Suma hexadecimal</a></li>
+                                        
+                                            <li><a href="#resta-hexadecimal" class="toc-enlace">Resta hexadecimal</a></li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            <li>
+                                <a href="#aritmetica-octal" class="toc-enlace">Aritmética octal</a>
+                                
+                            </li>
+                        
+                            <li>
+                                <a href="#aritmetica-bcd" class="toc-enlace">Aritmética BCD</a>
+                                
+                            </li>
+                        
+                            <li>
+                                <a href="#aritmetica-de-los-complementos" class="toc-enlace">Aritmética de los complementos</a>
+                                
+                                    <ul>
+                                        
+                                            <li><a href="#complemento-a-1" class="toc-enlace">Complemento a 1</a></li>
+                                        
+                                            <li><a href="#complemento-a-2" class="toc-enlace">Complemento a 2</a></li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                    </ul>
+                </nav>
+            </div>
+            
+
+        </aside>
+        
+        
+        <div class="columna-principal">
+            
+            
+                <h1 class="titulo-gran-formato">P0A: Aritmética de otras bases</h1>
+            
+
+            <main class="contenedor-contenido">
+                
+                
+					<div class="widget-construccion">
+
+						<div class="construccion-cabecera">
+							<h2>Igual que la cocina, esto lleva su tiempo</h2>
+						</div>
+						
+						<div class="imagen-construccion-contenedor" style="text-align: center; margin-top: 10px; margin-bottom: 15px;">
+							<img src="../../../../pics/Trabajando_publicacion.jpg" alt="Trabajando en ello" style="max-width: 150px; height: auto;">
+						</div>
+
+						<p>Alto ahí, campeón. Sé que tienes ganas de echar un vistazo, pero toca esperar.</p>
+						<p>Aprovecha y sal a caminar un rato. Eso nunca hace daño.</p>
+						
+						<div class="construccion-barra-fondo">
+							<div class="construccion-barra-relleno" style="width: 35%;"></div>
+						</div>
+						<div class="construccion-porcentaje">Esto anda por el 35%</div>
+					</div>
+				
+
+                <div id="contenido-articulo" class="borrador-oculto">
+                    
+                        
+                            <blockquote>
+<p>✍🏻 <strong>Autor:</strong> Lulo<br />
+📚 <strong>Nivel:</strong> Complementario<br />
+⌛ <strong>Tiempo lectura:</strong> ~30 min <br />
+🧮 <strong>Matemáticas:</strong> Medio  </p>
+</blockquote>
+<hr />
+<blockquote>
+<p>⚠️ <strong>Cuidado:</strong> Esta publicación es una expansión de <a href="../04-octal-hexadecimal-y-bcd/">Octal, hexadecimal y BCD</a>.</p>
+</blockquote>
+<hr />
+<p>Teniendo en mente las diferentes bases del <a href="../04-octal-hexadecimal-y-bcd/">hexadecimal, el octal y el BCD</a>, queda aún hablar de cómo se trabaja con ellos aritméticamente. También al final hablaré de la suma de números de distinto signo de los complementos <a href="../07-complemento-a1/">a 1</a> y <a href="../08-complemento-a2/">a 2</a>.</p>
+<h1 id="aritmetica-hexadecimal">Aritmética hexadecimal</h1>
+<h2 id="suma-hexadecimal">Suma hexadecimal</h2>
+<p>Es muy parecida a la decimal pero teniendo en cuenta que tenemos los números de <span class="arithmatex">\(A\)</span> a <span class="arithmatex">\(F\)</span>, que será trabajar con su equivalencia en decimal. Supongamos <span class="arithmatex">\(2A\)</span> y <span class="arithmatex">\(1C\)</span>, que los vamos a sumar. Realizamos como primer paso las equivalencia de <span class="arithmatex">\(A\)</span> y <span class="arithmatex">\(C\)</span> a decimal, que son <span class="arithmatex">\(10\)</span> y <span class="arithmatex">\(12\)</span>: si los sumamos los queda <span class="arithmatex">\(22\)</span>, pero es mayor a <span class="arithmatex">\(15\)</span>, que es el valor máximo alcanzable. Entonces, tenemos que restarle al resultado este número, resultando <span class="arithmatex">\(7\)</span>: ya tenemos nuestro primer dígito, con un acarreo al siguiente. Para el segundo valor, tenemos <span class="arithmatex">\(2\)</span>, <span class="arithmatex">\(1\)</span> y otro <span class="arithmatex">\(1\)</span>, debido a que antes cuando sumamos <span class="arithmatex">\(A\)</span> y <span class="arithmatex">\(C\)</span> tuvimos un desbordamiento: entonces, la suma nos queda en <span class="arithmatex">\(4\)</span>, que sí es menor a <span class="arithmatex">\(15\)</span>, por lo que no hay nuevo acarreo, y de resultado queda <span class="arithmatex">\(47\)</span>.</p>
+<div class="arithmatex">\[2A + 1C = (20 + 10) + (A(10) + C(12)) = 30 + (10 + 7) = 47\]</div>
+<h2 id="resta-hexadecimal">Resta hexadecimal</h2>
+<p>Como la resta consiste en sumar dos elementos de signo contrario, ocurre que al segundo valor hace falta cambiarle el signo. En las máquinas, el hexadecimal se usa como simplificación del binario, por lo que tiene que seguir las mismas reglas: nada de signo. Por lo que, podemos ayudarnos del complemento a 2: si tenemos los dos valores en complemento a 2, resulta que, por ejemplo, con dos dígitos en hexadecimal, podemos representar desde el -128 hasta el 127, en complemento a 2.</p>
+<p>Para la conversión, podemos emplear tres métodos:</p>
+<h3 id="hexadecimal-binario">Hexadecimal-binario</h3>
+<p>Ya sabemos convertir de hexadecimal a binario y biceversa. En este método es simplemente aplicarlo. Supongamos el <span class="arithmatex">\(67\)</span>, que sería su equivalente a <span class="arithmatex">\(103\)</span> en decimal. Bueno, pues vamos a convertirlo a binario:</p>
+<div class="arithmatex">\[67 = 6 // 7 = 0110 // 0111 = 0110 0111\]</div>
+<p>Ya tenemos el número en binario complemento a 2, pero en positivo, por lo que hace falta invertirlo para conseguir su versión negativa: pasamos de <span class="arithmatex">\(01100111\)</span> a <span class="arithmatex">\(10011000\)</span>, con lo que ya tenemos <span class="arithmatex">\(-67\)</span> en binario. Pero queda un paso final, y es pasar ese valor a hexadecimal, ya que el <span class="arithmatex">\(-67\)</span> no es posible porque tiene signo. Por ello, hemos de hacer el primer paso, pero hacia atrás y con este nuevo dígito:</p>
+<div class="arithmatex">\[10011000 = 1001 // 1000 = 9 // 8 = 98\]</div>
+<p>Entonces, <span class="arithmatex">\(67\)</span>, su versión negativa es <span class="arithmatex">\(98\)</span> en complemento a 2. Es antintuitivo, lo sé, pero es así como funciona: no podemos trabajar con un "-", por lo que usamos el complemento a 2, y, para no estar poniendo cantidades ingentes de 0 y 1, compactamos empleando el hexadecimal.</p>
+<h3 id="restar-maximo">Restar máximo</h3>
+<p>Este paso no require tanta conversión, sino solo usar matemáticas: supongamos un rango de <span class="arithmatex">\(0\)</span> a <span class="arithmatex">\(100\)</span>, en el que <span class="arithmatex">\(50\)</span> es el centro; si tenemos el número <span class="arithmatex">\(80\)</span>, este está a <span class="arithmatex">\(30\)</span> unidades de diferencia del centro, ¿cómo sabemos cuál sería su equivalente al lado contrario del centro? Pues, si tenemos el límite superior, pues quitarle a ese límite máximo (<span class="arithmatex">\(100\)</span>) este valor y, lo restante, sumarlo al límite inferior (<span class="arithmatex">\(0\)</span>); esto nos da <span class="arithmatex">\(20\)</span>, y, si obtenemos la distancia que hay con el centro, que sería <span class="arithmatex">\(30\)</span>, es la misma distancia que hay con el ejemplo (<span class="arithmatex">\(80 - 50 = 30\)</span>). Pues esto mismo se hace con este método, pero teniendo como límite superior <span class="arithmatex">\(FF\)</span>, que sería <span class="arithmatex">\(127\)</span>:</p>
+<div class="arithmatex">\[FF - 67 = F(15) - 6// F(15) - 7 = 9 // 8 = 98\]</div>
+<h3 id="secuencia-inversa">Secuencia inversa</h3>
+<p>Este es el método más abstracto, pero es exactamente igual al anterior: en vez de tener que efectuar la resta, se busca su equivalente en invertido. Para ello, nos vamos a ayudar con la siguiente tablita:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Ordenado</strong></th>
+<th style="text-align: center;"><strong>Invertidor</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">E</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">D</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">C</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">B</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">A</td>
+</tr>
+<tr>
+<td style="text-align: center;"><em>6</em></td>
+<td style="text-align: center;"><em>9</em></td>
+</tr>
+<tr>
+<td style="text-align: center;"><em>7</em></td>
+<td style="text-align: center;"><em>8</em></td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">7</td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr>
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr>
+<td style="text-align: center;">D</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">E</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
+<p>Si nos fijamos, tenemos a la izquierda el <span class="arithmatex">\(67\)</span> y a la derecha nos cae el <span class="arithmatex">\(98\)</span>.</p>
+<h1 id="aritmetica-octal">Aritmética octal</h1>
+<p>En este base, no es tan enrevesado, ya que trabajamos con valores que van de <span class="arithmatex">\(0\)</span> a <span class="arithmatex">\(7\)</span>, por lo que cuando efectuamos sumas o restas, realizamos los acarreos necesarios. Tenemos el <span class="arithmatex">\(14\)</span>, y le restamos <span class="arithmatex">\(6\)</span>: sabemos que <span class="arithmatex">\(14\)</span>, para llegar a nueve, tenemos que quitarle cinco, por lo que pasamos a tener <span class="arithmatex">\(9 - 1\)</span>, pero el nueve está prohibido en esta base, así que pasamos a <span class="arithmatex">\(7 - 1\)</span>, que <span class="arithmatex">\(7\)</span> es el valor máximo. Entonces, efectuamos la última resta y nos queda <span class="arithmatex">\(6\)</span>.</p>
+<div class="arithmatex">\[14 - 6 = (7 + 5) - 6 = (7 + 0) - 1 = 7 - 1 = 6\]</div>
+<p>En este caso, no tenemos que tener en cuenta el signo o temas de usar el complemento a 2 como en el hexadecimal porque el octal se usa escensialmente en el papel: los ordenadores usan binario y para simplificar se usa directamente el hexadecimal, sin pasar por el octal.</p>
+<h1 id="aritmetica-bcd">Aritmética BCD</h1>
+<p>Esta base tiene un truco, y es que todas las operaciones se comportan de la misma manera: si al efectuarla, el valor resultante entra dentro del ranto (de <span class="arithmatex">\(0000\)</span> a <span class="arithmatex">\(1001\)</span>), entonces ese es el resultado; si no, lo que esté sobrando se emplea como acarreo. Para emplear un ejemplo simplificado, vamos a sumar <span class="arithmatex">\(4\)</span> y <span class="arithmatex">\(7\)</span>.</p>
+<p>Los pasos son los siguientes: se pasa a binario en BCD, se efectúa la suma. ¿Es un valor permitido? Tenemos el resultado. ¿No? Toca llevar uno de acarreo y lo que nos sobra se queda en esa posición.</p>
+<div class="arithmatex">\[4 + 7 = 0100 + 0111 = 1011\quad (PROHIBIDO) = 0001\quad (1011 - 1010(10)) = 0001(1) \quad 0001(1) = 11\]</div>
+<h1 id="aritmetica-de-los-complementos">Aritmética de los complementos</h1>
+<p>Ahora queda la aritmética de valores con signo, que, para ello, vamos a usar los <a href="../07-complemento-a1/">complementos</a>. Los dos casos funcionan diferente pero tienen algo en común: la importancia de los signos de los valores trabajados y el número de bits.</p>
+<h2 id="complemento-a-1">Complemento a 1</h2>
+<p>Cuando efectuamos una suma, puede ser de uno de estos casos: que ambos números sean positivos, que sean de distinto signo, siendo el positivo o el negativo el mayor; y que ambos sean negativos. Y no solo este factor es importante, sino también con cuántos bits trabajamos, ya que este limita el rango de valores.</p>
+<p>PAG 75
+explicar resta y suma</p>
+<h2 id="complemento-a-2">Complemento a 2</h2>
+<p>solo decir que exactamente igual al 1 pero quitando el paso final de añadirle 1</p>
+<p>Indicar el problema de overflow</p>
+<hr />
+<hr />
+                            
+                            
+
+                            
+
+                            
+                            <div class="bloque-recursos-independiente" style="margin-top: 40px;">
+                                <h3 class="titulo-recursos">¿Quieres comentar cualquier cosa?</h3>
+                                <p style="color: #64748b; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">
+                                    En caso de tener dudas o haber visto fallos en nuestras publicaciones, puedes acceder a la parte de comentarios de nuestro GitHub y cuanto antes te responderemos.
+                                </p>
+                                <div style="text-align: center; margin-top: 25px;">
+                                    <a href="" 
+                                       target="_blank" 
+                                       class="boton-comentar-github">
+                                        <span style="font-size: 1.2rem;">🚀</span>
+                                        <span>Dejar un comentario en GitHub</span>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            
+                    
+                </div>
+                
+            </main>
+        </div>
+
+        <aside class="panel-derecho">
+            
+            
+            <div class="widget-sidebar" style="margin-bottom: 25px;">
+                <h3 style="margin-top: 0; font-size: 1.05rem; color: var(--color-primario); border-bottom: 2px solid var(--color-fondo-claro); padding-bottom: 8px; margin-bottom: 15px;">
+                    Lectura previa recomendada
+                </h3>
+                <div class="lista-tarjetas">
+                    
+                        <div class="tarjeta-articulo">
+                            <div class="tarjeta-info">
+                                <h3><a href="../../../../../02-decimal-y-binario/" style="color: var(--color-primario);">P02: Decimal y binario</a></h3>
+                                <span class="tarjeta-meta" style="display: block; margin-bottom: 4px;">
+                                    📊 Fácil — ⌛ 20 min
+                                </span>
+                                <span class="tarjeta-meta" style="display: block;">
+                                    📅 REVISIÓN — ✍🏻 Lulo
+                                </span>
+                            </div>
+                        </div>
+                    
+                        <div class="tarjeta-articulo">
+                            <div class="tarjeta-info">
+                                <h3><a href="../../../../../03-aritmetica-binaria/" style="color: var(--color-primario);">P03: Aritmética binaria</a></h3>
+                                <span class="tarjeta-meta" style="display: block; margin-bottom: 4px;">
+                                    📊 Fácil — ⌛ ~10 min
+                                </span>
+                                <span class="tarjeta-meta" style="display: block;">
+                                    📅 REVISIÓN — ✍🏻 Lulo
+                                </span>
+                            </div>
+                        </div>
+                    
+                        <div class="tarjeta-articulo">
+                            <div class="tarjeta-info">
+                                <h3><a href="../../../../../04-octal-hexadecimal-y-bcd/" style="color: var(--color-primario);">P04: Octal, hexadecimal y BCD</a></h3>
+                                <span class="tarjeta-meta" style="display: block; margin-bottom: 4px;">
+                                    📊 Básico — ⌛ ~10 min
+                                </span>
+                                <span class="tarjeta-meta" style="display: block;">
+                                    📅 REVISIÓN — ✍🏻 Lulo
+                                </span>
+                            </div>
+                        </div>
+                    
+                        <div class="tarjeta-articulo">
+                            <div class="tarjeta-info">
+                                <h3><a href="../../../../../07-complemento-a1/" style="color: var(--color-primario);">P07: Complemento a 1</a></h3>
+                                <span class="tarjeta-meta" style="display: block; margin-bottom: 4px;">
+                                    📊 Básico — ⌛ 5 min
+                                </span>
+                                <span class="tarjeta-meta" style="display: block;">
+                                    📅 REVISIÓN — ✍🏻 Lulo
+                                </span>
+                            </div>
+                        </div>
+                    
+                        <div class="tarjeta-articulo">
+                            <div class="tarjeta-info">
+                                <h3><a href="../../../../../08-complemento-a2/" style="color: var(--color-primario);">P08: Complemento a 2</a></h3>
+                                <span class="tarjeta-meta" style="display: block; margin-bottom: 4px;">
+                                    📊 Básico — ⌛ ~5 min
+                                </span>
+                                <span class="tarjeta-meta" style="display: block;">
+                                    📅 REVISIÓN — ✍🏻 Lulo
+                                </span>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+            
+
+            <div class="widget-lateral">
+                <h3 style="margin-top: 0; font-size: 1.05rem; color: var(--color-primario); border-bottom: 2px solid var(--color-fondo-claro); padding-bottom: 8px; margin-bottom: 15px;">
+                    Últimas actualizaciones
+                </h3>
+                <div class="lista-tarjetas">
+                    
+                        <div class="tarjeta-articulo">
+                            <div class="tarjeta-imagen">
+                                
+                                    <img src="../../../../pics/mini_elect.jpg" alt="P07: Complemento a 1">
+                                
+                            </div>
+                            <div class="tarjeta-info">
+                                <h3><a href="../../../../Ingenieria/Electronica/Lenguaje_Maquina/07-complemento-a1/">P07: Complemento a 1</a></h3>
+                                <span class="tarjeta-meta" style="display: block; margin-bottom: 3px;">
+                                    📊 Básico — ⌛ ~5 min
+                                </span>
+                                <span class="tarjeta-meta">📅 REVISIÓN — ✍🏻 Lulo</span>
+                                <p class="tarjeta-descripcion"></p>
+                            </div>
+                        </div>
+                    
+                        <div class="tarjeta-articulo">
+                            <div class="tarjeta-imagen">
+                                
+                                    <img src="../../../../pics/mini_elect.jpg" alt="P08: Complemento a 2">
+                                
+                            </div>
+                            <div class="tarjeta-info">
+                                <h3><a href="../../../../Ingenieria/Electronica/Lenguaje_Maquina/08-complemento-a2/">P08: Complemento a 2</a></h3>
+                                <span class="tarjeta-meta" style="display: block; margin-bottom: 3px;">
+                                    📊 Básico — ⌛ 5 min
+                                </span>
+                                <span class="tarjeta-meta">📅 REVISIÓN — ✍🏻 Lulo</span>
+                                <p class="tarjeta-descripcion"></p>
+                            </div>
+                        </div>
+                    
+                        <div class="tarjeta-articulo">
+                            <div class="tarjeta-imagen">
+                                
+                                    <img src="../../../../pics/mini_elect.jpg" alt="P0A: Aritmética de otras bases">
+                                
+                            </div>
+                            <div class="tarjeta-info">
+                                <h3><a href="../../../../Ingenieria/Electronica/Lenguaje_Maquina/0A-aritmetica-de-otras-bases/">P0A: Aritmética de otras bases</a></h3>
+                                <span class="tarjeta-meta" style="display: block; margin-bottom: 3px;">
+                                    📊 Básico — ⌛ ~5 min
+                                </span>
+                                <span class="tarjeta-meta">📅 REVISIÓN — ✍🏻 Lulo</span>
+                                <p class="tarjeta-descripcion"></p>
+                            </div>
+                        </div>
+                    
+                </div> 
+            </div> 
+            
+            <div class="widget-sidebar" style="margin-top: 35px;">
+                <h2 style="margin-top: 0; font-size: 1.15rem; color: var(--color-primario); border-bottom: 2px solid var(--color-fondo-claro); padding-bottom: 8px; margin-bottom: 15px; font-family: 'Merriweather', serif;">
+                    Publicaciones destacadas
+                </h2>
+                <div class="lista-articulos">
+                    
+                </div>
+            </div>
+
+        </aside>
+
+    </div>
+    
+    <footer class="pie-pagina">
+        <div class="contenedor-footer">
+            <p>&copy; 2026 <strong>liCiencia2</strong></p>
+            <span class="subtext-footer">Desarrollado usando MkDocs & Python macros</span>
+        </div>
+    </footer>
+</body>
+</html>

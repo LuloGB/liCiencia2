@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>
+        
+            
+                Física - 
+            
+            liCiencia2
+        
+    </title>
+    
+    <link rel="icon" type="image/png" href="../../pics/logo_principal.png">
+ 
+    <link rel="stylesheet" href="../../estilos.css">
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const links = document.querySelectorAll('.toc-enlace');
+			
+			function changeActive() {
+				let fromTop = window.scrollY + (window.innerHeight / 2); 
+				let currentActiveId = "";
+				
+				links.forEach(link => {
+					const id = link.getAttribute('href');
+					if (id && id.startsWith('#')) {
+						try {
+							const element = document.querySelector(id);
+							if (element && element.offsetTop <= fromTop) {
+								currentActiveId = id;
+							}
+						} catch(e) {}
+					}
+				});
+				
+				links.forEach(link => {
+					if (link.getAttribute('href') === currentActiveId) {
+						link.classList.add('active');
+					} else {
+						link.classList.remove('active');
+					}
+				});
+			}
+			
+			window.addEventListener('scroll', changeActive);
+			changeActive(); // Ejecución inicial
+		});
+	</script>
+<body>
+        
+    <header class="cabecera-principal">
+        <div class="contenedor-cabecera">
+            <div class="logo-sitio">
+                <a href="../../" style="text-decoration: none; color: inherit;">
+                    <h1>liCiencia2</h1>
+                </a>
+            </div>
+            <nav class="barra-superior">
+                <ul>
+                    
+                        <li>
+                            
+                                <details name="menu-principal">
+                                    <summary class="titulo-apartado">Inicio</summary>
+                                    <ul class="subapartado">
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../">¿Qué es este sitio?</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../#quienes-somos">¿Quiénes somos?</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../#planes-futuro">Planes a futuro</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../#donde-encontrarnos">¿Dónde encontrarnos?</a>
+                                                
+                                            </li>
+                                        
+                                    </ul>
+                                </details>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                                <details name="menu-principal">
+                                    <summary class="titulo-apartado">Publicaciones</summary>
+                                    <ul class="subapartado">
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../publicaciones/#estructura">Estructura</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../publicaciones/#etiquetas">Catálogo por Etiquetas</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../publicaciones/#ultimas-publicaciones">Últimas publicaciones</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../publicaciones/#biblioteca">Biblioteca</a>
+                                                
+                                            </li>
+                                        
+                                    </ul>
+                                </details>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                                <a href="../../Fisica/inicio-fisica/" class="enlace-apartado">Física</a>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                                <details name="menu-principal">
+                                    <summary class="titulo-apartado">Ingeniería</summary>
+                                    <ul class="subapartado">
+                                        
+                                            <li>
+                                                
+                                                    <details name="menu-subnivel">
+                                                        <summary class="titulo-subapartado">Electrónica</summary>
+                                                        <ul class="subsubapartado">
+                                                            
+                                                                <li>
+                                                                    
+                                                                        <a href="../../Ingenieria/Electronica/Lenguaje_Maquina/indice-lenguaje-maquina/">Lenguaje máquina</a>
+                                                                    
+                                                                </li>
+                                                            
+                                                        </ul>
+                                                    </details>
+                                                
+                                            </li>
+                                        
+                                    </ul>
+                                </details>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                                <a href="../../#como-contribuir" class="enlace-apartado">Cómo contribuir</a>
+                            
+                        </li>
+                    
+                </ul>
+            </nav>
+            <script>
+                document.addEventListener('click', function(event) {
+                    const cabecera = document.querySelector('.cabecera-principal');
+                    if (!cabecera.contains(event.target)) {
+                        document.querySelectorAll('.barra-superior details').forEach(details => {
+                            details.removeAttribute('open');
+                        });
+                    }
+                });
+            </script>
+        </div>
+    </header>
+    
+    <div class="layout-principal sin-izquierdo">
+        
+        
+        
+        <div class="columna-principal">
+            
+            
+                <h1 class="titulo-gran-formato"></h1>
+            
+
+            <main class="contenedor-contenido">
+                
+                
+
+                <div id="contenido-articulo" class="">
+                    
+                        
+                    
+                </div>
+                
+            </main>
+        </div>
+
+        <aside class="panel-derecho">
+            
+            
+
+            <div class="widget-lateral">
+                <h3 style="margin-top: 0; font-size: 1.05rem; color: var(--color-primario); border-bottom: 2px solid var(--color-fondo-claro); padding-bottom: 8px; margin-bottom: 15px;">
+                    Últimas actualizaciones
+                </h3>
+                <div class="lista-tarjetas">
+                    
+                        <div class="tarjeta-articulo">
+                            <div class="tarjeta-imagen">
+                                
+                                    <img src="../../pics/mini_elect.jpg" alt="P07: Complemento a 1">
+                                
+                            </div>
+                            <div class="tarjeta-info">
+                                <h3><a href="../../Ingenieria/Electronica/Lenguaje_Maquina/07-complemento-a1/">P07: Complemento a 1</a></h3>
+                                <span class="tarjeta-meta" style="display: block; margin-bottom: 3px;">
+                                    📊 Básico — ⌛ ~5 min
+                                </span>
+                                <span class="tarjeta-meta">📅 REVISIÓN — ✍🏻 Lulo</span>
+                                <p class="tarjeta-descripcion"></p>
+                            </div>
+                        </div>
+                    
+                        <div class="tarjeta-articulo">
+                            <div class="tarjeta-imagen">
+                                
+                                    <img src="../../pics/mini_elect.jpg" alt="P08: Complemento a 2">
+                                
+                            </div>
+                            <div class="tarjeta-info">
+                                <h3><a href="../../Ingenieria/Electronica/Lenguaje_Maquina/08-complemento-a2/">P08: Complemento a 2</a></h3>
+                                <span class="tarjeta-meta" style="display: block; margin-bottom: 3px;">
+                                    📊 Básico — ⌛ 5 min
+                                </span>
+                                <span class="tarjeta-meta">📅 REVISIÓN — ✍🏻 Lulo</span>
+                                <p class="tarjeta-descripcion"></p>
+                            </div>
+                        </div>
+                    
+                        <div class="tarjeta-articulo">
+                            <div class="tarjeta-imagen">
+                                
+                                    <img src="../../pics/mini_elect.jpg" alt="P0A: Aritmética de otras bases">
+                                
+                            </div>
+                            <div class="tarjeta-info">
+                                <h3><a href="../../Ingenieria/Electronica/Lenguaje_Maquina/0A-aritmetica-de-otras-bases/">P0A: Aritmética de otras bases</a></h3>
+                                <span class="tarjeta-meta" style="display: block; margin-bottom: 3px;">
+                                    📊 Básico — ⌛ ~5 min
+                                </span>
+                                <span class="tarjeta-meta">📅 REVISIÓN — ✍🏻 Lulo</span>
+                                <p class="tarjeta-descripcion"></p>
+                            </div>
+                        </div>
+                    
+                </div> 
+            </div> 
+            
+            <div class="widget-sidebar" style="margin-top: 35px;">
+                <h2 style="margin-top: 0; font-size: 1.15rem; color: var(--color-primario); border-bottom: 2px solid var(--color-fondo-claro); padding-bottom: 8px; margin-bottom: 15px; font-family: 'Merriweather', serif;">
+                    Publicaciones destacadas
+                </h2>
+                <div class="lista-articulos">
+                    
+                </div>
+            </div>
+
+        </aside>
+
+    </div>
+    
+    <footer class="pie-pagina">
+        <div class="contenedor-footer">
+            <p>&copy; 2026 <strong>liCiencia2</strong></p>
+            <span class="subtext-footer">Desarrollado usando MkDocs & Python macros</span>
+        </div>
+    </footer>
+</body>
+</html>

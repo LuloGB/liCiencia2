@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>
+        
+            
+                P02: Decimal y binario - 
+            
+            liCiencia2
+        
+    </title>
+    
+    <link rel="icon" type="image/png" href="../../../../pics/logo_principal.png">
+ 
+    <link rel="stylesheet" href="../../../../estilos.css">
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const links = document.querySelectorAll('.toc-enlace');
+			
+			function changeActive() {
+				let fromTop = window.scrollY + (window.innerHeight / 2); 
+				let currentActiveId = "";
+				
+				links.forEach(link => {
+					const id = link.getAttribute('href');
+					if (id && id.startsWith('#')) {
+						try {
+							const element = document.querySelector(id);
+							if (element && element.offsetTop <= fromTop) {
+								currentActiveId = id;
+							}
+						} catch(e) {}
+					}
+				});
+				
+				links.forEach(link => {
+					if (link.getAttribute('href') === currentActiveId) {
+						link.classList.add('active');
+					} else {
+						link.classList.remove('active');
+					}
+				});
+			}
+			
+			window.addEventListener('scroll', changeActive);
+			changeActive(); // Ejecución inicial
+		});
+	</script>
+<body>
+        
+    <header class="cabecera-principal">
+        <div class="contenedor-cabecera">
+            <div class="logo-sitio">
+                <a href="../../../../" style="text-decoration: none; color: inherit;">
+                    <h1>liCiencia2</h1>
+                </a>
+            </div>
+            <nav class="barra-superior">
+                <ul>
+                    
+                        <li>
+                            
+                                <details name="menu-principal">
+                                    <summary class="titulo-apartado">Inicio</summary>
+                                    <ul class="subapartado">
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../">¿Qué es este sitio?</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../#quienes-somos">¿Quiénes somos?</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../#planes-futuro">Planes a futuro</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../#donde-encontrarnos">¿Dónde encontrarnos?</a>
+                                                
+                                            </li>
+                                        
+                                    </ul>
+                                </details>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                                <details name="menu-principal">
+                                    <summary class="titulo-apartado">Publicaciones</summary>
+                                    <ul class="subapartado">
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../publicaciones/#estructura">Estructura</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../publicaciones/#etiquetas">Catálogo por Etiquetas</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../publicaciones/#ultimas-publicaciones">Últimas publicaciones</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="../../../../publicaciones/#biblioteca">Biblioteca</a>
+                                                
+                                            </li>
+                                        
+                                    </ul>
+                                </details>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                                <a href="../../../../Fisica/inicio-fisica/" class="enlace-apartado">Física</a>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                                <details name="menu-principal">
+                                    <summary class="titulo-apartado">Ingeniería</summary>
+                                    <ul class="subapartado">
+                                        
+                                            <li>
+                                                
+                                                    <details name="menu-subnivel">
+                                                        <summary class="titulo-subapartado">Electrónica</summary>
+                                                        <ul class="subsubapartado">
+                                                            
+                                                                <li>
+                                                                    
+                                                                        <a href="../../../../Ingenieria/Electronica/Lenguaje_Maquina/indice-lenguaje-maquina/">Lenguaje máquina</a>
+                                                                    
+                                                                </li>
+                                                            
+                                                        </ul>
+                                                    </details>
+                                                
+                                            </li>
+                                        
+                                    </ul>
+                                </details>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                                <a href="../../../../#como-contribuir" class="enlace-apartado">Cómo contribuir</a>
+                            
+                        </li>
+                    
+                </ul>
+            </nav>
+            <script>
+                document.addEventListener('click', function(event) {
+                    const cabecera = document.querySelector('.cabecera-principal');
+                    if (!cabecera.contains(event.target)) {
+                        document.querySelectorAll('.barra-superior details').forEach(details => {
+                            details.removeAttribute('open');
+                        });
+                    }
+                });
+            </script>
+        </div>
+    </header>
+    
+    <div class="layout-principal ">
+        
+        
+        <aside class="panel-izquierdo">
+            
+            
+            <div class="widget-etiquetas">
+                <h3>Etiquetas</h3>
+                <div class="lista-etiquetas-sidebar">
+                    
+                        <span class="tag-sidebar">Binario</span>
+                    
+                        <span class="tag-sidebar">Decimal</span>
+                    
+                        <span class="tag-sidebar">Conversión de bases</span>
+                    
+                </div>
+            </div>
+            
+
+            
+            <div class="widget-toc">
+                <h3>Índice</h3>
+                <nav class="tabla-contenidos">
+                    <ul>
+                        
+                            <li>
+                                <a href="#bases" class="toc-enlace">Bases</a>
+                                
+                            </li>
+                        
+                            <li>
+                                <a href="#conversion-binario-a-decimal" class="toc-enlace">Conversión binario a decimal</a>
+                                
+                            </li>
+                        
+                            <li>
+                                <a href="#conversion-decimal-a-binario" class="toc-enlace">Conversión decimal a binario</a>
+                                
+                                    <ul>
+                                        
+                                            <li><a href="#suma-de-pesos" class="toc-enlace">Suma de pesos</a></li>
+                                        
+                                            <li><a href="#division-sucesiva" class="toc-enlace">División sucesiva</a></li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            <li>
+                                <a href="#fraccion-decimal-a-binario" class="toc-enlace">Fracción decimal a binario</a>
+                                
+                                    <ul>
+                                        
+                                            <li><a href="#suma-de-pesos_1" class="toc-enlace">Suma de pesos</a></li>
+                                        
+                                            <li><a href="#multiplicacion-sucesiva" class="toc-enlace">Multiplicación sucesiva</a></li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                    </ul>
+                </nav>
+            </div>
+            
+
+        </aside>
+        
+        
+        <div class="columna-principal">
+            
+            
+                <h1 class="titulo-gran-formato">P02: Decimal y binario</h1>
+            
+
+            <main class="contenedor-contenido">
+                
+                
+					<div class="widget-construccion">
+
+						<div class="construccion-cabecera">
+							<h2>Igual que la cocina, esto lleva su tiempo</h2>
+						</div>
+						
+						<div class="imagen-construccion-contenedor" style="text-align: center; margin-top: 10px; margin-bottom: 15px;">
+							<img src="../../../../pics/Trabajando_publicacion.jpg" alt="Trabajando en ello" style="max-width: 150px; height: auto;">
+						</div>
+
+						<p>Alto ahí, campeón. Sé que tienes ganas de echar un vistazo, pero toca esperar.</p>
+						<p>Aprovecha y sal a caminar un rato. Eso nunca hace daño.</p>
+						
+						<div class="construccion-barra-fondo">
+							<div class="construccion-barra-relleno" style="width: 70%;"></div>
+						</div>
+						<div class="construccion-porcentaje">Esto anda por el 70%</div>
+					</div>
+				
+
+                <div id="contenido-articulo" class="borrador-oculto">
+                    
+                        
+                            <h1 id="bases">Bases</h1>
+<blockquote>
+<p>✍🏻 <strong>Autor:</strong> Lulo<br />
+📚 <strong>Nivel:</strong> Fácil<br />
+⌛ <strong>Tiempo lectura:</strong> 20 min <br />
+🧮 <strong>Matemáticas:</strong> Básicas  </p>
+</blockquote>
+<p>Previamente se ha introducido lo que es una <a href="../01-senial-digital/">señan digital</a> y cómo parte de la electrónica se basa en ella. El inconveniente que se encuentra al trabajar con este tipo de señales es que hace falta algún tipo de herramienta que lo vuelva más cómodo: esto se consigue con el <strong>binario</strong>.</p>
+<h1 id="conversion-binario-a-decimal">Conversión binario a decimal</h1>
+<p>Como primer punto, hace faltan entender lo que son las bases. De manera muy simplificada, y más orientado a lo que se va a desarrollar hoy, es el número de dígitos con los que podemos representar una cuenta. Por ejemplo, la base actualmente más empleada es la <strong>base decimal</strong>. En ella se encuentran los números del <span class="arithmatex">\(0\)</span> al <span class="arithmatex">\(9\)</span> y con ellos se pueden representar todo. Dependiendo de si se colocan varios símbolos a la derecha o a la izquierda, representan una cantidad u otra. </p>
+<p>Para verlo más claro, se tomará el ejemplo del número <span class="arithmatex">\(157\)</span>, qque se encuentra constituido por los símbolos <span class="arithmatex">\(1\)</span>, <span class="arithmatex">\(5\)</span> y <span class="arithmatex">\(7\)</span>. Cada uno se encuentra en una posición que se puede calcular por dicho puesto por diez elevado al número de su posición (<span class="arithmatex">\(10^n\)</span>, siendo <span class="arithmatex">\(n\)</span> la posición en la que se encuentra). Al efectuar el cálculo de el dígito por su posición, nos queda que el ejemplo se encuentra compuesto por la suma de /<span class="arithmatex">\(100/\)</span>, <span class="arithmatex">\(50\)</span> y <span class="arithmatex">\(7\)</span>. Este ejemplo se puede ver desarollado en el <a href="#ej1">Ejemplo 1</a>.</p>
+<div id="ej1"></div>
+
+<div class="arithmatex">\[
+157 = 1 · 10^2 + 5 · 10^2 + 7 · 10^0\tag{Ej. 1}
+\]</div>
+<blockquote>
+<p>☝🏻🤓 <strong>Aclaración:</strong> Hay que tener en cuenta que la primera posición se indica con <span class="arithmatex">\(0\)</span>, no con <span class="arithmatex">\(1\)</span>. Esto es porque <span class="arithmatex">\(10^0\)</span> es <span class="arithmatex">\(1\)</span>, y si multiplicamos las unidades por <span class="arithmatex">\(10^1\)</span> nos dan las decenas, alterando completamente el resultado.</p>
+</blockquote>
+<p>Otra de las bases que existe, y de la que se va a hablar durante bastantes publicaciones, son el <strong>binario</strong>. Esta base está conformada por dos dígitos, el <span class="arithmatex">\(1\)</span> y el <span class="arithmatex">\(0\)</span>, no como en la base diez que se tenían diez dígitos.</p>
+<p>Se parte del número <span class="arithmatex">\(10011101\)</span> en base 2. Desde un punto de vista humano, es difícil de conocer la cantidad que está almacenando este valor, por lo que se aprovechará la conversión binario decimal para poderlo ver. Como se vio antes, para construir un número en base decimal, se tomaba la posición de cada dígito y se multiplicaba por el exponente de la base. Al trabajar en base dos, lo que se tienen no son diez dígitos, sino dos, por lo que se ha de multiplicar por <span class="arithmatex">\(2^n\)</span>, siendo <span class="arithmatex">\(n\)</span> la posición del dígito. Tras multiplicar cada posición por su exponente, se suman todos los valores y se consigue pasar de base dos a base diez, como se encuentra mejor explicado en el <a href="#ej2">Ejemplo 2</a>.</p>
+<div id="ej2"></div>
+
+<div class="arithmatex">\[1 · 2^7 | 0 · 2^6 | 0 · 2^5 | 1 · 2^4 | 1 · 2^3 | 1 · 2^2 | 0 · 2^1 | 1 · 2^0 \tag{Ej. 2}\]</div>
+<div class="arithmatex">\[10011101 = 1 · 2^7 + 0 · 2^6 + 0 · 2^5 + 1 · 2^4 + 1 · 2^3 + 1 · 2^2 + 0 · 2^1+ 1 · 2^0 \Rightarrow 1 · 2^7 + 1 · 2^4 + 1 · 2^3 + 1 · 2^2 + 1 · 2^0 = 157 \]</div>
+<blockquote>
+<p>🧐 <strong>Interpretación:</strong> Para agilizar la lectura, normalmente cuando se lee un número en base binaria se describe como una consecución de unos y ceros, en vez de leerlo como si estuviera en base decimal, temrinando haciendo la tarea de lectura mucho más cómodo. Imagina leer un dígito de 32 bits, que normalmente se trabaja con esa resolución.</p>
+</blockquote>
+<p>Con esta misma técnica, se puede convertir cualquier número en <strong>binario natural</strong> positivo a base decimal. El siguiente paso sería ver cómo se puede revertir esta conversión.</p>
+<blockquote>
+<p>📒 <strong>Ejercicio:</strong> Esto también funciona cuando tenemos números de coma flotante. Intenta hacer la conversión de 1011,110101, a ver si te sale. <strong>Pista:</strong> Igual que para las unidades y superiores usamos enteros de <span class="arithmatex">\(0\)</span> hacia arriba, para los que están por debajo de la coma son con enteros negativos.</p>
+</blockquote>
+<h1 id="conversion-decimal-a-binario">Conversión decimal a binario</h1>
+<p>Ahora es necesario meter un nuevo concepto que son <em>los pesos de 2</em>. En base diez es muy cómodo el convertir de notación exponencial a normal, que es poner el número de ceros que sale en el exponente. Cuando estamos en base dos, es mucho más cómodo pasarlo todo a decimal, que para ello solo hace falta saberse la tabla del dos:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+2^0 &amp;= 1 \\
+2^1 &amp;= 2 \\
+2^2 &amp;= 4 \\
+2^3 &amp;= 8 \\
+2^4 &amp;= 16 \\
+2^5 &amp;= 32 \\
+2^6 &amp;= 64 \\
+2^7 &amp;= 128 \\
+2^8 &amp;= 256 \\
+\vdots
+\end{aligned}
+\]</div>
+<p>Estos son los nueve principales pesos de <span class="arithmatex">\(2\)</span>, que son en verdad muy importante sabérselos, pero por ahora, solo necesito que lo entiendas.</p>
+<blockquote>
+<p>❗ <strong>Curiosidad:</strong> ¿La secuencia de números te suena? <span class="arithmatex">\(16\)</span> GB, 32 GB, 128 GB, 256 GB... A que si vas a una tienda de discos de memoria, como pendrives o disco duros, te los venden en esta secuencia. Pues es por los pesos de 2.</p>
+</blockquote>
+<h2 id="suma-de-pesos">Suma de pesos</h2>
+<p>Vamos a descomponer el <span class="arithmatex">\(157\)</span>, pero no como lo hicimos al comienzo, sino esta vez en pesos de dos: el número más próximo de la secuencia sería el <span class="arithmatex">\(128\)</span>, que es <span class="arithmatex">\(2^7\)</span>. Lo que le queda a <span class="arithmatex">\(128\)</span> para llegar a nuestro número son <span class="arithmatex">\(29\)</span>, pero esto no se puede quedar así, por lo que hace falta buscar un nuevo peso cercano: el <span class="arithmatex">\(16\)</span>, que es <span class="arithmatex">\(2^4\)</span>. Nos está sobrando <span class="arithmatex">\(13\)</span>, al que tenemos <span class="arithmatex">\(8\)</span>, que es <span class="arithmatex">\(2^3\)</span> como el más cercano. Y si seguimos así, nos sobra <span class="arithmatex">\(5\)</span>, tenemos <span class="arithmatex">\(4\)</span>, siendo <span class="arithmatex">\(2^2\)</span> más <span class="arithmatex">\(1\)</span>, llegamos al final, ya que <span class="arithmatex">\(1\)</span> es <span class="arithmatex">\(2^0\)</span> y hemos terminado.</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp;\quad \mathbf{157}=128[2^7]+\mathbf{29} \\
+&amp;\qquad \hspace{2cm} \swarrow \\
+&amp;\qquad \mathbf{29}=16[2^4]+\mathbf{13} \\
+&amp;\qquad \hspace{2cm} \swarrow \\
+&amp;\qquad \quad \mathbf{13}=8[2^3]+\mathbf{5} \\
+&amp;\qquad \hspace{2cm} \swarrow \\
+&amp;\qquad \qquad \mathbf{5}=4[2^2]+\mathbf{1} \\
+&amp;\qquad \hspace{2cm} \swarrow \\
+&amp;\qquad \qquad \quad \mathbf{1}=1[2^0]
+\end{aligned}
+\]</div>
+<p>Lo que nos queda es ver la posición de cada peso, que sería viendo su exponente, y aquellos que aparezcan, se pone un 1, si no, 0.</p>
+<div class="arithmatex">\[
+2^7 2^6 2^5 2^4 2^3 2^2 2^1 2^0
+\]</div>
+<div class="arithmatex">\[
+1 \hspace{1.5mm} 0 \hspace{1.5mm} 0 \hspace{1.5mm} 1 \hspace{1.5mm} 1 \hspace{1.5mm} 1 \hspace{1.5mm} 0 \hspace{1.5mm} 1
+\]</div>
+<p>Volvimos a tener el <span class="arithmatex">\(10011101\)</span> del comienzo, que, como demostramos antes, es el <span class="arithmatex">\(157\)</span>. En la realidad, un ordenador que trabaje con 8 unidades, es muy raro: tu ordenador y móvil trabajan a 64, por lo que estar trabajando desde <span class="arithmatex">\(2^{64}\)</span> no es cuestión. Para eso tenemos la <em>división sucesiva</em>.</p>
+<h2 id="division-sucesiva">División sucesiva</h2>
+<p>Este método es mucho más sencillo y solo hace falta saber dividir entre dos.</p>
+<blockquote>
+<p>😬 <strong>Experiencia:</strong> Recuerdo en Informática cuando tuvimos que aprender a usar este método y lo que más nos costó fue recordar cómo se dividía obteniendo el resto, y sin tener que usar la calculadora.</p>
+</blockquote>
+<p>Volvamos a nuestro querido <span class="arithmatex">\(157\)</span> y vamos a irlo dividiendo entre dos hasta que solo quede dividir <span class="arithmatex">\(1\)</span>/<span class="arithmatex">\(2\)</span>. Comenzamos primero dividiendo <span class="arithmatex">\(157\)</span> entre dos, con lo que tenemos <span class="arithmatex">\(78\)</span> y de resto <span class="arithmatex">\(1\)</span>. Anotemos el resto, que es importante. El cociente dado, hay que seguirlo trabajando, volviendo a efectuar la división, quedando <span class="arithmatex">\(39\)</span> de cociente y <span class="arithmatex">\(0\)</span> de resto. Importante, los ceros hay que también apuntarlos: todos los restos nos van a dar la solución.</p>
+<div class="arithmatex">\[
+\begin{array}{r|ll}
+\text{División} &amp; \text{Cociente} &amp; \text{Resto} \\
+\hline
+157 / 2 &amp; 78 &amp; \mathbf{1} \quad \\
+78 / 2 &amp; 39 &amp; \mathbf{0} \quad  \\
+39 / 2 &amp; 19 &amp; \mathbf{1} \quad  \\
+19 / 2 &amp; 9 &amp; \mathbf{1} \quad  \\
+9 / 2 &amp; 4 &amp; \mathbf{1} \quad  \\
+4 / 2 &amp; 2 &amp; \mathbf{0} \quad  \\
+2 / 2 &amp; 1 &amp; \mathbf{0} \quad  \\
+1 / 2 &amp; \mathbf{0} &amp; \mathbf{1} \quad
+\end{array}
+\]</div>
+<p>Para poder ver cuál es el número en binario, solo hay que reordenar los restos y ponerlos del último conseguido al primero: <span class="arithmatex">\(10011101\)</span>, que es nuestro <span class="arithmatex">\(157\)</span>.</p>
+<blockquote>
+<p>📒 <strong>Ejercicio:</strong> si en verdad lo entendiste, inténtalo con un número más grande, como el 1612, a ver si logras pasarlo a binario.</p>
+</blockquote>
+<h1 id="fraccion-decimal-a-binario">Fracción decimal a binario</h1>
+<p>Con estas herramientas somos capaces de pasar cualquier número entero a binario, pero ¿qué pasa con los decimales?</p>
+<h2 id="suma-de-pesos_1">Suma de pesos</h2>
+<p>Esto tiene algo de truco, y es que la suma de pesos funciona igual: para los decimales, en vez de elevar a naturales, hay que hacerlo a enteros negativos.</p>
+<blockquote>
+<p>☝🏻🤓 <strong>Aclaración</strong> ¿Por qué se empieza en -1 y no en -0? Muy simple, porque si elevamos cualquier número a -0, este sería la inversa del mismo número elevado a 0, que da 1, y la inversa de 1 es 1, por tanto, esto nos da igual.</p>
+</blockquote>
+<div class="arithmatex">\[
+\begin{aligned}
+2^{-1} &amp;= 0.5 \\
+2^{-2} &amp;= 0.25 \\
+2^{-3} &amp;= 0.125 \\
+2^{-4} &amp;= 0.0625 \\
+2^{-5} &amp;= 0.03125 \\
+2^{-6} &amp;= 0.015625 \\
+2^{-7} &amp;= 0.0078125 \\
+2^{-8} &amp;= 0.00390625 \\
+\vdots
+\end{aligned}
+\]</div>
+<p>Como me gusta hacerlo todo a base de ejemplos, te voy a dar el <span class="arithmatex">\(0.6875\)</span>. Para la lectura aquí, toma papel y lápiz e intenta convertirlo ayudándote de la tabla superior. La solución te quedaría en <span class="arithmatex">\(0.1011\)</span>. Abajo te pongo el desarrollo, aunque es exactamente igual a como hice antes con los números enteros.</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp;\quad \mathbf{0.6875} = 0.5[2^{-1}] + \mathbf{0.1875} \\
+&amp;\qquad \hspace{3cm} \swarrow \\
+&amp;\qquad \quad \mathbf{0.1875} = 0.125[2^{-3}] + \mathbf{0.0625} \\
+&amp;\qquad \hspace{3cm} \swarrow \\
+&amp;\qquad \qquad \mathbf{0.0625} = 0.0625[2^{-4}] \\
+\end{aligned}
+\]</div>
+<h2 id="multiplicacion-sucesiva">Multiplicación sucesiva</h2>
+<p>Ahora tenemos el mismo dilema: si son grandes los decimales, no apetece tener una tabla infinita con casi infinitos números para lograrlo convertir: por eso, como en los enteros teníamos la división sucesiva, aquí tenemos la <em>multiplicación sucesiva</em>.</p>
+<p>Con saber multiplicar es más que suficiente, pero esta vez, hay un pequeño truco, ya que, lo que nos va a dar el valor convertido, no es lo que sobre, sino la unidad.</p>
+<p>Tenemos nuestro ejemplo, el <span class="arithmatex">\(0.6875\)</span> y lo multiplicamos por <span class="arithmatex">\(2\)</span>, teniendo <span class="arithmatex">\(1.375\)</span>. Separamos lo que tengamos de unidad (<span class="arithmatex">\(1\)</span>) y nos quedamos con los valores a la derecha de la coma (<span class="arithmatex">\(0.375\)</span>), con los que vamos a seguir trabajando. Volviendo a duplicar, conseguimos <span class="arithmatex">\(0\)</span> y <span class="arithmatex">\(.75\)</span>, y así seguimos hasta llegar al final no tener nada tras la coma.</p>
+<div class="arithmatex">\[
+\begin{array}{r|ll}
+\text{Operación} &amp; \text{Entero} &amp; \text{Decimales} \\
+\hline
+0.6875 \cdot 2 = 1.375 &amp; \mathbf{1} &amp; \mathbf{.375} \\
+0.375 \cdot 2 = 0.75 &amp; \mathbf{0} &amp; \mathbf{.75} \\
+0.75 \cdot 2 = 1.5 &amp; \mathbf{1} &amp; \mathbf{.5} \\
+0.5 \cdot 2 = 1.0 &amp; \mathbf{1} &amp; \mathbf{.0}
+\end{array}
+\]</div>
+<blockquote>
+<p>☝🏻🤓 <strong>Aclaración:</strong> Tanto en división como en multiplicación sucesiva para construir los números de izquierda a derecha, se apuntan los resultados del último al primero; y si se quieren poner de derecha a izquierda, es al revés el apunte, de arriba a abajo.</p>
+</blockquote>
+<p>Y, mirando los valores de abajo hacia arriba, para construirlo de la coma para la derecha, hemos vuelto a conseguir <span class="arithmatex">\(0.1011\)</span>.</p>
+<hr />
+<p>Con esto ya podemos pasar de base diez (humano) a base dos (máquina), pero si queremos que la máquina sume o reste no la vamos a hacer pasar a binario para poder efectuar el cálculo, por lo que en la próxima publicación, explicaré cómo se hace.</p>
+<hr />
+                            
+                            
+
+                            
+							<nav class="navegacion-publicacion-independiente">
+								<div class="nav-columna nav-izquierda">
+									
+									<a href="../01-senial-digital/" class="enlace-nav flecha-izq" title="Ir a la publicación anterior">
+										<span class="flecha">←</span>
+										<div class="texto-nav">
+											<span class="etiqueta-nav">Anterior</span>
+										</div>
+									</a>
+									
+								</div>
+								
+								<div class="nav-columna nav-derecha">
+									
+									<a href="../03-aritmetica-binaria/" class="enlace-nav flecha-der" title="Ir a la siguiente publicación">
+										<div class="texto-nav">
+											<span class="etiqueta-nav">Siguiente</span>
+										</div>
+										<span class="flecha">→</span>
+									</a>
+									
+								</div>
+							</nav>
+							
+
+                            
+                            <div class="bloque-recursos-independiente" style="margin-top: 40px;">
+                                <h3 class="titulo-recursos">¿Quieres comentar cualquier cosa?</h3>
+                                <p style="color: #64748b; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">
+                                    En caso de tener dudas o haber visto fallos en nuestras publicaciones, puedes acceder a la parte de comentarios de nuestro GitHub y cuanto antes te responderemos.
+                                </p>
+                                <div style="text-align: center; margin-top: 25px;">
+                                    <a href="" 
+                                       target="_blank" 
+                                       class="boton-comentar-github">
+                                        <span style="font-size: 1.2rem;">🚀</span>
+                                        <span>Dejar un comentario en GitHub</span>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            
+                    
+                </div>
+                
+            </main>
+        </div>
+
+        <aside class="panel-derecho">
+            
+            
+
+            <div class="widget-lateral">
+                <h3 style="margin-top: 0; font-size: 1.05rem; color: var(--color-primario); border-bottom: 2px solid var(--color-fondo-claro); padding-bottom: 8px; margin-bottom: 15px;">
+                    Últimas actualizaciones
+                </h3>
+                <div class="lista-tarjetas">
+                    
+                        <div class="tarjeta-articulo">
+                            <div class="tarjeta-imagen">
+                                
+                                    <img src="../../../../pics/mini_elect.jpg" alt="P07: Complemento a 1">
+                                
+                            </div>
+                            <div class="tarjeta-info">
+                                <h3><a href="../../../../Ingenieria/Electronica/Lenguaje_Maquina/07-complemento-a1/">P07: Complemento a 1</a></h3>
+                                <span class="tarjeta-meta" style="display: block; margin-bottom: 3px;">
+                                    📊 Básico — ⌛ ~5 min
+                                </span>
+                                <span class="tarjeta-meta">📅 REVISIÓN — ✍🏻 Lulo</span>
+                                <p class="tarjeta-descripcion"></p>
+                            </div>
+                        </div>
+                    
+                        <div class="tarjeta-articulo">
+                            <div class="tarjeta-imagen">
+                                
+                                    <img src="../../../../pics/mini_elect.jpg" alt="P08: Complemento a 2">
+                                
+                            </div>
+                            <div class="tarjeta-info">
+                                <h3><a href="../../../../Ingenieria/Electronica/Lenguaje_Maquina/08-complemento-a2/">P08: Complemento a 2</a></h3>
+                                <span class="tarjeta-meta" style="display: block; margin-bottom: 3px;">
+                                    📊 Básico — ⌛ 5 min
+                                </span>
+                                <span class="tarjeta-meta">📅 REVISIÓN — ✍🏻 Lulo</span>
+                                <p class="tarjeta-descripcion"></p>
+                            </div>
+                        </div>
+                    
+                        <div class="tarjeta-articulo">
+                            <div class="tarjeta-imagen">
+                                
+                                    <img src="../../../../pics/mini_elect.jpg" alt="P0A: Aritmética de otras bases">
+                                
+                            </div>
+                            <div class="tarjeta-info">
+                                <h3><a href="../../../../Ingenieria/Electronica/Lenguaje_Maquina/0A-aritmetica-de-otras-bases/">P0A: Aritmética de otras bases</a></h3>
+                                <span class="tarjeta-meta" style="display: block; margin-bottom: 3px;">
+                                    📊 Básico — ⌛ ~5 min
+                                </span>
+                                <span class="tarjeta-meta">📅 REVISIÓN — ✍🏻 Lulo</span>
+                                <p class="tarjeta-descripcion"></p>
+                            </div>
+                        </div>
+                    
+                </div> 
+            </div> 
+            
+            <div class="widget-sidebar" style="margin-top: 35px;">
+                <h2 style="margin-top: 0; font-size: 1.15rem; color: var(--color-primario); border-bottom: 2px solid var(--color-fondo-claro); padding-bottom: 8px; margin-bottom: 15px; font-family: 'Merriweather', serif;">
+                    Publicaciones destacadas
+                </h2>
+                <div class="lista-articulos">
+                    
+                </div>
+            </div>
+
+        </aside>
+
+    </div>
+    
+    <footer class="pie-pagina">
+        <div class="contenedor-footer">
+            <p>&copy; 2026 <strong>liCiencia2</strong></p>
+            <span class="subtext-footer">Desarrollado usando MkDocs & Python macros</span>
+        </div>
+    </footer>
+</body>
+</html>

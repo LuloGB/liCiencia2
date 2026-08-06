@@ -251,21 +251,22 @@
 							{% endif %}
 
                             {% if page.meta and page.meta.autor and page.meta.comentarios != false %}
-                            <div class="bloque-recursos-independiente" style="margin-top: 40px;">
-                                <h3 class="titulo-recursos">¿Quieres comentar cualquier cosa?</h3>
-                                <p style="color: #64748b; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">
-                                    En caso de tener dudas o haber visto fallos en nuestras publicaciones, puedes acceder a la parte de comentarios de nuestro GitHub y cuanto antes te responderemos.
-                                </p>
-                                <div style="text-align: center; margin-top: 25px;">
-                                    <a href="https://github.com/LuloGB/liCiencia2/issues/" 
-                                       target="_blank" 
-                                       class="boton-comentar-github">
-                                        <span style="font-size: 1.2rem;">🚀</span>
-                                        <span>Dejar un comentario en GitHub</span>
-                                    </a>
-                                </div>
-                            </div>
-                            {% endif %}
+							<div class="bloque-recursos-independiente" style="margin-top: 40px;">
+							    <h3 class="titulo-recursos">¿Quieres comentar cualquier cosa?</h3>
+							    <p style="color: #64748b; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">
+							        En caso de tener dudas o haber visto fallos en nuestras publicaciones, puedes acceder a la parte de comentarios de nuestro GitHub y cuanto antes te responderemos.
+							    </p>
+							    <div style="text-align: center; margin-top: 25px;">
+							        <a href="https://github.com/LuloGB/liCiencia2/issues/new?title={{ ('Comentario: ' ~ page.title) | urlencode }}&body={{ ('Hola! Quiero dejar un comentario sobre la publicación **' ~ page.title ~ '**\n\nEnlace: ' ~ page.canonical_url) | urlencode }}" 
+							           target="_blank" 
+							           rel="noopener noreferrer"
+							           class="boton-comentar-github">
+							            <span style="font-size: 1.2rem;">🚀</span>
+							            <span>Dejar un comentario en GitHub</span>
+							        </a>
+							    </div>
+							</div>
+							{% endif %}
                             {% endif %}
                     {% endblock %}
                 </div>

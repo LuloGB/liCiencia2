@@ -282,14 +282,14 @@
 <p>El elemento más básico e importante en la electrónica es el <strong>electrón</strong>. Este, al desplazarse por los diferentes materiales hace que surja la <strong>intensidad</strong>, pero para que exista este movimiento tenemos algo que llamaremos  <strong>voltaje</strong> o <strong>tensión</strong>: esta puede ser grande, pequeña o negativa. Esta variación, si la medimos a lo largo del tiempo, conseguiremos una <strong>amplitud</strong>. Si en vez de ser constante, cambia, conseguimos una <strong>señal continua</strong>, como podemos ver en la <a href="#figura1">Figura 1</a>, que es la base de la electrónica analógica.</p>
 <p>El trabajar este tipo de señales es muy difícil de procesar y almacenar. Son necesarios grandes aparatos que generalmente requieren muchas horas para poderlos programar. Esto surge por el hecho que trabajamos con "la señal completa". Una solución es medir cada cierto tiempo -llamado <strong>periodo</strong>- la tensión que hay en ese instante. De esta manera, tenemos una <strong>señal discreta</strong>, que son las que usan nuestros ordenadores, móviles o dispositivos electrónicos en general.</p>
 <div align="center" id="figura1">
-  <img src="https://github.com/LuloGB/liCiencia2/raw/main/Ingenieria/Electronica/pics/lenguaje_maquina/senial-digital/Fig%201.png" alt="Señal continua" width="400">
+  <img src="../pics/lenguaje_maquina/senial-digital/fig_1.png" alt="Señal continua" width="400">
   <br>
   <sub><em>Fig 1. Ejemplo de señal continua</em></sub>
 </div>
 <p><br></p>
 <p>Imaginemos una señal como la <a href="#figura1">Figura 1</a>. En el eje vertical tenemos <strong>la amplitud</strong>, que representaremos con la letra <span class="arithmatex">\(V\)</span>, y en el horizontal el <strong>tiempo</strong>, mostrado con <span class="arithmatex">\(t\)</span>. Al recorrer el eje del tiempo vemos que la señal ha ido cambiando su valor de amplitud. Esto es porque es una señal variable.</p>
 <div align="center" id="figura2">
-  <img src="https://github.com/LuloGB/liCiencia2/raw/main/Ingenieria/Electronica/pics/lenguaje_maquina/senial-digital/Fig%202.png" alt="Señal discretizada" width="400">
+  <img src="../pics/lenguaje_maquina/senial-digital/fig_2.png" alt="Señal discretizada" width="400">
   <br>
   <sub><em>Fig 2. Señal discretizada sobre Señal continua</em></sub>
 </div>
@@ -298,7 +298,7 @@
 <h1 id="el-0-y-el-1">El 0 y el 1</h1>
 <p>Para que un ordenador pueda entender bien la información, el usar señales analógicas digitalizadas le pueden llegar a ser demasiado complicadas, por lo que hace falta simplificarlas. Para ello, vamos a tener dos tensiones de partida, voltaje bajo <span class="arithmatex">\(V_L\)</span> y voltaje alto <span class="arithmatex">\(V_H\)</span>. Para entenderlo mejor, montamos un circuito simple, de solo una fuente y un bombillo, representado en la <a href="#figura3">Figura 3</a>. Vamos a imaginarnos que la fuente, una simple pila, da <span class="arithmatex">\(V_H\)</span> cuando el cable está conectado, y cuando no está conectado, como no existe un circuito cerrado, pues da <span class="arithmatex">\(V_L\)</span>.</p>
 <div align="center" id="figura3">
-  <img src="https://github.com/LuloGB/liCiencia2/raw/main/Ingenieria/Electronica/pics/lenguaje_maquina/senial-digital/Fig%203.png" alt="Ejemplo bombillos" width="400">
+  <img src="../pics/lenguaje_maquina/senial-digital/fig_3.png" alt="Ejemplo bombillos" width="400">
   <br>
   <sub><em>Fig 3. Ejemplo empleando un circuito sencillo. Izquierda en $V_H$. Derecha en $V_L$</em></sub>
 </div>
@@ -306,7 +306,7 @@
 <p>Para poder trabajar con estos conceptos, en vez de usar este dibujo, vamos a apoyarnos en las matemáticas transformando estos estados a que cuando esté encendido el bombillo equivale a un 1, y si está apagado a un 0. De manera muy superficial, este es el abecedario de los ordenadores, con el que ellos pueden "pensar".</p>
 <p>Como punto final, estaría bien que aclarase que para que un circuito pueda tener en funcionamiento este 1 y 0, se usan tensiones con <u>valores típicos de 5V o 3.3V a 0V</u>.</p>
 <div align="center" id="figura4">
-  <img src="https://github.com/LuloGB/liCiencia2/raw/main/Ingenieria/Electronica/pics/lenguaje_maquina/senial-digital/Fig%204.png" alt="Rangos de tensión" width="400">
+  <img src="../pics/lenguaje_maquina/senial-digital/fig_4.png" alt="Rangos de tensión" width="400">
   <br>
   <sub><em>Fig 4. Rangos de tensión de señal electrónica</em></sub>
 </div>
@@ -317,7 +317,7 @@
 <h2 id="senal-ideal">Señal ideal</h2>
 <p>Retomando la señal discretizada, tenemos <em>high</em> y <em>low</em>. Si se hace que la señal alterne entre estos dos valores y se toma una foto de uno de estos instantes, se obtiene una especie de caja, como se representa en la <a href="#figura5">Figura 5</a>.</p>
 <div align="center" id="figura5">
-  <img src="https://github.com/LuloGB/liCiencia2/raw/main/Ingenieria/Electronica/pics/lenguaje_maquina/senial-digital/Fig%205.png" alt="Señal Ideal" width="400">
+  <img src="../pics/lenguaje_maquina/senial-digital/fig_5.png" alt="Señal Ideal" width="400">
   <br>
   <sub><em>Fig 5. Constitución de una señal digital ideal</em></sub>
 </div>
@@ -327,7 +327,7 @@
 <h2 id="senal-real">Señal real</h2>
 <p>Cuando pasamos al caso real, a medir lo que pasa por el circuito y trabajan los componentes electrónicos, pues existen algunas diferencias.</p>
 <div align="center" id="figura6">
-  <img src="https://github.com/LuloGB/liCiencia2/raw/main/Ingenieria/Electronica/pics/lenguaje_maquina/senial-digital/Fig%206.png" alt="Señal Real" width="400">
+  <img src="../pics/lenguaje_maquina/senial-digital/fig_6.png" alt="Señal Real" width="400">
   <br>
   <sub><em>Fig 6. Constitución de una señal digital real</em></sub>
 </div>
